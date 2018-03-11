@@ -1,4 +1,11 @@
 package View;
 
-public class SettingsPage {
+import javax.swing.*;
+
+public class SettingsPage extends JPanel {
+
+    public SettingsPage()
+    {
+
+    }
 }

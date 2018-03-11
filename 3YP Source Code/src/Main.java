@@ -1,9 +1,11 @@
+import Model.DataHandler;
 import View.MainFrame;
 
 public class Main {
 
     public static void main(String[] args)
     {
-        new MainFrame(900,600);
+        MainFrame.mainFrame.start();
+        //DataHandler.dataHandler.init();
     }
 }

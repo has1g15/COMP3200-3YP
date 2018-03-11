@@ -1,7 +1,11 @@
 package View;
 
+import Controller.ExitListener;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Menu extends JPanel {
 
@@ -12,6 +16,7 @@ public class Menu extends JPanel {
 
     public Menu(int width, int height)
     {
+        //TODO: update progress bars from data upon loading menu
         this.setSize(width, height);
         this.setBackground(new Color(0X003166));
         this.setLayout(new GridBagLayout());
@@ -34,7 +39,7 @@ public class Menu extends JPanel {
         stats.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         toolTips = new JButton("Tool Tips");
         toolTips.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
-        settings = new JButton("Settings");
+        settings = new JButton("Main Menu");
         settings.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         exit = new JButton("Exit");
         exit.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
@@ -55,5 +60,8 @@ public class Menu extends JPanel {
         this.add(toolTips, gbc); gbc.gridy++;
         this.add(settings, gbc); gbc.gridy++;
         this.add(exit, gbc);
+
+        exit.addActionListener(new ExitListener());
+
     }
 }

@@ -1,7 +1,11 @@
 package View;
 
+import Controller.GoListener;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainPanel extends JPanel {
 
@@ -9,6 +13,7 @@ public class MainPanel extends JPanel {
     private JLabel name, selectLanguage, selectSkill;
     private GridBagConstraints gbc;
     private String[] languages, skills;
+    private String language, skill;
     private JComboBox<String> languageOptions, skillOptions;
     private JButton go;
 
@@ -34,17 +39,48 @@ public class MainPanel extends JPanel {
         gbc = new GridBagConstraints();
         goPanel.setLayout(new GridBagLayout());
         goPanel.setBackground(new Color(0x3396ff));
+
         selectLanguage = new JLabel("Please Select a Language...");
         selectLanguage.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         selectLanguage.setForeground(Color.WHITE);
-        languages = new String[] {"Java", "Javascript", "Python"};
+        languages = new String[] {"Select a Language from this Menu", "Java", "Javascript", "Python"};
         languageOptions = new JComboBox<>(languages);
+        language = "";
         selectSkill = new JLabel("Please Select a Skill...");
         selectSkill.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         selectSkill.setForeground(Color.WHITE);
-        skills = new String[] {"TODO: Insert Options"};
+        skills = new String[] {"Select a Skill from this Menu", "Printing and Variable Declaration", "Data Types",
+                "Formatting and I/O", "Conditional Statements", "Loops", "Operators", "Functions and Libraries",
+                "String Handling", "Scope", "Recursion", "Data Structures", "Searching", "Sorting"};
         skillOptions = new JComboBox<>(skills);
+        skill = "";
+
         go = new JButton("GO!");
+        languageOptions.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                language = (String)languageOptions.getSelectedItem();
+
+
+                skillOptions.addActionListener(new ActionListener(){
+
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        skill = (String)skillOptions.getSelectedItem();
+                        if (language!="Select a Language from this Menu" && skill!= "Select a Skill from this Menu") {
+                            go.addActionListener(new GoListener(language, skill));
+                        }
+                        else
+                        {
+                            JOptionPane.showMessageDialog(null, "Please Select a Language and a Skill");
+                        }
+                    }
+                });
+            }
+        });
+
+
 
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(0, 0, 10, 0);
@@ -64,5 +100,6 @@ public class MainPanel extends JPanel {
         gbc.insets = new Insets(30, 0, 40, 0);
         goPanel.add(go, gbc);
         this.add(goPanel);
+
     }
 }

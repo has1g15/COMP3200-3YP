@@ -1,21 +1,33 @@
 package View;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
     Menu menu;
-    MainPanel mainPanel;
+    private JPanel panel;
 
-    public MainFrame(int width, int height)
+    public static MainFrame mainFrame = new MainFrame();
+
+    public void start()
     {
-        this.setSize(width,height);
+        panel = new MainPanel(900,600);
+        this.setSize(900,600);
         menu = new Menu(200, 600);
-        mainPanel = new MainPanel(900,600);
-
         this.add(menu);
-        this.add(mainPanel);
+        this.add(panel);
+       // this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void updatePanel(JPanel newPanel)
+    {
+        mainFrame.remove(panel);
+        mainFrame.add(newPanel);
+        this.setVisible(true);
+        panel = newPanel;
     }
 }
