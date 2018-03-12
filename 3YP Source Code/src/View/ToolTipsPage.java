@@ -1,4 +1,11 @@
 package View;
 
-public class ToolTipsPage {
+import javax.swing.*;
+
+public class ToolTipsPage extends JPanel {
+
+    public ToolTipsPage()
+    {
+
+    }
 }

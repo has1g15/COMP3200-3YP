@@ -16,18 +16,17 @@ public class DataHandler {
         TODO: update method for appData
         TODO: methods breaking down maps and returning question data
      */
-    
+
     final String DBName = "appData";
     final String mcqTable = "mcq";
     final String practicalQuestions = "longAnswer";
     public SQLiteConnection c;
 
-    public HashMap<Integer, HashMap<String, String>> data;
+    private HashMap<Integer, HashMap<String, String>> data;
 
     public static DataHandler dataHandler = new DataHandler();
 
-    public void init()
-    {
+    public void init() {
         c = new SQLiteConnection(new File(DBName));
         try {
             c.open(false);
@@ -37,6 +36,10 @@ public class DataHandler {
         }
         loadMcqData();
         finish();
+    }
+
+    public void loadAppData() {
+
     }
 
     public void loadMcqData() {
@@ -66,6 +69,15 @@ public class DataHandler {
         } catch (SQLiteException e) {
             error(e);
         }
+    }
+
+    public void loadLongAnswer() {
+
+    }
+
+    public void updateAppData()
+    {
+
     }
 
     public void error(SQLiteException e) {

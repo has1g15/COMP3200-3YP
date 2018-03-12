@@ -1,15 +1,15 @@
 package Controller;
 
+import Model.Tutorial;
 import View.MainFrame;
 import View.TutorialScreen;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GoListener implements ActionListener {
 
     private String language, skill;
+    private Tutorial tutorial;
 
     public GoListener(String language, String skill)
     {
@@ -20,8 +20,14 @@ public class GoListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
+         MainFrame.mainFrame.updatePanel(new TutorialScreen(900, 600, language, skill));
+         //TODO: new tutorial
+    }
 
-         MainFrame.mainFrame.updatePanel(new TutorialScreen(900, 600));
-
+    public String getSkillGuide()
+    {
+        String skill = "";
+        //TODO: extract info from table using DataHandler() - .get() from hashmap
+        return skill;
     }
 }

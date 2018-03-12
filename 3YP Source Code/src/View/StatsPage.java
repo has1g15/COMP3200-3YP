@@ -1,9 +1,11 @@
 package View;
 
-public class StatsPage {
+import javax.swing.*;
 
-    public StatsPage()
+public class StatsPage extends JPanel {
+
+    public StatsPage(int width, int height)
     {
-
+        this.setSize(width, height);
     }
 }

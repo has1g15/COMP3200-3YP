@@ -100,6 +100,5 @@ public class MainPanel extends JPanel {
         gbc.insets = new Insets(30, 0, 40, 0);
         goPanel.add(go, gbc);
         this.add(goPanel);
-
     }
 }

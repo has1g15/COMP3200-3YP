@@ -5,7 +5,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-        MainFrame.mainFrame.start();
         //DataHandler.dataHandler.init();
+        //load app data in order to populate menu progress bars
+        MainFrame.mainFrame.start();
     }
 }
