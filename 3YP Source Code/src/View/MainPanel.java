@@ -49,9 +49,9 @@ public class MainPanel extends JPanel {
         selectSkill = new JLabel("Please Select a Skill...");
         selectSkill.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         selectSkill.setForeground(Color.WHITE);
-        skills = new String[] {"Select a Skill from this Menu", "Printing and Variable Declaration", "Data Types",
-                "Formatting and I/O", "Conditional Statements", "Loops", "Operators", "Functions and Libraries",
-                "String Handling", "Scope", "Recursion", "Data Structures", "Searching", "Sorting"};
+        skills = new String[] {"Select a Skill from this Menu", "Printing, Variable Declaration and Data Types",
+                "Formatting and I/O", "Conditional Statements", "Loops", "Operators", "String Handling",
+                "Functions, Procedures and Libraries", "Scope", "Data Structures", "Searching", "Sorting"};
         skillOptions = new JComboBox<>(skills);
         skill = "";
 

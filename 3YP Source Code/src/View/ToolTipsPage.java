@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class ToolTipsPage extends JPanel {
 
-    public ToolTipsPage()
+    public ToolTipsPage(int width, int height)
     {
-
+        this.setSize(width, height);
     }
 }

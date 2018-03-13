@@ -1,8 +1,8 @@
 package View;
 
+import Controller.QuizListener;
+
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class TutorialScreen extends JPanel {
@@ -11,7 +11,7 @@ public class TutorialScreen extends JPanel {
     private JScrollPane guidePane;
     private JTextArea guideText;
     private JLabel taskLabel;
-    private JButton prev, next;
+    private JButton prev, next, quiz;
 
     public TutorialScreen(int width, int height, String language, String skill)
     {
@@ -29,19 +29,22 @@ public class TutorialScreen extends JPanel {
         guidePanel.setPreferredSize(new Dimension(220, 500));
         guidePanel.setBackground(new Color(0x3396ff));
         guidePanel.setLayout(new FlowLayout());
-        guideText = new JTextArea("test test test test test test test test test test", 24, 17);
-        guideText.setFont(new Font("Balsamiq Sand", Font.PLAIN, 14));
+        guideText = new JTextArea("test test test test test test test test test test", 23, 17);
+        guideText.setFont(new Font("Balsamiq Sand", Font.BOLD, 14));
         guideText.setLineWrap(true);
         guidePane = new JScrollPane(guideText);
+        quiz = new JButton("Quiz Out");
+        quiz.setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
+        quiz.addActionListener(new QuizListener(language, skill));
         guidePanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         guidePanel.add(guidePane);
+        guidePanel.add(quiz);
 
         blank = new JPanel();
         blank.setPreferredSize(new Dimension(200, 200));
 
         prevPanel = new JPanel();
         prevPanel.setPreferredSize(new Dimension(100, 200));
-        //prevPanel.setBounds(200,400, 100, 200);
         prev = new JButton("prev");
         prevPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         prevPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
@@ -50,7 +53,6 @@ public class TutorialScreen extends JPanel {
 
         labelPanel = new JPanel();
         labelPanel.setPreferredSize(new Dimension(484, 200));
-        //labelPanel.setBounds(400, 300, 450, 200);
         labelPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         labelPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         labelPanel.setBackground(new Color(0x0063cc));
@@ -78,5 +80,10 @@ public class TutorialScreen extends JPanel {
     public void drawGraphic(Graphics2D g2)
     {
 
+    }
+
+    public void changeGuideText(String text)
+    {
+        guideText.setText(text);
     }
 }

@@ -4,6 +4,7 @@ import Controller.ExitListener;
 import Controller.MenuListener;
 import Controller.StatsListener;
 import Controller.ToolTipsListener;
+import Model.Progress;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class Menu extends JPanel {
     private JLabel java, js, python;
     private JButton stats, toolTips, menu, exit;
     private GridBagConstraints gbc;
+    private Progress progress;
 
     public Menu(int width, int height)
     {
@@ -22,13 +24,14 @@ public class Menu extends JPanel {
         this.setBackground(new Color(0X003166));
         this.setLayout(new GridBagLayout());
 
+        progress = new Progress();
+
         javaProg = new JProgressBar();
         javaProg.setPreferredSize(new Dimension(150, 20));
         javaProg.setMinimum(0);
         javaProg.setMaximum(100);
         javaProg.setForeground(new Color(0X009900));
-        //TODO: change to get value from progress class
-        javaProg.setValue(80);
+        javaProg.setValue(progress.getJavaPercentage());
         java = new JLabel("          Java");
         java.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         java.setForeground(Color.WHITE);
@@ -38,8 +41,7 @@ public class Menu extends JPanel {
         jsProg.setMinimum(0);
         jsProg.setMaximum(100);
         jsProg.setForeground(new Color(0X009900));
-        //TODO: change to get value from progress class
-        jsProg.setValue(25);
+        jsProg.setValue(progress.getJavaScriptPercentage());
         js = new JLabel("      JavaScript");
         js.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         js.setForeground(Color.WHITE);
@@ -49,8 +51,7 @@ public class Menu extends JPanel {
         pythonProg.setMinimum(0);
         pythonProg.setMaximum(100);
         pythonProg.setForeground(new Color(0X009900));
-        //TODO: change to get value from progress class
-        pythonProg.setValue(55);
+        pythonProg.setValue(progress.getPythonPercentage());
         python = new JLabel("         Python");
         python.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         python.setForeground(Color.WHITE);

@@ -10,7 +10,7 @@ public class ExitListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        //TODO: save progress
+        //TODO: save progress when exiting
         MainFrame.mainFrame.dispose();
     }
 }
