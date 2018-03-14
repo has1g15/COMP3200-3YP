@@ -10,7 +10,6 @@ import com.almworks.sqlite4java.SQLiteStatement;
 public class DataHandler {
 
     /*
-        TODO: build DB
         TODO: load methods for appData and longAnswer and tutorial
         TODO: update method for appData
         TODO: methods breaking down maps and returning question data
