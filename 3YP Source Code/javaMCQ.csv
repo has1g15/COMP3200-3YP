@@ -1,0 +1,40 @@
+﻿1,PRINT 'Hello World!' to the console,System.out.print('Hello World!'),"$System.out.print(""Hello World!"")","$System.out.print(""Hello World!""); ",$System.out.print('Hello World!');
+1,Declare and initialise a STRING variable,"string hello = ""hello"";","$String hello = ""hello"";","$String hello = ""hello"";",$String hello = 'hello';
+1,Declare an INTEGER variable,int n,$integer n;,$Int n;,$int n;
+1,Declare and initialise a CHARACTER variable,Char character;,"$char character = ""c"";",$char character = 'c';,$char character = c;
+1,Declare and initialise a BOOLEAN variable ,boolean b = false;,$bool b = false;,$boolean b = 'false';,"$boolean b = ""false"";"
+1,Declare and initialise a FLOAT variable,float f = 5;,$Float f = 5.0;,$float f = 5,$float f = 5.0;
+1,PRINT the INTEGER variable n,system.out.print(n);,"$System.out.print(""n"");",$System.out.print('n');,$System.out.print(n);
+1,Declare and initialise a variable whose value CANNOT be changed,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
+1,Declare a variable which can ONLY be accessed from where it is declared,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
+1,Declare a variable which can be accessed from ANYWHERE within an application,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"2					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"3					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,
+"4					",,,,,

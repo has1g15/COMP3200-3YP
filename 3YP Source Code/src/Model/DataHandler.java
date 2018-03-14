@@ -16,7 +16,7 @@ public class DataHandler {
         TODO: methods breaking down maps and returning question data
      */
 
-    private final String thirdYPdb = "3YPdb";
+    private final String thirdYPdb = "3YPdb.db";
     private final String appDataTable = "appData";
     private final String javaTutorialTable = "javaTutorial";
     private final String javaScriptTutorialTable = "javaScriptTutorial";
@@ -40,6 +40,7 @@ public class DataHandler {
 
     public void init()
     {
+        System.out.println(thirdYPdb);
         c = new SQLiteConnection(new File(thirdYPdb));
         try
         {
@@ -50,10 +51,10 @@ public class DataHandler {
         {
             error(e);
         }
-        loadAppData();
-        loadTutorialData();
+        //loadAppData();
+        //loadTutorialData();
         loadMcqData();
-        loadSkillMap();
+        //loadSkillMap();
         finish();
     }
 
@@ -173,7 +174,7 @@ public class DataHandler {
             while (stat.step())
             {
                 Integer mcqID = stat.columnInt(0);
-                String question = stat.columnString(1);
+                String questions = stat.columnString(1);
                 String answers = stat.columnString(2) + stat.columnString(3) + stat.columnString(4) + stat.columnString(5);
 
                 HashMap<String, String> mcqQuestions = javaMcqData.get(mcqID);
@@ -183,12 +184,13 @@ public class DataHandler {
                     mcqQuestions = new HashMap<>();
                     javaMcqData.put(mcqID, mcqQuestions);
                 }
-                mcqQuestions.put(question, answers);
+                mcqQuestions.put(questions, answers);
                 count++;
             }
 
             stat.dispose();
             System.out.println("Loaded " + count + " MCQs from " + javaMcqData.size() + " quizzes");
+            System.out.print(javaMcqData.toString());
         }
         catch (SQLiteException e)
         {

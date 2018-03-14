@@ -20,7 +20,7 @@ public class QuizListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        MainFrame.mainFrame.updatePanel(new QuizScreen(900, 600));
+        MainFrame.mainFrame.updatePanel(new QuizScreen(900, 600, language, skill));
         new Quiz(language, skill);
     }
 }
