@@ -8,6 +8,8 @@ import java.awt.*;
 
 public class QuizScreen extends JPanel {
 
+    //TODO: fix panel glitch
+
     private JPanel title, quizPanel;
     private JLabel name, instruction;
     private GridBagConstraints gbc;
@@ -50,9 +52,10 @@ public class QuizScreen extends JPanel {
         instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
+
         for (int i = 0; i < 10; i++)
         {
-            questionLabels[i] = new JLabel(quizListener.getQuestions().get(i));
+            questionLabels[i] = new JLabel(i+1 + ") " + quizListener.getQuestions().get(i));
             questionLabels[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             questionLabels[i].setForeground(Color.WHITE);
             gbc.gridwidth=4;

@@ -20,8 +20,8 @@ public class GoListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-         MainFrame.mainFrame.updatePanel(new TutorialScreen(1366, 768, language, skill));
-         //TODO: new tutorial
+        tutorial = new Tutorial(language, skill);
+        MainFrame.mainFrame.updatePanel(new TutorialScreen(1366, 768, language, skill));
     }
 
     public String getSkillGuide()
