@@ -1,5 +1,6 @@
 package View;
 
+import Controller.QuizCalculator;
 import Controller.QuizListener;
 
 import javax.swing.*;
@@ -13,6 +14,7 @@ public class QuizScreen extends JPanel {
     private JScrollPane scrollPanel;
     private JLabel[] questionLabels;
     private CheckboxGroup[] checkBoxGroup;
+    private JButton submit;
 
     public QuizScreen(int width, int height, QuizListener quizListener)
     {
@@ -41,10 +43,13 @@ public class QuizScreen extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 10, 0);
+        gbc.gridwidth=4;
         quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
         instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
+        quizPanel.add(instruction, gbc);
+        gbc.gridy++;
         for (int i = 0; i < 10; i++)
         {
             questionLabels[i] = new JLabel(quizListener.getQuestions().get(i));
@@ -78,9 +83,12 @@ public class QuizScreen extends JPanel {
             gbc.gridy++;
         }
 
+        submit = new JButton("Submit");
+        quizPanel.add(submit, gbc);
+        submit.addActionListener(new QuizCalculator());
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
-        scrollPanel.setPreferredSize(new Dimension(width, height*77/100));
+        scrollPanel.setPreferredSize(new Dimension(width*99/100, height*77/100));
         //quizPanel.setAutoscrolls(true);
         this.add(scrollPanel);
     }

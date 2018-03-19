@@ -14,7 +14,7 @@ public class MainFrame extends JFrame {
 
     public void start()
     {
-        this.setName("Graphical Programming E-Learning Platform");
+        this.setTitle("Graphical Programming E-Learning Platform");
         //this.setLayout(new FlowLayout());
         System.out.println((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth());
         System.out.println((int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
