@@ -1,19 +1,16 @@
 package Model;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.almworks.sqlite4java.SQLiteConnection;
 import com.almworks.sqlite4java.SQLiteException;
 import com.almworks.sqlite4java.SQLiteStatement;
 
 public class DataHandler {
-
-    /*
-        TODO: load methods for appData and longAnswer and tutorial
-        TODO: update method for appData
-        TODO: methods breaking down maps and returning question data
-     */
 
     private final String thirdYPdb = "3YPdb.db";
     private final String appDataTable = "appData";
@@ -31,8 +28,8 @@ public class DataHandler {
 
     private HashMap<String, String> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
-                                                      javaMcqData, javaScriptMcqData, pythonMcqData,
-                                                      javaExerciseData, javaScriptExerciseData, pythonExerciseData;
+                                                      javaMcqData, javaScriptMcqData, pythonMcqData;
+    private HashMap<Integer, String> javaExerciseData, javaScriptExerciseData, pythonExerciseData;
     private HashMap<String, Integer> skillMap;
 
     public static DataHandler dataHandler = new DataHandler();
@@ -165,6 +162,8 @@ public class DataHandler {
     public void loadMcqData()
     {
         System.out.println("Loading data from " + javaMcqTable);
+        //System.out.println("Loading data from " + javaScriptMcqTable);
+        //System.out.println("Loading data from " + pythonMcqTable);
         int count = 0;
         try
         {
@@ -224,7 +223,26 @@ public class DataHandler {
 
     public HashMap<String, String> getAppData()
     {
+
         return appData;
+    }
+
+    public HashMap<String, String> getTutorialData(int tutorialID, String language)
+    {
+        HashMap<Integer, HashMap <String, String>> map = null;
+        switch (language)
+        {
+            case "Java":
+                map = javaTutorialData;
+                break;
+            case "JavaScript":
+                map = javaScriptTutorialData;
+                break;
+            case "Python":
+                map = pythonTutorialData;
+                break;
+        }
+        return map.get(tutorialID);
     }
 
     public HashMap<String, String> getMCQData(int quizID, String language)
@@ -245,9 +263,30 @@ public class DataHandler {
         return map.get(quizID);
     }
 
-    public void getExerciseData()
+    public List<String> getExerciseData(int exerciseID, String language)
     {
-
+        HashMap<Integer, String> map = null;
+        switch (language)
+        {
+            case "Java":
+                map = javaExerciseData;
+                break;
+            case "JavaScript":
+                map = javaScriptExerciseData;
+                break;
+            case "Python":
+                map = pythonExerciseData;
+                break;
+        }
+        List<String> codeLines = new ArrayList<>();
+        for (Map.Entry<Integer, String> entry : map.entrySet())
+        {
+            if (exerciseID == entry.getKey())
+            {
+                codeLines.add(entry.getValue());
+            }
+        }
+        return codeLines;
     }
 
     public int getQuizID(String skill)
