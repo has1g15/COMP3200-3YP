@@ -34,7 +34,7 @@ public class Quiz {
         return questions.get(index-1);
     }
 
-    public String[] getAnswer(int index)
+    public String[] getAnswers(int index)
     {
         return answers.get(index-1).split("$");
     }
