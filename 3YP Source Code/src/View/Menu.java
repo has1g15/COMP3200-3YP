@@ -67,7 +67,7 @@ public class Menu extends JPanel {
 
         gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.insets = new Insets(0, 0, 20, 0);
+        gbc.insets = new Insets(0, 0, 25, 0);
         gbc.gridx = 0; gbc.gridy = 0;
         this.add(javaProg, gbc); gbc.gridy++;
         this.add(java, gbc); gbc.gridy++;
@@ -75,9 +75,9 @@ public class Menu extends JPanel {
         this.add(js, gbc); gbc.gridy++;
         this.add(pythonProg, gbc); gbc.gridy++;
         this.add(python, gbc); gbc.gridy++;
-        gbc.insets = new Insets(40, 0, 20, 0);
+        gbc.insets = new Insets(60, 0, 30, 0);
         this.add(stats, gbc); gbc.gridy++;
-        gbc.insets = new Insets(0, 0, 20, 0);
+        gbc.insets = new Insets(0, 0, 30, 0);
         this.add(toolTips, gbc); gbc.gridy++;
         this.add(menu, gbc); gbc.gridy++;
         this.add(exit, gbc);

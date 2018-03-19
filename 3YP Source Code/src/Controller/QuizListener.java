@@ -25,7 +25,8 @@ public class QuizListener implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         quiz = new Quiz(language, skill);
-        MainFrame.mainFrame.updatePanel(new QuizScreen(900, 600, this));
+        MainFrame.mainFrame.updatePanel(new QuizScreen(MainFrame.mainFrame.getWidth(),
+                MainFrame.mainFrame.getHeight(), this));
     }
 
     public String getLanguage()

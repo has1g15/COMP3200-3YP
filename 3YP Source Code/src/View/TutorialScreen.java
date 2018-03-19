@@ -22,11 +22,11 @@ public class TutorialScreen extends JPanel {
         flowLayout.setVgap(0);
         this.setLayout(flowLayout);
         graphicsPanel = new JPanel();
-        graphicsPanel.setPreferredSize(new Dimension(660,500));
+        graphicsPanel.setPreferredSize(new Dimension(860,500));
         graphicsPanel.setBackground(new Color(0xebebe0));
 
         guidePanel = new JPanel();
-        guidePanel.setPreferredSize(new Dimension(220, 500));
+        guidePanel.setPreferredSize(new Dimension(320, 500));
         guidePanel.setBackground(new Color(0x3396ff));
         guidePanel.setLayout(new FlowLayout());
         guideText = new JTextArea("test test test test test test test test test test", 23, 17);

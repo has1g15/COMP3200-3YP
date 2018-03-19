@@ -8,7 +8,7 @@ import java.awt.*;
 public class QuizScreen extends JPanel {
 
     private JPanel title, quizPanel;
-    private JLabel name;
+    private JLabel name, instruction;
     private GridBagConstraints gbc;
     private JScrollPane scrollPanel;
     private JLabel[] questionLabels;
@@ -31,32 +31,42 @@ public class QuizScreen extends JPanel {
         this.add(title);
 
         quizPanel = new JPanel();
-        quizPanel.setPreferredSize(new Dimension(width, height*5/6));
+        //quizPanel.setPreferredSize(new Dimension(width, height*5/6));
 
-        questionLabels = new JLabel[9];
-        checkBoxGroup = new CheckboxGroup[9];
+        questionLabels = new JLabel[10];
+        checkBoxGroup = new CheckboxGroup[10];
 
         gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.insets = new Insets(0, 0, 0, 0);
-        quizPanel.setBorder(BorderFactory.createEmptyBorder(0, 300, 0, 0));
+        gbc.insets = new Insets(0, 0, 10, 0);
+        quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
-
-        for (int i = 0; i < 9; i++)
+        instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
+        for (int i = 0; i < 10; i++)
         {
             questionLabels[i] = new JLabel(quizListener.getQuestions().get(i));
             questionLabels[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             questionLabels[i].setForeground(Color.WHITE);
+            gbc.gridwidth=4;
             quizPanel.add(questionLabels[i], gbc);
             gbc.gridy++;
             checkBoxGroup[i] = new CheckboxGroup();
             Checkbox cb1 = new Checkbox(quizListener.getAnswers().get(i)[0], checkBoxGroup[i],false);
+            cb1.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb1.setForeground(new Color(0x003166));
             Checkbox cb2 = new Checkbox(quizListener.getAnswers().get(i)[1], checkBoxGroup[i],false);
+            cb2.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb2.setForeground(new Color(0x003166));
             Checkbox cb3 = new Checkbox(quizListener.getAnswers().get(i)[2], checkBoxGroup[i],false);
+            cb3.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb3.setForeground(new Color(0x003166));
             Checkbox cb4 = new Checkbox(quizListener.getAnswers().get(i)[3], checkBoxGroup[i],false);
+            cb4.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb4.setForeground(new Color(0x003166));
+            gbc.gridwidth=1;
             quizPanel.add(cb1, gbc);
             gbc.gridx++;
             quizPanel.add(cb2, gbc);
@@ -69,6 +79,8 @@ public class QuizScreen extends JPanel {
         }
 
         scrollPanel = new JScrollPane(quizPanel);
+        scrollPanel.setLayout(new ScrollPaneLayout());
+        scrollPanel.setPreferredSize(new Dimension(width, height*77/100));
         //quizPanel.setAutoscrolls(true);
         this.add(scrollPanel);
     }
