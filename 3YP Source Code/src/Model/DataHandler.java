@@ -53,7 +53,7 @@ public class DataHandler {
         //loadAppData();
         //loadTutorialData();
         loadMcqData();
-        //loadSkillMap();
+        loadSkillMap();
         finish();
     }
 

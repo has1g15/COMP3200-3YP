@@ -11,6 +11,7 @@ import java.util.List;
 public class QuizListener implements ActionListener {
 
     private String language, skill;
+    private Quiz quiz;
     private List<String> questions;
     private List<String[]> answers;
 
@@ -23,8 +24,8 @@ public class QuizListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        quiz = new Quiz(language, skill);
         MainFrame.mainFrame.updatePanel(new QuizScreen(900, 600, this));
-        new Quiz(language, skill);
     }
 
     public String getLanguage()
@@ -35,5 +36,15 @@ public class QuizListener implements ActionListener {
     public String getSkill()
     {
         return skill;
+    }
+
+    public List<String> getQuestions()
+    {
+        return quiz.getQuestions();
+    }
+
+    public List<String[]> getAnswers()
+    {
+        return quiz.getAnswers();
     }
 }

@@ -1,14 +1,13 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Quiz {
 
     private String language, skill;
-    private List<String> questions, answers;
+    private List<String> questions;
+    private List<String[]> answers;
+    private String[] answerSet;
     private Date dateCompleted;
     private HashMap<String, String> quizData;
     private int quizID, score;
@@ -18,34 +17,43 @@ public class Quiz {
         this.language = language;
         this.skill = skill;
         questions = new ArrayList<>();
-        answers = new ArrayList();
-        //populateQuizData();
+        answers = new ArrayList<>();
+        populateQuizData();
+        setQuestions();
+        setAnswers();
     }
 
     public void populateQuizData()
     {
         quizID = DataHandler.dataHandler.getQuizID(skill);
         quizData = DataHandler.dataHandler.getMCQData(quizID, language);
-        //TODO: populate question and answer lists from DataHandler using MCQ ID
     }
 
-    public String getQuestion(int index)
+    public List<String> getQuestions()
     {
-        return questions.get(index-1);
+        return questions;
     }
 
-    public String[] getAnswers(int index)
+    public List<String[]> getAnswers()
     {
-        return answers.get(index-1).split("$");
+        return answers;
     }
 
     public void setQuestions()
     {
-
+        for (String question: quizData.keySet())
+        {
+            questions.add(question);
+        }
     }
 
     public void setAnswers()
     {
+        for (Map.Entry<String, String> entry : quizData.entrySet())
+        {
+            System.out.println(entry.getValue());
+            answers.add(entry.getValue().split("\\$"));
 
+        }
     }
 }
