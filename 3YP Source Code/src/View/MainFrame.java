@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
+    //TODO: set bounds on panels
+    //TODO: line breaks in formatting table
+    
     Menu menu;
     private JPanel panel;
 

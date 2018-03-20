@@ -23,6 +23,6 @@ a comment*/"""
 2,"When using the format method, which of the following conversions is true?",d formats an integer value as a decimal value,$d formats a decimal value as an integer,$n formats an integer value as a decimal value,$n formats a decimal value as an integer
 2,What is the most MEANINGFUL name for a variable denoting the name of a student?,studentName,$studname,$sn,$nameofastudent
 2,Write the variable 'average group size' in CAMELCASE ,averageGroupSize,$aVeRaGeGrOuPsIzE,$AveragegroupsizE,$Average_Group_Size
-2,How do you import the library needed to read user input to the console? ,import javaScanner;,$import java.scanner;,Simport java.util.Scanner;,$import java.util.inputReader;
+2,How do you import the library needed to read user input to the console? ,import javaScanner;,$import java.scanner;,$import java.util.Scanner;,$import java.util.inputReader;
 2,How do you read in STRING input?,String input = scanner.nextstring();,$String input = scanner.nextLine();,$String input = scanner.readLine();,$Scanner input = scanner.nextString();
 2,How do you read in INTEGER input? ,int input = scanner.nextInteger();,$int input = scanner.readInt();,$int input = scanner.readInteger();,$int input = scanner.nextInt();

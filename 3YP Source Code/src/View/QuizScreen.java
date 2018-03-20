@@ -49,7 +49,7 @@ public class QuizScreen extends JPanel {
         quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
-        instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
+        instruction = new JLabel("Please answer\n the following ten questions, selecting one of the 4 answers for each");
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
 
@@ -63,15 +63,19 @@ public class QuizScreen extends JPanel {
             gbc.gridy++;
             checkBoxGroup[i] = new CheckboxGroup();
             Checkbox cb1 = new Checkbox(quizListener.getAnswers().get(i)[0], checkBoxGroup[i],false);
+            System.out.println(quizListener.getAnswers().get(i)[0]);
             cb1.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             cb1.setForeground(new Color(0x003166));
             Checkbox cb2 = new Checkbox(quizListener.getAnswers().get(i)[1], checkBoxGroup[i],false);
+            System.out.println(quizListener.getAnswers().get(i)[1]);
             cb2.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             cb2.setForeground(new Color(0x003166));
             Checkbox cb3 = new Checkbox(quizListener.getAnswers().get(i)[2], checkBoxGroup[i],false);
+            System.out.println(quizListener.getAnswers().get(i)[2]);
             cb3.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             cb3.setForeground(new Color(0x003166));
             Checkbox cb4 = new Checkbox(quizListener.getAnswers().get(i)[3], checkBoxGroup[i],false);
+            System.out.println(quizListener.getAnswers().get(i)[3]);
             cb4.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             cb4.setForeground(new Color(0x003166));
             gbc.gridwidth=1;
