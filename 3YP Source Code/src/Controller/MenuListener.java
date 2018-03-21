@@ -17,6 +17,6 @@ public class MenuListener implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         //TODO: save progress
-        MainFrame.mainFrame.updatePanel(new MainPanel(MainFrame.WIDTH/6, 0, MainFrame.WIDTH, MainFrame.HEIGHT));
+        MainFrame.mainFrame.updatePanel(new MainPanel(MainFrame.WIDTH/6, 0, MainFrame.PANEL_WIDTH, MainFrame.HEIGHT));
     }
 }

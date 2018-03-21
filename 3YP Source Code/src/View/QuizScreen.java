@@ -16,14 +16,13 @@ public class QuizScreen extends JPanel {
     private CheckboxGroup[] checkBoxGroup;
     private JButton submit;
 
-    public QuizScreen(int width, int height, QuizListener quizListener)
+    public QuizScreen(int x, int y, int width, int height, QuizListener quizListener)
     {
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
         this.setLayout(new FlowLayout());
         this.setBackground(new Color(0x0063cc));
         title = new JPanel();
         title.setPreferredSize(new Dimension(width, height*1/6));
-        title.setBorder(BorderFactory.createEmptyBorder(0, 200, 0, 0));
         title.setBackground(new Color(0x0063cc));
         title.setLayout(new GridBagLayout());
         name = new JLabel(quizListener.getLanguage() + ": " + quizListener.getSkill() + " Quiz");
@@ -44,9 +43,10 @@ public class QuizScreen extends JPanel {
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 10, 0);
         gbc.gridwidth=4;
-        quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
+        //quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
+        quizPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
         instruction = new JLabel("Please answer\n the following ten questions, selecting one of the 4 answers for each");
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
@@ -93,7 +93,7 @@ public class QuizScreen extends JPanel {
         submit.addActionListener(new QuizCalculator());
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
-        scrollPanel.setPreferredSize(new Dimension(width*99/100, height*77/100));
+        scrollPanel.setPreferredSize(new Dimension(width, height*4/5));
         //quizPanel.setAutoscrolls(true);
         this.add(scrollPanel);
     }
