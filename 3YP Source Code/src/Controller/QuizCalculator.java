@@ -1,11 +1,14 @@
 package Controller;
 
 import Model.Quiz;
+import View.QuizResult;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class QuizCalculator implements ActionListener {
+
+    private int score;
 
     public QuizCalculator(Quiz quiz)
     {
@@ -23,6 +26,7 @@ public class QuizCalculator implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         calcScore();
+        new QuizResult(score);
     }
 
     public void updateAppData()

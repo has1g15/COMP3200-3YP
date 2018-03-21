@@ -47,7 +47,9 @@ public class QuizScreen extends JPanel {
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
         quizPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
-        instruction = new JLabel("Please answer" + System.lineSeparator() + "the following ten questions, selecting one of the 4 answers for each");
+        instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
+        instruction.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        instruction.setForeground(new Color(0x003166));
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
 
