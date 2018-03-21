@@ -5,6 +5,8 @@ import View.QuizResult;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class QuizCalculator implements ActionListener {
 
@@ -12,14 +14,17 @@ public class QuizCalculator implements ActionListener {
 
     public QuizCalculator(Quiz quiz)
     {
-        //calcScore()
-        //quiz.setScore()
-        //quiz.setDate()
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
+        LocalDate date = LocalDate.now();
+        System.out.println(formatter.format(date));
+        quiz.setScore(calcScore());
+        quiz.setDateCompleted(formatter.format(date));
     }
 
-    public void calcScore()
+    public int calcScore()
     {
-
+        //temp
+        return 5;
     }
 
     @Override

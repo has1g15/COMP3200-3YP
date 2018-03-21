@@ -19,6 +19,6 @@ public class StatsListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        MainFrame.mainFrame.updatePanel(new StatsPage(900, 600));
+        MainFrame.mainFrame.updatePanel(new StatsPage(MainFrame.WIDTH/6, 0, MainFrame.PANEL_WIDTH, MainFrame.HEIGHT));
     }
 }

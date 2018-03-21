@@ -4,7 +4,7 @@ import Controller.ExerciseListener;
 
 import javax.swing.*;
 
-public class QuizResult {
+public class QuizResult extends JPanel {
 
     private JButton exercise;
 

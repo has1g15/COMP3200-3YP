@@ -7,9 +7,9 @@ public class Quiz {
     private String language, skill;
     private List<String> questions;
     private List<String[]> answers;
-    private Date dateCompleted;
+    private String dateCompleted;
     private HashMap<String, String> quizData;
-    private int quizID, score;
+    private int quizID, quizScore;
 
     public Quiz(String language, String skill)
     {
@@ -54,5 +54,15 @@ public class Quiz {
             answers.add(entry.getValue().split("\\$"));
 
         }
+    }
+
+    public void setDateCompleted(String date)
+    {
+        dateCompleted = date;
+    }
+
+    public void setScore(int score)
+    {
+        quizScore = score;
     }
 }

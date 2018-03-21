@@ -32,7 +32,6 @@ public class QuizScreen extends JPanel {
         this.add(title);
 
         quizPanel = new JPanel();
-        //quizPanel.setPreferredSize(new Dimension(width, height*5/6));
 
         questionLabels = new JLabel[10];
         checkBoxGroup = new CheckboxGroup[10];
@@ -43,7 +42,6 @@ public class QuizScreen extends JPanel {
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 10, 0);
         gbc.gridwidth=4;
-        //quizPanel.setBorder(BorderFactory.createEmptyBorder(0, this.getWidth()/9, 0, 0));
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
         quizPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
@@ -96,7 +94,6 @@ public class QuizScreen extends JPanel {
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
         scrollPanel.setPreferredSize(new Dimension(width, height*4/5));
-        //quizPanel.setAutoscrolls(true);
         this.add(scrollPanel);
     }
 }

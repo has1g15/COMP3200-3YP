@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class StatsPage extends JPanel {
 
-    public StatsPage(int width, int height)
+    public StatsPage(int x, int y, int width, int height)
     {
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
     }
 }

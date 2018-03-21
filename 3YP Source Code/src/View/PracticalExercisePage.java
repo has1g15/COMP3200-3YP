@@ -1,6 +1,8 @@
 package View;
 
-public class PracticalExercisePage {
+import javax.swing.*;
+
+public class PracticalExercisePage extends JPanel{
 
     public PracticalExercisePage()
     {

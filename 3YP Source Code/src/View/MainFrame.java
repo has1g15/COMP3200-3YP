@@ -2,8 +2,6 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -23,16 +21,13 @@ public class MainFrame extends JFrame {
         System.out.println(WIDTH);
         System.out.println(HEIGHT);
         this.setTitle("Graphical Programming E-Learning Platform");
-        //this.setLayout(new FlowLayout());
         panel = new MainPanel(PANEL_X_POS, 0, PANEL_WIDTH, HEIGHT);
-        //this.setSize(WIDTH,HEIGHT);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setResizable(false);
         this.setLayout(null);
         menu = new Menu(0,0,PANEL_X_POS, HEIGHT);
         this.add(menu);
         this.add(panel);
-        //this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

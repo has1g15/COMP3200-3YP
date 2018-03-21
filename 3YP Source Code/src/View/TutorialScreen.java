@@ -1,5 +1,7 @@
 package View;
 
+import Controller.NextListener;
+import Controller.PrevListener;
 import Controller.QuizListener;
 
 import javax.swing.*;
@@ -43,6 +45,7 @@ public class TutorialScreen extends JPanel {
         prevPanel = new JPanel();
         prevPanel.setPreferredSize(new Dimension(width/5, height/7));
         prev = new JButton("prev");
+        prev.addActionListener(new PrevListener());
         prevPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         prevPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         prevPanel.setBackground(new Color(0x0063cc));
@@ -61,6 +64,7 @@ public class TutorialScreen extends JPanel {
         nextPanel = new JPanel();
         nextPanel.setPreferredSize(new Dimension(width/5, height/7));
         next = new JButton("next");
+        next.addActionListener(new NextListener());
         nextPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         nextPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         nextPanel.setBackground(new Color(0x0063cc));

@@ -7,6 +7,11 @@ import java.awt.event.ActionListener;
 
 public class ExitListener implements ActionListener {
 
+    public ExitListener()
+    {
+
+    }
+
     @Override
     public void actionPerformed(ActionEvent e)
     {
