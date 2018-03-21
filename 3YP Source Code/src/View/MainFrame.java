@@ -7,29 +7,32 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
-    //TODO: set bounds on panels
     //TODO: line breaks in formatting table
-    
+
     Menu menu;
     private JPanel panel;
+    public static final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+    public static final int HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+    public static final int PANEL_X_POS = WIDTH/6;
+    public static final int PANEL_WIDTH = WIDTH*5/6;
 
     public static MainFrame mainFrame = new MainFrame();
 
     public void start()
     {
+        System.out.println(WIDTH);
+        System.out.println(HEIGHT);
         this.setTitle("Graphical Programming E-Learning Platform");
         //this.setLayout(new FlowLayout());
-        System.out.println((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth());
-        System.out.println((int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
-        panel = new MainPanel((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth(),
-                (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
-        //this.setSize(1200,600);
+        panel = new MainPanel(PANEL_X_POS, 0, PANEL_WIDTH, HEIGHT);
+        //this.setSize(WIDTH,HEIGHT);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        menu = new Menu((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth()/6,
-                (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
+        this.setResizable(false);
+        this.setLayout(null);
+        menu = new Menu(0,0,PANEL_X_POS, HEIGHT);
         this.add(menu);
         this.add(panel);
-        this.pack();
+        //this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

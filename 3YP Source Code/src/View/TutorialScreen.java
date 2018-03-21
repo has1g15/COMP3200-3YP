@@ -13,23 +13,23 @@ public class TutorialScreen extends JPanel {
     private JLabel taskLabel;
     private JButton prev, next, quiz;
 
-    public TutorialScreen(int width, int height, String language, String skill)
+    public TutorialScreen(int x, int y, int width, int height, String language, String skill)
     {
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
         this.setBackground(new Color(0x3396ff));
         FlowLayout flowLayout = new FlowLayout();
         flowLayout.setHgap(0);
         flowLayout.setVgap(0);
         this.setLayout(flowLayout);
         graphicsPanel = new JPanel();
-        graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*3/4,this.getHeight()*5/6));
+        graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*2/3,this.getHeight()*6/7));
         graphicsPanel.setBackground(new Color(0xebebe0));
 
         guidePanel = new JPanel();
-        guidePanel.setPreferredSize(new Dimension(this.getWidth()/4, this.getHeight()*5/6));
+        guidePanel.setPreferredSize(new Dimension(this.getWidth()/3, this.getHeight()*6/7));
         guidePanel.setBackground(new Color(0x3396ff));
         guidePanel.setLayout(new FlowLayout());
-        guideText = new JTextArea("test test test test test test test test test test", 29, 24);
+        guideText = new JTextArea("test test test test test test test test test test", 30, 24);
         guideText.setFont(new Font("Balsamiq Sand", Font.BOLD, 14));
         guideText.setLineWrap(true);
         guidePane = new JScrollPane(guideText);
@@ -40,11 +40,8 @@ public class TutorialScreen extends JPanel {
         guidePanel.add(guidePane);
         guidePanel.add(quiz);
 
-        blank = new JPanel();
-        blank.setPreferredSize(new Dimension(this.getWidth()/6, 200));
-
         prevPanel = new JPanel();
-        prevPanel.setPreferredSize(new Dimension(200, 200));
+        prevPanel.setPreferredSize(new Dimension(width/5, height/7));
         prev = new JButton("prev");
         prevPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         prevPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
@@ -52,7 +49,7 @@ public class TutorialScreen extends JPanel {
         prevPanel.add(prev);
 
         labelPanel = new JPanel();
-        labelPanel.setPreferredSize(new Dimension(738, 200));
+        labelPanel.setPreferredSize(new Dimension(width*3/5, height/7));
         labelPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         labelPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         labelPanel.setBackground(new Color(0x0063cc));
@@ -62,7 +59,7 @@ public class TutorialScreen extends JPanel {
         labelPanel.add(taskLabel);
 
         nextPanel = new JPanel();
-        nextPanel.setPreferredSize(new Dimension(200, 200));
+        nextPanel.setPreferredSize(new Dimension(width/5, height/7));
         next = new JButton("next");
         nextPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         nextPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
@@ -71,7 +68,6 @@ public class TutorialScreen extends JPanel {
 
         this.add(graphicsPanel);
         this.add(guidePanel);
-        this.add(blank);
         this.add(prevPanel);
         this.add(labelPanel);
         this.add(nextPanel);

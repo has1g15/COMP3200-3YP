@@ -17,14 +17,14 @@ public class MainPanel extends JPanel {
     private JComboBox<String> languageOptions, skillOptions;
     private JButton go;
 
-    public MainPanel(int width, int height)
+    public MainPanel(int x, int y, int width, int height)
     {
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
         this.setLayout(new FlowLayout());
         this.setBackground(new Color(0x0063cc));
         title = new JPanel();
         title.setPreferredSize(new Dimension(width, height*1/3));
-        title.setBorder(BorderFactory.createEmptyBorder(0, 200, 0, 0));
+        //title.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
         title.setBackground(new Color(0x0063cc));
         title.setLayout(new GridBagLayout());
         name = new JLabel("Graphical Programming E-Learning Platform");
@@ -35,7 +35,7 @@ public class MainPanel extends JPanel {
 
         goPanel = new JPanel();
         goPanel.setPreferredSize(new Dimension(width, height*2/3));
-        goPanel.setBorder(BorderFactory.createEmptyBorder(0, 200, 50, 0));
+        //goPanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 50, 0));
         gbc = new GridBagConstraints();
         goPanel.setLayout(new GridBagLayout());
         goPanel.setBackground(new Color(0x3396ff));

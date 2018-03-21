@@ -8,8 +8,6 @@ import java.awt.*;
 
 public class QuizScreen extends JPanel {
 
-    //TODO: fix panel glitch
-
     private JPanel title, quizPanel;
     private JLabel name, instruction;
     private GridBagConstraints gbc;

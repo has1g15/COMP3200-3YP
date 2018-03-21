@@ -17,10 +17,10 @@ public class Menu extends JPanel {
     private GridBagConstraints gbc;
     private Progress progress;
 
-    public Menu(int width, int height)
+    public Menu(int x, int y, int width, int height)
     {
         //TODO: update progress bars from data upon loading menu
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
         this.setBackground(new Color(0X003166));
         this.setLayout(new GridBagLayout());
 
