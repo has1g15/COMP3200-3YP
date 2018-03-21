@@ -3,7 +3,7 @@ package View;
 import Controller.ExitListener;
 import Controller.MenuListener;
 import Controller.StatsListener;
-import Controller.ToolTipsListener;
+import Controller.GuideListener;
 import Model.Progress;
 
 import javax.swing.*;
@@ -58,7 +58,7 @@ public class Menu extends JPanel {
 
         stats = new JButton("View Stats");
         stats.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
-        toolTips = new JButton("Tool Tips");
+        toolTips = new JButton("Help Guide");
         toolTips.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         menu = new JButton("Main Menu");
         menu.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
@@ -83,7 +83,7 @@ public class Menu extends JPanel {
         this.add(exit, gbc);
 
         stats.addActionListener(new StatsListener());
-        toolTips.addActionListener(new ToolTipsListener());
+        toolTips.addActionListener(new GuideListener());
         menu.addActionListener(new MenuListener());
         exit.addActionListener(new ExitListener());
     }
