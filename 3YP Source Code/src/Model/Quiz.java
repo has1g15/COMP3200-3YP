@@ -7,7 +7,6 @@ public class Quiz {
     private String language, skill;
     private List<String> questions;
     private List<String[]> answers;
-    private String[] answerSet;
     private Date dateCompleted;
     private HashMap<String, String> quizData;
     private int quizID, score;

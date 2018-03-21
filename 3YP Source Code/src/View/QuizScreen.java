@@ -47,7 +47,7 @@ public class QuizScreen extends JPanel {
         quizPanel.setLayout(new GridBagLayout());
         quizPanel.setBackground(new Color(0x3396ff));
         quizPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
-        instruction = new JLabel("Please answer\n the following ten questions, selecting one of the 4 answers for each");
+        instruction = new JLabel("Please answer" + System.lineSeparator() + "the following ten questions, selecting one of the 4 answers for each");
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
 
@@ -90,7 +90,7 @@ public class QuizScreen extends JPanel {
 
         submit = new JButton("Submit");
         quizPanel.add(submit, gbc);
-        submit.addActionListener(new QuizCalculator());
+        submit.addActionListener(new QuizCalculator(quizListener.getQuiz()));
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
         scrollPanel.setPreferredSize(new Dimension(width, height*4/5));

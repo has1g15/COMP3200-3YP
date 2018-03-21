@@ -12,8 +12,6 @@ public class QuizListener implements ActionListener {
 
     private String language, skill;
     private Quiz quiz;
-    private List<String> questions;
-    private List<String[]> answers;
 
     public QuizListener(String language, String skill)
     {
@@ -47,5 +45,10 @@ public class QuizListener implements ActionListener {
     public List<String[]> getAnswers()
     {
         return quiz.getAnswers();
+    }
+
+    public Quiz getQuiz()
+    {
+        return quiz;
     }
 }
