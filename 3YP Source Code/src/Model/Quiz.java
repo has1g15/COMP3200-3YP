@@ -50,9 +50,7 @@ public class Quiz {
     {
         for (Map.Entry<String, String> entry : quizData.entrySet())
         {
-            System.out.println(entry.getValue());
             answers.add(entry.getValue().split("\\$"));
-
         }
     }
 

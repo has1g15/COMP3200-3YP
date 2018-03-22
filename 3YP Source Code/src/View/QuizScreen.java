@@ -5,6 +5,10 @@ import Controller.QuizListener;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuizScreen extends JPanel {
 
@@ -14,10 +18,17 @@ public class QuizScreen extends JPanel {
     private JScrollPane scrollPanel;
     private JLabel[] questionLabels;
     private CheckboxGroup[] checkBoxGroup;
+    private Checkbox[] cb1, cb2, cb3, cb4;
     private JButton submit;
+    private List<String> chosenAnswers;
+    private List<String> correctAnswers;
+    private int i;
 
     public QuizScreen(int x, int y, int width, int height, QuizListener quizListener)
     {
+        correctAnswers = new ArrayList<>();
+        chosenAnswers = new ArrayList<>();
+
         this.setBounds(x, y, width, height);
         this.setLayout(new FlowLayout());
         this.setBackground(new Color(0x0063cc));
@@ -35,6 +46,10 @@ public class QuizScreen extends JPanel {
 
         questionLabels = new JLabel[10];
         checkBoxGroup = new CheckboxGroup[10];
+        cb1 = new Checkbox[10];
+        cb2 = new Checkbox[10];
+        cb3 = new Checkbox[10];
+        cb4 = new Checkbox[10];
 
         gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -51,7 +66,7 @@ public class QuizScreen extends JPanel {
         quizPanel.add(instruction, gbc);
         gbc.gridy++;
 
-        for (int i = 0; i < 10; i++)
+        for (i = 0; i < 10; i++)
         {
             questionLabels[i] = new JLabel(i+1 + ") " + quizListener.getQuestions().get(i));
             questionLabels[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
@@ -60,40 +75,110 @@ public class QuizScreen extends JPanel {
             quizPanel.add(questionLabels[i], gbc);
             gbc.gridy++;
             checkBoxGroup[i] = new CheckboxGroup();
-            Checkbox cb1 = new Checkbox(quizListener.getAnswers().get(i)[0], checkBoxGroup[i],false);
-            System.out.println(quizListener.getAnswers().get(i)[0]);
-            cb1.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-            cb1.setForeground(new Color(0x003166));
-            Checkbox cb2 = new Checkbox(quizListener.getAnswers().get(i)[1], checkBoxGroup[i],false);
-            System.out.println(quizListener.getAnswers().get(i)[1]);
-            cb2.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-            cb2.setForeground(new Color(0x003166));
-            Checkbox cb3 = new Checkbox(quizListener.getAnswers().get(i)[2], checkBoxGroup[i],false);
-            System.out.println(quizListener.getAnswers().get(i)[2]);
-            cb3.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-            cb3.setForeground(new Color(0x003166));
-            Checkbox cb4 = new Checkbox(quizListener.getAnswers().get(i)[3], checkBoxGroup[i],false);
-            System.out.println(quizListener.getAnswers().get(i)[3]);
-            cb4.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-            cb4.setForeground(new Color(0x003166));
+            cb1[i] = new Checkbox(quizListener.getAnswers().get(i)[0], checkBoxGroup[i],false);
+            cb1[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb1[i].setForeground(new Color(0x003166));
+            cb1[i].addItemListener(new ItemListener() {
+                @Override
+                public void itemStateChanged(ItemEvent e)
+                {
+                    if (e.getStateChange() == ItemEvent.SELECTED)
+                    {
+                        System.out.println((String)e.getItem());
+                        chosenAnswers.add((String)e.getItem());
+                    }
+                    else
+                    {
+                        chosenAnswers.remove(e.getItem());
+                    }
+                }
+            });
+            cb2[i] = new Checkbox(quizListener.getAnswers().get(i)[1], checkBoxGroup[i],false);
+            cb2[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb2[i].setForeground(new Color(0x003166));
+            cb2[i].addItemListener(new ItemListener() {
+                @Override
+                public void itemStateChanged(ItemEvent e)
+                {
+                    if (e.getStateChange() == ItemEvent.SELECTED)
+                    {
+                        chosenAnswers.add((String)e.getItem());
+                    }
+                    else
+                    {
+                        chosenAnswers.remove(e.getItem());
+                    }
+                }
+            });
+            cb3[i] = new Checkbox(quizListener.getAnswers().get(i)[2], checkBoxGroup[i],false);
+            cb3[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb3[i].setForeground(new Color(0x003166));
+            cb3[i].addItemListener(new ItemListener() {
+                @Override
+                public void itemStateChanged(ItemEvent e)
+                {
+                    if (e.getStateChange() == ItemEvent.SELECTED)
+                    {
+                        chosenAnswers.add((String)e.getItem());
+                    }
+                    else
+                    {
+                        chosenAnswers.remove(e.getItem());
+                    }
+                }
+            });
+            cb4[i] = new Checkbox(quizListener.getAnswers().get(i)[3], checkBoxGroup[i],false);
+            cb4[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb4[i].setForeground(new Color(0x003166));
+            cb4[i].addItemListener(new ItemListener() {
+                @Override
+                public void itemStateChanged(ItemEvent e)
+                {
+                    if (e.getStateChange() == ItemEvent.SELECTED)
+                    {
+                        chosenAnswers.add((String)e.getItem());
+                    }
+                    else
+                    {
+                        chosenAnswers.remove(e.getItem());
+                    }
+                }
+            });
+            //correctAnswers.add(quizListener.getAnswers().get(i)[4]);
             gbc.gridwidth=1;
-            quizPanel.add(cb1, gbc);
+            quizPanel.add(cb1[i], gbc);
             gbc.gridx++;
-            quizPanel.add(cb2, gbc);
+            quizPanel.add(cb2[i], gbc);
             gbc.gridx++;
-            quizPanel.add(cb3, gbc);
+            quizPanel.add(cb3[i], gbc);
             gbc.gridx++;
-            quizPanel.add(cb4, gbc);
+            quizPanel.add(cb4[i], gbc);
             gbc.gridx = 0;
             gbc.gridy++;
         }
 
         submit = new JButton("Submit");
         quizPanel.add(submit, gbc);
-        submit.addActionListener(new QuizCalculator(quizListener.getQuiz()));
+        submit.addActionListener(new QuizCalculator(quizListener.getQuiz(), this));
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
         scrollPanel.setPreferredSize(new Dimension(width, height*4/5));
         this.add(scrollPanel);
+    }
+
+    public List<String> getSelectedAnswers()
+    {
+        System.out.println("hi");
+        /*chosenAnswers = new ArrayList<>();
+        for (int i = 0; i < 10; i++)
+        {
+            chosenAnswers.add(checkBoxGroup[i].getSelectedCheckbox().getLabel());
+        }*/
+        return chosenAnswers;
+    }
+
+    public List<String> getCorrectAnswers()
+    {
+        return correctAnswers;
     }
 }

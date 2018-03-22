@@ -1,10 +1,7 @@
 package Model;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.almworks.sqlite4java.SQLiteConnection;
 import com.almworks.sqlite4java.SQLiteException;
@@ -29,6 +26,7 @@ public class DataHandler {
     private HashMap<String, String> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
                                                       javaMcqData, javaScriptMcqData, pythonMcqData;
+    private List<String> mcqAnswers;
     private HashMap<Integer, String> javaExerciseData, javaScriptExerciseData, pythonExerciseData;
     private HashMap<String, Integer> skillMap;
 
@@ -168,18 +166,19 @@ public class DataHandler {
         try
         {
             SQLiteStatement stat = c.prepare("SELECT * FROM " + javaMcqTable);
-            javaMcqData = new HashMap<>();
+            javaMcqData = new LinkedHashMap<>();
             while (stat.step())
             {
                 Integer mcqID = stat.columnInt(0);
                 String questions = stat.columnString(1);
-                String answers = stat.columnString(2) + stat.columnString(3) + stat.columnString(4) + stat.columnString(5);
+                String answers = stat.columnString(2) + stat.columnString(3) + stat.columnString(4) +
+                        stat.columnString(5); //+ stat.columnString(6);
 
                 HashMap<String, String> mcqQuestions = javaMcqData.get(mcqID);
                 //Check if mcq already exists otherwise create map for mcq
                 if (mcqQuestions == null)
                 {
-                    mcqQuestions = new HashMap<>();
+                    mcqQuestions = new LinkedHashMap<>();
                     javaMcqData.put(mcqID, mcqQuestions);
                 }
                 mcqQuestions.put(questions, answers);
@@ -223,7 +222,6 @@ public class DataHandler {
 
     public HashMap<String, String> getAppData()
     {
-
         return appData;
     }
 
