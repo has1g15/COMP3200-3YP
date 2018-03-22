@@ -18,8 +18,6 @@ public class MainFrame extends JFrame {
 
     public void start()
     {
-        System.out.println(WIDTH);
-        System.out.println(HEIGHT);
         this.setTitle("Graphical Programming E-Learning Platform");
         panel = new MainPanel(PANEL_X_POS, 0, PANEL_WIDTH, HEIGHT);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);

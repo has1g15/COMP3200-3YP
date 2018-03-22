@@ -10,6 +10,8 @@ public class QuizResult extends JPanel {
 
     public QuizResult(int score)
     {
+        exercise = new JButton("Complete Exercise");
         exercise.addActionListener(new ExerciseListener());
+        this.add(exercise);
     }
 }
