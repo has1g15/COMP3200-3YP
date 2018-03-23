@@ -197,7 +197,57 @@ public class DataHandler {
 
     public void loadPracticalQuestions()
     {
+        System.out.println("Loading data from " + javaPracticalQuestions);
+        System.out.println("Loading data from " + javaScriptPracticalQuestions);
+        System.out.println("Loading data from " + pythonPracticalQuestions);
 
+        int count = 0;
+        try
+        {
+            SQLiteStatement javaStat = c.prepare("SELECT * FROM " + javaPracticalQuestions);
+            SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptPracticalQuestions);
+            SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonPracticalQuestions);
+
+            //change hashmaps to multimaps/add extra field for ordered answers
+            javaExerciseData = new LinkedHashMap<>();
+            javaScriptExerciseData = new LinkedHashMap<>();
+            pythonExerciseData = new LinkedHashMap<>();
+
+            while (javaStat.step())
+            {
+                Integer exerciseID = javaStat.columnInt(0);
+                String codeLine = javaStat.columnString(1);
+                javaExerciseData.put(exerciseID, codeLine);
+                count++;
+            }
+
+            javaStat.dispose();
+            System.out.println("Loaded " + count + " exercises from " + javaExerciseData.size() + " Java exercises");
+
+            while (javaScriptStat.step())
+            {
+                Integer exerciseID = javaStat.columnInt(0);
+                String codeLine = javaStat.columnString(1);
+                javaScriptExerciseData.put(exerciseID, codeLine);
+                count++;
+            }
+            javaScriptStat.dispose();
+            System.out.println("Loaded " + count + " exercises from " + javaScriptExerciseData.size() + " JavaScript exercises");
+
+            while (pythonStat.step())
+            {
+                Integer exerciseID = javaStat.columnInt(0);
+                String codeLine = javaStat.columnString(1);
+                pythonExerciseData.put(exerciseID, codeLine);
+                count++;
+            }
+            pythonStat.dispose();
+            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");
+        }
+        catch (SQLiteException e)
+        {
+            error(e);
+        }
     }
 
     public void loadSkillMap()
