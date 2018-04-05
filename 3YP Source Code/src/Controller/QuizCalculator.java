@@ -13,14 +13,16 @@ import java.util.List;
 public class QuizCalculator implements ActionListener {
 
     private int score;
+    private QuizListener quizListener;
     private QuizScreen quizScreen;
     private Quiz quiz;
     private List<String> selectedAnswers, correctAnswers;
 
-    public QuizCalculator(Quiz quiz, QuizScreen quizScreen)
+    public QuizCalculator(QuizListener quizListener, QuizScreen quizScreen, Quiz quiz)
     {
+        this.quizListener = quizListener;
         this.quizScreen = quizScreen;
-
+        this.quiz = quiz;
     }
 
     public int calcScore()
@@ -48,7 +50,7 @@ public class QuizCalculator implements ActionListener {
         LocalDate date = LocalDate.now();
         quiz.setDateCompleted(formatter.format(date));
         calcScore();
-        new QuizResult(score);
+        new QuizResult(score, quizListener);
     }
 
     public void updateAppData()

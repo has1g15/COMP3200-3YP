@@ -1,5 +1,6 @@
 package View;
 
+import Controller.ExerciseListener;
 import Controller.NextListener;
 import Controller.PrevListener;
 import Controller.QuizListener;
@@ -9,11 +10,11 @@ import java.awt.*;
 
 public class TutorialScreen extends JPanel {
 
-    private JPanel graphicsPanel, guidePanel, prevPanel, labelPanel, nextPanel, blank;
+    private JPanel graphicsPanel, guidePanel, prevPanel, labelPanel, nextPanel;
     private JScrollPane guidePane;
     private JTextArea guideText;
     private JLabel taskLabel;
-    private JButton prev, next, quiz;
+    private JButton prev, next, quiz, exercise;
 
     public TutorialScreen(int x, int y, int width, int height, String language, String skill)
     {
@@ -36,11 +37,15 @@ public class TutorialScreen extends JPanel {
         guideText.setLineWrap(true);
         guidePane = new JScrollPane(guideText);
         quiz = new JButton("Quiz Out");
+        exercise = new JButton("Take Exercise");
         quiz.setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
         quiz.addActionListener(new QuizListener(language, skill));
+        exercise.setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
+        exercise.addActionListener(new ExerciseListener(language, skill));
         guidePanel.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
         guidePanel.add(guidePane);
         guidePanel.add(quiz);
+        guidePanel.add(exercise);
 
         prevPanel = new JPanel();
         prevPanel.setPreferredSize(new Dimension(width/5, height/7));

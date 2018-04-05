@@ -4,7 +4,7 @@ public class PracticalExercise {
 
     private String question;
 
-    public PracticalExercise()
+    public PracticalExercise(String language, String skill)
     {
 
     }

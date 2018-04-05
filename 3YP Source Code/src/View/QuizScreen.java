@@ -159,7 +159,7 @@ public class QuizScreen extends JPanel {
 
         submit = new JButton("Submit");
         quizPanel.add(submit, gbc);
-        submit.addActionListener(new QuizCalculator(quizListener.getQuiz(), this));
+        submit.addActionListener(new QuizCalculator(quizListener, this, quizListener.getQuiz()));
         scrollPanel = new JScrollPane(quizPanel);
         scrollPanel.setLayout(new ScrollPaneLayout());
         scrollPanel.setPreferredSize(new Dimension(width, height*4/5));
