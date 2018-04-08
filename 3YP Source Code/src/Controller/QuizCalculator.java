@@ -1,8 +1,10 @@
 package Controller;
 
 import Model.Quiz;
+import View.MainFrame;
 import View.QuizResult;
 import View.QuizScreen;
+import View.TutorialScreen;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,7 +56,8 @@ public class QuizCalculator implements ActionListener {
         LocalDate date = LocalDate.now();
         quiz.setDateCompleted(formatter.format(date));
         calcScore();
-        new QuizResult(score, quizListener);
+        MainFrame.mainFrame.updatePanel(new QuizResult(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
+                MainFrame.HEIGHT, score, quizListener));
     }
 
     public void updateAppData()
