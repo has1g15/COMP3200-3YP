@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class QuizScreen extends JPanel {
@@ -20,14 +21,14 @@ public class QuizScreen extends JPanel {
     private CheckboxGroup[] checkBoxGroup;
     private Checkbox[] cb1, cb2, cb3, cb4;
     private JButton submit;
-    private List<String> chosenAnswers;
+    private String[] chosenAnswers;
     private List<String> correctAnswers;
     private int i;
 
     public QuizScreen(int x, int y, int width, int height, QuizListener quizListener)
     {
         correctAnswers = new ArrayList<>();
-        chosenAnswers = new ArrayList<>();
+        chosenAnswers = new String[10];
 
         this.setBounds(x, y, width, height);
         this.setLayout(new FlowLayout());
@@ -68,6 +69,7 @@ public class QuizScreen extends JPanel {
 
         for (i = 0; i < 10; i++)
         {
+            correctAnswers.add(quizListener.getAnswers().get(i)[4]);
             questionLabels[i] = new JLabel(i+1 + ") " + quizListener.getQuestions().get(i));
             questionLabels[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
             questionLabels[i].setForeground(Color.WHITE);
@@ -84,12 +86,7 @@ public class QuizScreen extends JPanel {
                 {
                     if (e.getStateChange() == ItemEvent.SELECTED)
                     {
-                        System.out.println((String)e.getItem());
-                        chosenAnswers.add((String)e.getItem());
-                    }
-                    else
-                    {
-                        chosenAnswers.remove(e.getItem());
+                        chosenAnswers[Arrays.asList(cb1).indexOf(e.getSource())] = (String)e.getItem();
                     }
                 }
             });
@@ -102,11 +99,7 @@ public class QuizScreen extends JPanel {
                 {
                     if (e.getStateChange() == ItemEvent.SELECTED)
                     {
-                        chosenAnswers.add((String)e.getItem());
-                    }
-                    else
-                    {
-                        chosenAnswers.remove(e.getItem());
+                        chosenAnswers[Arrays.asList(cb2).indexOf(e.getSource())] = (String)e.getItem();
                     }
                 }
             });
@@ -119,11 +112,7 @@ public class QuizScreen extends JPanel {
                 {
                     if (e.getStateChange() == ItemEvent.SELECTED)
                     {
-                        chosenAnswers.add((String)e.getItem());
-                    }
-                    else
-                    {
-                        chosenAnswers.remove(e.getItem());
+                        chosenAnswers[Arrays.asList(cb3).indexOf(e.getSource())] = (String)e.getItem();
                     }
                 }
             });
@@ -136,15 +125,11 @@ public class QuizScreen extends JPanel {
                 {
                     if (e.getStateChange() == ItemEvent.SELECTED)
                     {
-                        chosenAnswers.add((String)e.getItem());
-                    }
-                    else
-                    {
-                        chosenAnswers.remove(e.getItem());
+                        chosenAnswers[Arrays.asList(cb4).indexOf(e.getSource())] = (String)e.getItem();
                     }
                 }
             });
-            //correctAnswers.add(quizListener.getAnswers().get(i)[4]);
+
             gbc.gridwidth=1;
             quizPanel.add(cb1[i], gbc);
             gbc.gridx++;
@@ -166,14 +151,8 @@ public class QuizScreen extends JPanel {
         this.add(scrollPanel);
     }
 
-    public List<String> getSelectedAnswers()
+    public String[] getSelectedAnswers()
     {
-        System.out.println("hi");
-        /*chosenAnswers = new ArrayList<>();
-        for (int i = 0; i < 10; i++)
-        {
-            chosenAnswers.add(checkBoxGroup[i].getSelectedCheckbox().getLabel());
-        }*/
         return chosenAnswers;
     }
 

@@ -172,7 +172,7 @@ public class DataHandler {
                 Integer mcqID = stat.columnInt(0);
                 String questions = stat.columnString(1);
                 String answers = stat.columnString(2) + stat.columnString(3) + stat.columnString(4) +
-                        stat.columnString(5); //+ stat.columnString(6);
+                        stat.columnString(5) + stat.columnString(6);
 
                 HashMap<String, String> mcqQuestions = javaMcqData.get(mcqID);
                 //Check if mcq already exists otherwise create map for mcq

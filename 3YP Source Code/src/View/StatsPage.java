@@ -63,5 +63,6 @@ public class StatsPage extends JPanel {
         panel.add(pythonStats);
 
         this.add(panel);
+
     }
 }

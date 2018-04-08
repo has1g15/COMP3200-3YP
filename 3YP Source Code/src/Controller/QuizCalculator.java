@@ -16,7 +16,8 @@ public class QuizCalculator implements ActionListener {
     private QuizListener quizListener;
     private QuizScreen quizScreen;
     private Quiz quiz;
-    private List<String> selectedAnswers, correctAnswers;
+    private List<String> correctAnswers;
+    private String[] selectedAnswers;
 
     public QuizCalculator(QuizListener quizListener, QuizScreen quizScreen, Quiz quiz)
     {
@@ -31,14 +32,17 @@ public class QuizCalculator implements ActionListener {
         score = 0;
         for (String chosenAnswer: selectedAnswers)
         {
-            if (chosenAnswer == correctAnswers.get(index))
+            System.out.println(chosenAnswer);
+            System.out.println(correctAnswers.get(index));
+            System.out.print(index);
+            if (chosenAnswer.equals(correctAnswers.get(index)))
             {
                 score++;
             }
             index++;
         }
-        //return score;
-        return 5;
+        System.out.println(score);
+        return score;
     }
 
     @Override

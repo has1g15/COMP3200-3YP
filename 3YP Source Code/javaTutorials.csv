@@ -1,0 +1,3 @@
+﻿1,"In this tutorial, we are going to learn how to print out data to the console and declare and initialise variables as well as a selection of the data types available in Java.",Welcome to Java Tutorial 1,This is the console
+1,"To print to the console, we use the following: System.out.print();. We enclose the data we want to print within the brackets. For now, we will use a String type - essentially text surrounded by double quotation marks","System.out.print(""Hello!"");",Hello!
+1,,,

@@ -1,28 +1,30 @@
-1,PRINT 'Hello World!' to the console,System.out.print('Hello World!'),"$System.out.print(""Hello World!"")","$System.out.print(""Hello World!""); ",$System.out.print('Hello World!');
-1,Declare and initialise a STRING variable,"string hello = ""hello"";","$String hello = ""hello"";","$String hello = ""hello"";",$String hello = 'hello';
-1,Declare an INTEGER variable,int n,$integer n;,$Int n;,$int n;
-1,Declare and initialise a CHARACTER variable,Char character;,"$char character = ""c"";",$char character = 'c';,$char character = c;
-1,Declare and initialise a BOOLEAN variable ,boolean b = false;,$bool b = false;,$boolean b = 'false';,"$boolean b = ""false"";"
-1,Declare and initialise a FLOAT variable,float f = 5;,$Float f = 5.0;,$float f = 5,$float f = 5.0;
-1,PRINT the INTEGER variable n,system.out.print(n);,"$System.out.print(""n"");",$System.out.print('n');,$System.out.print(n);
-1,Declare and initialise a variable whose value CANNOT be changed,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
-1,Declare a variable which can ONLY be accessed from where it is declared,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
-1,Declare a variable which can be accessed from ANYWHERE within an application,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";"
-2,Write a SINGLE line comment ,/This is a comment,$/*This is a comment,$//This is a comment,$/This is a comment/
+1,PRINT 'Hello World!' to the console,System.out.print('Hello World!'),"$System.out.print(""Hello World!"")","$System.out.print(""Hello World!""); ",$System.out.print('Hello World!');,"$System.out.print(""Hello World!""); "
+1,Declare and initialise a STRING variable,"string hello = ""hello"";","$String hello = ""hello"";",$String hello = hello;,$String hello = 'hello';,"$String hello = ""hello"";"
+1,Declare an INTEGER variable,int n,$integer n;,$Int n;,$int n;,$int n;
+1,Declare and initialise a CHARACTER variable,Char character;,"$char character = ""c"";",$char character = 'c';,$char character = c;,$char character = 'c';
+1,Declare and initialise a BOOLEAN variable ,boolean b = false;,$bool b = false;,$boolean b = 'false';,"$boolean b = ""false"";",$boolean b = false;
+1,Declare and initialise a FLOAT variable,float f = 5;,$Float f = 5.0;,$float f = 5,$float f = 5.0;,$float f = 5.0;
+1,PRINT the INTEGER variable n,system.out.print(n);,"$System.out.print(""n"");",$System.out.print('n');,$System.out.print(n);,$System.out.print(n);
+1,Declare and initialise a variable whose value CANNOT be changed,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";","$final String hello = ""hello"";"
+1,Declare a variable which can ONLY be accessed from where it is declared,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";","$private String hello = ""hello"";"
+1,Declare a variable which can be accessed from ANYWHERE within an application,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";","$public String hello = ""hello"";"
+2,Write a SINGLE line comment ,/This is a comment,$/*This is a comment,$//This is a comment,$/This is a comment/,$//This is a comment
 2,Write a MULTILINE comment ,"""//This is
 a comment//""","""$/*This is
 a comment""","""$*/This is
 a comment/*""","""$/*This is 
+a comment*/""","""$/*This is 
 a comment*/"""
-2,What would you use to print text to a NEW line in the console?,"System.out.print(""Hello!"");","$System.out.printline(""Hello!"");","$System.out.println(""Hello!"");","$System.out.Printline(""Hello!"");"
+2,What would you use to print text to a NEW line in the console?,"System.out.print(""Hello!"");","$System.out.printline(""Hello!"");","$System.out.println(""Hello!"");","$System.out.Printline(""Hello!"");","$System.out.println(""Hello!"");"
 2,What is the structure of the MAIN method in Java?,"""public static main (String args) {
 }""","""$public static void main (String[] args) {
 }""","""$public static void programMain (String[] args) {
 }""","""$public static void main (String args) {
+}""","""$public static void main (String[] args) {
 }"""
-2,"When using the format method, which of the following conversions is true?",d formats an integer value as a decimal value,$d formats a decimal value as an integer,$n formats an integer value as a decimal value,$n formats a decimal value as an integer
-2,What is the most MEANINGFUL name for a variable denoting the name of a student?,studentName,$studname,$sn,$nameofastudent
-2,Write the variable 'average group size' in CAMELCASE ,averageGroupSize,$aVeRaGeGrOuPsIzE,$AveragegroupsizE,$Average_Group_Size
-2,How do you import the library needed to read user input to the console? ,import javaScanner;,$import java.scanner;,$import java.util.Scanner;,$import java.util.inputReader;
-2,How do you read in STRING input?,String input = scanner.nextstring();,$String input = scanner.nextLine();,$String input = scanner.readLine();,$Scanner input = scanner.nextString();
-2,How do you read in INTEGER input? ,int input = scanner.nextInteger();,$int input = scanner.readInt();,$int input = scanner.readInteger();,$int input = scanner.nextInt();
+2,"When using the format method, which of the following conversions is true?",d formats an integer value as a decimal value,$d formats a decimal value as an integer,$n formats an integer value as a decimal value,$n formats a decimal value as an integer,$d formats an integer value as a decimal value
+2,What is the most MEANINGFUL name for a variable denoting the name of a student?,studentName,$studname,$sn,$nameofastudent,$studentName
+2,Write the variable 'average group size' in CAMELCASE ,averageGroupSize,$aVeRaGeGrOuPsIzE,$AveragegroupsizE,$Average_Group_Size,$averageGroupSize
+2,How do you import the library needed to read user input to the console? ,import javaScanner;,$import java.scanner;,$import java.util.Scanner;,$import java.util.inputReader;,$import java.util.Scanner;
+2,How do you read in STRING input?,String input = scanner.nextstring();,$String input = scanner.nextLine();,$String input = scanner.readLine();,$Scanner input = scanner.nextString();,$String input = scanner.nextLine();
+2,How do you read in INTEGER input? ,int input = scanner.nextInteger();,$int input = scanner.readInt();,$int input = scanner.readInteger();,$int input = scanner.nextInt();,$int input = scanner.nextInt();
