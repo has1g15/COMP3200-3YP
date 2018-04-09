@@ -45,7 +45,7 @@ public class DataHandler {
         {
             error(e);
         }
-        //loadAppData();
+        loadAppData();
         //loadTutorialData();
         loadMcqData();
         loadSkillMap();
@@ -66,11 +66,11 @@ public class DataHandler {
                 String dataField = stat.columnString(1);
                 String data = stat.columnString(2);
 
-                HashMap<String, String> datas = javaTutorialData.get(language);
+                HashMap<String, String> datas = appData.get(language);
                 //Check if tutorial already exists otherwise create map for mcq
                 if (datas == null)
                 {
-                    datas = new HashMap<>();
+                    datas = new LinkedHashMap<>();
                     appData.put(language, datas);
                 }
                 datas.put(dataField, data);
