@@ -49,7 +49,7 @@ public class MainPanel extends JPanel {
         selectSkill.setForeground(Color.WHITE);
         skills = new String[] {"Select a Skill from this Menu", "Printing, Variable Declaration and Data Types",
                 "Formatting and I/O", "Conditional Statements", "Loops", "Operators", "String Handling",
-                "Functions, Procedures and Libraries", "Scope", "Data Structures", "Searching", "Sorting"};
+                "Functions, Procedures and Libraries", "Scope", "Data Structures", "File Handling"};
         skillOptions = new JComboBox<>(skills);
         skill = "";
 
@@ -77,8 +77,6 @@ public class MainPanel extends JPanel {
                 });
             }
         });
-
-
 
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(0, 0, 10, 0);

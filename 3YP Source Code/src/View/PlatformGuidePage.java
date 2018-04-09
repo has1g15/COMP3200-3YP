@@ -10,6 +10,7 @@ public class PlatformGuidePage extends JPanel {
     private LineBorder border;
     private TitledBorder menuNavBorder, tutorialBorder, quizBorder, exerciseBorder, statsBorder, rewardsBorder;
     private JPanel title, guide, menuNav, tutorial, quiz, exercise, stats, rewards;
+    private JTextArea menuText, tutorialText, quizText, exerciseText, statsText, rewardsText;
     private JLabel name;
     private JScrollPane guideScroll;
 
@@ -39,6 +40,18 @@ public class PlatformGuidePage extends JPanel {
         menuNavBorder.setTitleColor(Color.WHITE);
         menuNavBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         menuNav.setBorder(menuNavBorder);
+        menuText = new JTextArea("The application menu consists of a progress overview and some navigation options. You" +
+                " can view your progress percentage in each individual language at the top via the progress bars. There are" +
+                " also options to view a full breakdown of your statistics, access this guide, return to the main menu and" +
+                " exit the application. The menu is available on every page of the application.");
+        menuText.setColumns(90);
+        menuText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        menuText.setBackground(new Color(0x3396ff));
+        menuText.setLineWrap(true);
+        menuText.setWrapStyleWord(true);
+        menuText.setForeground(Color.WHITE);
+        menuText.setEditable(false);
+        menuNav.add(menuText);
         guide.add(menuNav);
 
         tutorial = new JPanel();
@@ -48,6 +61,19 @@ public class PlatformGuidePage extends JPanel {
         tutorialBorder.setTitleColor(Color.WHITE);
         tutorialBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         tutorial.setBorder(tutorialBorder);
+        tutorialText = new JTextArea("After selecting your choice of language and skill, their respective tutorial will" +
+                " be loaded. A tutorial consists of a graphical representation of code executing as well as corresponding" +
+                " information explaining the code. The next and previous buttons can be used to return to and skip steps. " +
+                " At the end of the tutorial, you can take a quiz and an interactive exercise to assess your understanding" +
+                " of the content.");
+        tutorialText.setColumns(90);
+        tutorialText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        tutorialText.setBackground(new Color(0x3396ff));
+        tutorialText.setLineWrap(true);
+        tutorialText.setWrapStyleWord(true);
+        tutorialText.setForeground(Color.WHITE);
+        tutorialText.setEditable(false);
+        tutorial.add(tutorialText);
         guide.add(tutorial);
 
         quiz = new JPanel();
@@ -57,6 +83,19 @@ public class PlatformGuidePage extends JPanel {
         quizBorder.setTitleColor(Color.WHITE);
         quizBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         quiz.setBorder(quizBorder);
+        quizText = new JTextArea("At the end of each tutorial, there is a ten question multiple choice quiz to assess your" +
+                " understanding of the tutorial content. There is the option to take this quiz at any point during" +
+                " the tutorial if you feel comfortable with the content. On submitting, you will receive a score" +
+                " which will be updated on your statistics page and in the menu progress bars. You can retake quizzes at any" +
+                " point to achieve higher scores, these will be updated accordingly.");
+        quizText.setColumns(90);
+        quizText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        quizText.setBackground(new Color(0x3396ff));
+        quizText.setLineWrap(true);
+        quizText.setWrapStyleWord(true);
+        quizText.setForeground(Color.WHITE);
+        quizText.setEditable(false);
+        quiz.add(quizText);
         guide.add(quiz);
 
         exercise = new JPanel();
@@ -66,6 +105,15 @@ public class PlatformGuidePage extends JPanel {
         exerciseBorder.setTitleColor(Color.WHITE);
         exerciseBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         exercise.setBorder(exerciseBorder);
+        exerciseText = new JTextArea("Write description");
+        exerciseText.setColumns(90);
+        exerciseText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        exerciseText.setBackground(new Color(0x3396ff));
+        exerciseText.setLineWrap(true);
+        exerciseText.setWrapStyleWord(true);
+        exerciseText.setForeground(Color.WHITE);
+        exerciseText.setEditable(false);
+        exercise.add(exerciseText);
         guide.add(exercise);
 
         stats = new JPanel();
@@ -75,6 +123,15 @@ public class PlatformGuidePage extends JPanel {
         statsBorder.setTitleColor(Color.WHITE);
         statsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         stats.setBorder(statsBorder);
+        statsText = new JTextArea("Write description");
+        statsText.setColumns(90);
+        statsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        statsText.setBackground(new Color(0x3396ff));
+        statsText.setLineWrap(true);
+        statsText.setWrapStyleWord(true);
+        statsText.setForeground(Color.WHITE);
+        statsText.setEditable(false);
+        stats.add(statsText);
         guide.add(stats);
 
         rewards = new JPanel();
@@ -84,6 +141,15 @@ public class PlatformGuidePage extends JPanel {
         rewardsBorder.setTitleColor(Color.WHITE);
         rewardsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         rewards.setBorder(rewardsBorder);
+        rewardsText = new JTextArea("Write description");
+        rewardsText.setColumns(90);
+        rewardsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+        rewardsText.setBackground(new Color(0x3396ff));
+        rewardsText.setLineWrap(true);
+        rewardsText.setWrapStyleWord(true);
+        rewardsText.setForeground(Color.WHITE);
+        rewardsText.setEditable(false);
+        rewards.add(rewardsText);
         guide.add(rewards);
 
         guideScroll = new JScrollPane(guide);

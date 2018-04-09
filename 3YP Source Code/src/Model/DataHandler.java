@@ -23,7 +23,7 @@ public class DataHandler {
 
     public SQLiteConnection c;
 
-    private HashMap<String, String> appData;
+    private HashMap<String, HashMap<String, String>> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
                                                       javaMcqData, javaScriptMcqData, pythonMcqData;
     private List<String> mcqAnswers;
@@ -62,9 +62,18 @@ public class DataHandler {
             appData = new HashMap<>();
             while (stat.step())
             {
-                String dataField = stat.columnString(0);
-                String data = stat.columnString(1);
-                appData.put(dataField, data);
+                String language = stat.columnString(0);
+                String dataField = stat.columnString(1);
+                String data = stat.columnString(2);
+
+                HashMap<String, String> datas = javaTutorialData.get(language);
+                //Check if tutorial already exists otherwise create map for mcq
+                if (datas == null)
+                {
+                    datas = new HashMap<>();
+                    appData.put(language, datas);
+                }
+                datas.put(dataField, data);
                 count++;
             }
             stat.dispose();
@@ -262,7 +271,7 @@ public class DataHandler {
         skillMap.put("Functions, Procedures and Libraries", 7);
         skillMap.put("Scope", 8);
         skillMap.put("Data Structures", 9);
-        skillMap.put("Searching and Sorting", 10);
+        skillMap.put("File Handling", 10);
     }
 
     public void updateAppData(String field, String data)
@@ -270,9 +279,9 @@ public class DataHandler {
 
     }
 
-    public HashMap<String, String> getAppData()
+    public HashMap<String, String> getAppData(String language)
     {
-        return appData;
+        return appData.get(language);
     }
 
     public HashMap<String, String> getTutorialData(int tutorialID, String language)
