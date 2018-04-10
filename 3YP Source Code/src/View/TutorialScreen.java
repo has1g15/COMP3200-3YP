@@ -10,9 +10,9 @@ import java.awt.*;
 
 public class TutorialScreen extends JPanel {
 
-    private JPanel graphicsPanel, guidePanel, prevPanel, labelPanel, nextPanel;
+    private JPanel graphicsPanel, guidePanel, prevPanel, labelPanel, nextPanel, console, codePanel;
     private JScrollPane guidePane;
-    private JTextArea guideText;
+    private JTextArea guideText, consoleText;
     private JLabel taskLabel;
     private JButton prev, next, quiz, exercise;
 
@@ -24,9 +24,18 @@ public class TutorialScreen extends JPanel {
         flowLayout.setHgap(0);
         flowLayout.setVgap(0);
         this.setLayout(flowLayout);
+        codePanel = new JPanel();
+        codePanel.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()*6/7));
         graphicsPanel = new JPanel();
-        graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*2/3,this.getHeight()*6/7));
+        graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*2/3,this.getHeight()*5/7));
         graphicsPanel.setBackground(new Color(0xebebe0));
+        console = new JPanel();
+        console.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()/7));
+        console.setBackground(Color.BLACK);
+        consoleText = new JTextArea();
+        console.add(consoleText);
+        codePanel.add(graphicsPanel);
+        codePanel.add(console);
 
         guidePanel = new JPanel();
         guidePanel.setPreferredSize(new Dimension(this.getWidth()/3, this.getHeight()*6/7));
@@ -75,7 +84,7 @@ public class TutorialScreen extends JPanel {
         nextPanel.setBackground(new Color(0x0063cc));
         nextPanel.add(next);
 
-        this.add(graphicsPanel);
+        this.add(codePanel);
         this.add(guidePanel);
         this.add(prevPanel);
         this.add(labelPanel);
@@ -90,5 +99,15 @@ public class TutorialScreen extends JPanel {
     public void changeGuideText(String text)
     {
         guideText.setText(text);
+    }
+
+    public void changeCode()
+    {
+
+    }
+
+    public void changeConsoleText()
+    {
+
     }
 }
