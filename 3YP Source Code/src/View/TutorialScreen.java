@@ -7,6 +7,7 @@ import Controller.QuizListener;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class TutorialScreen extends JPanel {
 
@@ -15,6 +16,7 @@ public class TutorialScreen extends JPanel {
     private JTextArea guideText, consoleText;
     private JLabel taskLabel;
     private JButton prev, next, quiz, exercise;
+    private JLayeredPane layeredPane;
 
     public TutorialScreen(int x, int y, int width, int height, String language, String skill)
     {
@@ -24,16 +26,20 @@ public class TutorialScreen extends JPanel {
         flowLayout.setHgap(0);
         flowLayout.setVgap(0);
         this.setLayout(flowLayout);
+
         codePanel = new JPanel();
         codePanel.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()*6/7));
         graphicsPanel = new JPanel();
         graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*2/3,this.getHeight()*5/7));
         graphicsPanel.setBackground(new Color(0xebebe0));
+        layeredPane = new JLayeredPane();
+
         console = new JPanel();
         console.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()/7));
         console.setBackground(Color.BLACK);
         consoleText = new JTextArea();
         console.add(consoleText);
+
         codePanel.add(graphicsPanel);
         codePanel.add(console);
 
@@ -89,6 +95,33 @@ public class TutorialScreen extends JPanel {
         this.add(prevPanel);
         this.add(labelPanel);
         this.add(nextPanel);
+    }
+
+    public void createLayeredPanes(ArrayList<String> code)
+    {
+        Color colour;
+        for (int i = 0; i < code.size(); i++)
+        {
+            JTextArea text = new JTextArea();
+            if (code.get(i).contains("@"))
+            {
+                code.get(i).replace("@", "");
+                colour = Color.ORANGE;
+                text.setBackground(colour);
+            }
+            else
+            {
+                colour = new Color(0xebebe0);
+                text.setBackground(colour);
+            }
+            text.setBounds(0,0,this.getWidth()/4, this.getHeight()/4);
+            layeredPane.add(text);
+        }
+    }
+
+    public JLayeredPane getLayeredPane()
+    {
+       return layeredPane;
     }
 
     public void drawGraphic(Graphics2D g2)
