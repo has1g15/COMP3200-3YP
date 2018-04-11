@@ -7,6 +7,7 @@ import Controller.QuizListener;
 import Model.Tutorial;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,9 +21,11 @@ public class TutorialScreen extends JPanel {
     private JButton prev, next, quiz, exercise;
     private JLayeredPane layeredPane;
     private GridBagConstraints gbc;
+    private Tutorial tutorial;
 
     public TutorialScreen(int x, int y, int width, int height, String language, String skill, Tutorial tutorial)
     {
+        this.tutorial = tutorial;
         this.setBounds(x, y, width, height);
         this.setBackground(new Color(0x3396ff));
         FlowLayout flowLayout = new FlowLayout();
@@ -43,7 +46,12 @@ public class TutorialScreen extends JPanel {
         console = new JPanel();
         console.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()/7));
         console.setBackground(Color.BLACK);
+        console.setLayout(new BorderLayout());
+        console.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 0));
         consoleText = new JTextArea();
+        consoleText.setBackground(Color.BLACK);
+        consoleText.setForeground(Color.WHITE);
+        consoleText.setFont(new Font("Courier New", Font.BOLD, 14));
         console.add(consoleText);
 
         codePanel.add(graphicsPanel);
@@ -56,6 +64,7 @@ public class TutorialScreen extends JPanel {
         guideText = new JTextArea("test test test test test test test test test test", 30, 24);
         guideText.setFont(new Font("Balsamiq Sand", Font.BOLD, 14));
         guideText.setLineWrap(true);
+        guideText.setWrapStyleWord(true);
         guidePane = new JScrollPane(guideText);
         quiz = new JButton("Quiz Out");
         exercise = new JButton("Take Exercise");
@@ -106,15 +115,19 @@ public class TutorialScreen extends JPanel {
     public void createLayeredPanes(ArrayList<String> code)
     {
         int offset = 60;
-        int scale = 3;
+        int xScale = 2;
+        int yScale = 2;
 
         layeredPane = new JLayeredPane();
         layeredPane.setPreferredSize(new Dimension(graphicsPanel.getWidth()*3/4, graphicsPanel.getHeight()*3/4));
         Color colour;
         for (int i = 0; i < code.size(); i++)
         {
+            String[] lines = code.get(i).split("\r\n|\r|\n");
+            System.out.println(lines.length);
             JTextArea text = new JTextArea();
             text.setEditable(false);
+            text.setFont(new Font("Courier New", Font.BOLD, 16));
             if (code.get(i).contains("£"))
             {
                 String remove = code.get(i).replace("£", "");
@@ -128,16 +141,12 @@ public class TutorialScreen extends JPanel {
                 text.setBackground(colour);
                 text.setText(code.get(i));
             }
-            text.setBounds(offset*i,offset*i,this.getWidth()/scale, this.getHeight()/scale);
+            text.setBounds(offset*i/2,offset*i*2/3,this.getWidth()/xScale, this.getHeight()/yScale);
             layeredPane.add(text, new Integer(i));
-            scale+=3;
+            xScale+=0.75;
+            yScale+=2;
         }
         graphicsPanel.add(layeredPane, gbc);
-    }
-
-    public void drawGraphic(Graphics2D g2)
-    {
-
     }
 
     public void changeGuideText(String text)
@@ -147,6 +156,9 @@ public class TutorialScreen extends JPanel {
 
     public void changeCode(String text)
     {
+        if (tutorial.getCurrentIndex() > 0) {
+            graphicsPanel.remove(layeredPane);
+        }
         createLayeredPanes(new ArrayList(Arrays.asList(text.split("@"))));
     }
 

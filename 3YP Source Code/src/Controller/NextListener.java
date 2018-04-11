@@ -23,13 +23,15 @@ public class NextListener implements ActionListener {
         tutorial.incrementIndex();
         if (!tutorial.isMaxIndex())
         {
+            System.out.println("It's okay");
             tutorialScreen.changeCode(tutorial.getCurrentCode());
             tutorialScreen.changeConsoleText(tutorial.getCurrentOutput());
             tutorialScreen.changeGuideText(tutorial.getCurrentGuide());
         }
         else
         {
-            //End of tutorial screen?
+            System.out.println("uh oh");
+            //Go to end of tutorial screen
         }
     }
 }

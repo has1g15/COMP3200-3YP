@@ -21,5 +21,9 @@ public class PrevListener implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         tutorial.decrementIndex();
+        if (tutorial.getCurrentIndex() < 0)
+        {
+
+        }
     }
 }

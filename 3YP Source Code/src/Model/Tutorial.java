@@ -8,7 +8,7 @@ import java.util.Map;
 public class Tutorial {
 
     private String language, skill;
-    private int currentIndex, tutorialID, maxIndex;
+    private int currentIndex, tutorialID;
     private HashMap<String, String> tutorialData;
     private List<String> code, output, guides;
 
@@ -24,7 +24,6 @@ public class Tutorial {
 
     public void populateTutorialData()
     {
-        System.out.print("populating");
         tutorialID = DataHandler.dataHandler.getTutorialID(skill);
         tutorialData = DataHandler.dataHandler.getTutorialData(tutorialID, language);
     }
@@ -62,7 +61,6 @@ public class Tutorial {
 
     public String getCurrentCode()
     {
-        System.out.print(code.get(currentIndex));
         return code.get(currentIndex);
     }
 
@@ -88,7 +86,12 @@ public class Tutorial {
 
     public boolean isMaxIndex()
     {
-        return maxIndex == tutorialData.size()-1;
+        return currentIndex == tutorialData.size();
+    }
+
+    public int getCurrentIndex()
+    {
+        return currentIndex;
     }
 
     public void saveProgress()

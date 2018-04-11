@@ -1,11 +1,22 @@
 ﻿1,Welcome to Java Tutorial 1,$This is the console,"In this tutorial, we are going to learn how to print out data to the console and declare and initialise variables as well as a selection of the data types available in Java."
-1,"System.out.print(""Hello!"");",$Hello!,"To print to the console, we use the following: System.out.print();. We enclose the data we want to print within the brackets. For now, we will use a String type - essentially text surrounded by double quotation marks"
+1,"£System.out.print(""Hello!"");",$Hello!,"To print to the console, we use the following: System.out.print();. We enclose the data we want to print within the brackets. For now, we will use a String type - essentially text surrounded by double quotation marks"
+4,Welcome to the Java Loops Tutorial,$This is the console,"In this tutorial, we are going to learn about some of the types of loop we can use in Java. Loops are a concept used for performing operations sequentially until a specified condition is met. We'll start by looking at for loops."
 4,"int num = 5;
 int array = new int[10];
 array[3] = 5;
 
-@£for (int I = 0; I < 10; i++)
+
+
+
+
+
+
+
+
+@£for (int i = 0; i < 10; i++)
 {
+
+
 
 
 
@@ -14,12 +25,50 @@ array[3] = 5;
 }
 @if (array[i] == num)
  {
-          
+ 
+
+
  }
 @System.out.print(""Yes"");",$This is the console,blah blah 1
-4,,$This is the console,blah blah 2
-4,,$This is the console,blah blah 3
-4,,$This is the console,blah blah 4
-4,,$This is the console,blah blah 5
-4,,$This is the console,blah blah 6
-4,,$This is the console,blah blah 7
+4,"int num = 5;
+int array = new int[10];
+array[3] = 5;
+
+@for (int i = 0; i < 10; i++)
+{
+
+
+
+
+
+
+
+}
+@£if (array[i] == num)
+ {
+
+
+          
+ }
+@System.out.print(""Yes"");",$This is the console,blah blah 2
+4,"int num = 5;
+int array = new int[10];
+array[3] = 5;
+
+@for (int i = 0; i < 10; i++)
+{
+
+
+
+
+
+
+
+}
+@if (array[i] == num)
+ {
+
+
+          
+ }
+@£System.out.print(""Yes"");",$This is the console,blah blah 3

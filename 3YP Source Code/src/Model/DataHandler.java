@@ -26,7 +26,6 @@ public class DataHandler {
     private HashMap<String, HashMap<String, String>> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
                                                       javaMcqData, javaScriptMcqData, pythonMcqData;
-    private List<String> mcqAnswers;
     private HashMap<Integer, String> javaExerciseData, javaScriptExerciseData, pythonExerciseData;
     private HashMap<String, Integer> skillMap;
 
@@ -99,7 +98,7 @@ public class DataHandler {
             //SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
             //SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
 
-            javaTutorialData = new HashMap<>();
+            javaTutorialData = new LinkedHashMap<>();
             //javaScriptTutorialData = new HashMap<>();
             //pythonTutorialData = new HashMap<>();
 
@@ -113,7 +112,7 @@ public class DataHandler {
                 //Check if tutorial already exists otherwise create map for mcq
                 if (tutorialContent == null)
                 {
-                    tutorialContent = new HashMap<>();
+                    tutorialContent = new LinkedHashMap<>();
                     javaTutorialData.put(tutorialID, tutorialContent);
                 }
                 tutorialContent.put(example, guide);
