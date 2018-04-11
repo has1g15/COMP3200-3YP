@@ -19,6 +19,7 @@ public class TutorialScreen extends JPanel {
     private JLabel taskLabel;
     private JButton prev, next, quiz, exercise;
     private JLayeredPane layeredPane;
+    private GridBagConstraints gbc;
 
     public TutorialScreen(int x, int y, int width, int height, String language, String skill, Tutorial tutorial)
     {
@@ -34,7 +35,10 @@ public class TutorialScreen extends JPanel {
         graphicsPanel = new JPanel();
         graphicsPanel.setPreferredSize(new Dimension(this.getWidth()*2/3,this.getHeight()*5/7));
         graphicsPanel.setBackground(new Color(0xebebe0));
-        layeredPane = new JLayeredPane();
+        graphicsPanel.setLayout(new GridBagLayout());
+        gbc = new GridBagConstraints();
+        gbc.gridx=0;
+        gbc.gridy=0;
 
         console = new JPanel();
         console.setPreferredSize(new Dimension(this.getWidth()*2/3, this.getHeight()/7));
@@ -101,26 +105,34 @@ public class TutorialScreen extends JPanel {
 
     public void createLayeredPanes(ArrayList<String> code)
     {
+        int offset = 60;
+        int scale = 3;
+
+        layeredPane = new JLayeredPane();
+        layeredPane.setPreferredSize(new Dimension(graphicsPanel.getWidth()*3/4, graphicsPanel.getHeight()*3/4));
         Color colour;
         for (int i = 0; i < code.size(); i++)
         {
             JTextArea text = new JTextArea();
+            text.setEditable(false);
             if (code.get(i).contains("£"))
             {
-                code.get(i).replace("£", "");
+                String remove = code.get(i).replace("£", "");
                 colour = Color.ORANGE;
                 text.setBackground(colour);
-                text.setText(code.get(i));
+                text.setText(remove);
             }
             else
             {
-                colour = new Color(0xebebe0);
+                colour = Color.WHITE;
                 text.setBackground(colour);
                 text.setText(code.get(i));
             }
-            text.setBounds(0,0,this.getWidth()/4, this.getHeight()/4);
-            layeredPane.add(text);
+            text.setBounds(offset*i,offset*i,this.getWidth()/scale, this.getHeight()/scale);
+            layeredPane.add(text, new Integer(i));
+            scale+=3;
         }
+        graphicsPanel.add(layeredPane, gbc);
     }
 
     public void drawGraphic(Graphics2D g2)
@@ -136,7 +148,6 @@ public class TutorialScreen extends JPanel {
     public void changeCode(String text)
     {
         createLayeredPanes(new ArrayList(Arrays.asList(text.split("@"))));
-        graphicsPanel.add(layeredPane);
     }
 
     public void changeConsoleText(String text)
