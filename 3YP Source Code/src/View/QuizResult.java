@@ -11,6 +11,7 @@ public class QuizResult extends JPanel {
     private JPanel title, panel;
     private JLabel name, announce, scoreDisplay, exercisePrompt;
     private JButton exercise;
+    private GridBagConstraints gbc;
 
     public QuizResult(int x, int y, int width, int height, int score, QuizListener quizListener)
     {
@@ -30,21 +31,35 @@ public class QuizResult extends JPanel {
         panel = new JPanel();
         panel.setPreferredSize(new Dimension(width, height*5/6));
         panel.setBackground(new Color(0x3396ff));
+        panel.setLayout(new GridBagLayout());
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(0, 0, 10, 0);
+
         announce = new JLabel("You Scored:");
         announce.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         announce.setForeground(new Color(0x003166));
-        panel.add(announce);
+        panel.add(announce, gbc);
+        gbc.gridy++;
+
         scoreDisplay = new JLabel(Integer.toString(score));
         scoreDisplay.setFont(new Font("Balsamiq Sans", Font.BOLD, 28));
         scoreDisplay.setForeground(new Color(0x003166));
-        panel.add(scoreDisplay);
-        exercisePrompt = new JLabel(Integer.toString(score));
+        panel.add(scoreDisplay, gbc);
+        gbc.gridy++;
+        gbc.insets = new Insets(0, 0, 30, 0);
+
+        exercisePrompt = new JLabel("Complete Exercise in this Skill:");
         exercisePrompt.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         exercisePrompt.setForeground(new Color(0x003166));
-        panel.add(exercisePrompt);
+        panel.add(exercisePrompt,gbc);
+        gbc.gridy++;
+        gbc.insets = new Insets(0, 0, 20, 0);
+
         exercise = new JButton("Complete Exercise");
         exercise.addActionListener(new ExerciseListener(quizListener.getLanguage(), quizListener.getSkill()));
-        panel.add(exercise);
+        panel.add(exercise, gbc);
         this.add(panel);
     }
 }
