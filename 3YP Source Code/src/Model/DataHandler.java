@@ -11,9 +11,9 @@ public class DataHandler {
 
     private final String thirdYPdb = "3YPdb.db";
     private final String appDataTable = "appData";
-    private final String javaTutorialTable = "javaTutorial";
-    private final String javaScriptTutorialTable = "javaScriptTutorial";
-    private final String pythonTutorialTable = "pythonTutorial";
+    private final String javaTutorialTable = "javaTutorials";
+    private final String javaScriptTutorialTable = "javaScriptTutorials";
+    private final String pythonTutorialTable = "pythonTutorials";
     private final String javaMcqTable = "javaMcq";
     private final String javaScriptMcqTable = "javaScriptMcq";
     private final String pythonMcqTable = "pythonMcq";
@@ -46,8 +46,9 @@ public class DataHandler {
             error(e);
         }
         loadAppData();
-        //loadTutorialData();
+        loadTutorialData();
         loadMcqData();
+        //loadPracticalQuestions();
         loadSkillMap();
         finish();
     }
@@ -88,19 +89,19 @@ public class DataHandler {
     public void loadTutorialData()
     {
         System.out.println("Loading data from " + javaTutorialTable);
-        System.out.println("Loading data from " + javaScriptTutorialTable);
-        System.out.println("Loading data from " + pythonTutorialTable);
+        //System.out.println("Loading data from " + javaScriptTutorialTable);
+        //System.out.println("Loading data from " + pythonTutorialTable);
 
         int count = 0;
         try
         {
             SQLiteStatement javaStat = c.prepare("SELECT * FROM " + javaTutorialTable);
-            SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
-            SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
+            //SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
+            //SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
 
             javaTutorialData = new HashMap<>();
-            javaScriptTutorialData = new HashMap<>();
-            pythonTutorialData = new HashMap<>();
+            //javaScriptTutorialData = new HashMap<>();
+            //pythonTutorialData = new HashMap<>();
 
             while (javaStat.step())
             {
@@ -122,7 +123,7 @@ public class DataHandler {
             javaStat.dispose();
             System.out.println("Loaded " + count + " tutorials from " + javaTutorialData.size() + " Java tutorials");
 
-            while (javaScriptStat.step())
+            /*while (javaScriptStat.step())
             {
                 Integer tutorialID = javaScriptStat.columnInt(0);
                 String example = javaScriptStat.columnString(1) + javaScriptStat.columnString(2);
@@ -158,7 +159,7 @@ public class DataHandler {
                 count++;
             }
             pythonStat.dispose();
-            System.out.println("Loaded " + count + " tutorials from " + javaScriptTutorialData.size() + " Python tutorials");
+            System.out.println("Loaded " + count + " tutorials from " + javaScriptTutorialData.size() + " Python tutorials");*/
         }
         catch (SQLiteException e)
         {
@@ -207,8 +208,8 @@ public class DataHandler {
     public void loadPracticalQuestions()
     {
         System.out.println("Loading data from " + javaPracticalQuestions);
-        System.out.println("Loading data from " + javaScriptPracticalQuestions);
-        System.out.println("Loading data from " + pythonPracticalQuestions);
+        //System.out.println("Loading data from " + javaScriptPracticalQuestions);
+        //System.out.println("Loading data from " + pythonPracticalQuestions);
 
         int count = 0;
         try
@@ -219,8 +220,8 @@ public class DataHandler {
 
             //change hashmaps to multimaps/add extra field for ordered answers
             javaExerciseData = new LinkedHashMap<>();
-            javaScriptExerciseData = new LinkedHashMap<>();
-            pythonExerciseData = new LinkedHashMap<>();
+            //javaScriptExerciseData = new LinkedHashMap<>();
+            //pythonExerciseData = new LinkedHashMap<>();
 
             while (javaStat.step())
             {
@@ -233,7 +234,7 @@ public class DataHandler {
             javaStat.dispose();
             System.out.println("Loaded " + count + " exercises from " + javaExerciseData.size() + " Java exercises");
 
-            while (javaScriptStat.step())
+            /*while (javaScriptStat.step())
             {
                 Integer exerciseID = javaStat.columnInt(0);
                 String codeLine = javaStat.columnString(1);
@@ -251,7 +252,7 @@ public class DataHandler {
                 count++;
             }
             pythonStat.dispose();
-            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");
+            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");*/
         }
         catch (SQLiteException e)
         {
@@ -344,6 +345,11 @@ public class DataHandler {
             }
         }
         return codeLines;
+    }
+
+    public int getTutorialID(String skill)
+    {
+        return skillMap.get(skill);
     }
 
     public int getQuizID(String skill)

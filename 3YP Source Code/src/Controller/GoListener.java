@@ -22,7 +22,7 @@ public class GoListener implements ActionListener {
     {
         tutorial = new Tutorial(language, skill);
         MainFrame.mainFrame.updatePanel(new TutorialScreen(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
-                MainFrame.HEIGHT, language, skill));
+                MainFrame.HEIGHT, language, skill, tutorial));
     }
 
     public String getSkillGuide()

@@ -4,10 +4,12 @@ import Controller.ExerciseListener;
 import Controller.NextListener;
 import Controller.PrevListener;
 import Controller.QuizListener;
+import Model.Tutorial;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TutorialScreen extends JPanel {
 
@@ -18,7 +20,7 @@ public class TutorialScreen extends JPanel {
     private JButton prev, next, quiz, exercise;
     private JLayeredPane layeredPane;
 
-    public TutorialScreen(int x, int y, int width, int height, String language, String skill)
+    public TutorialScreen(int x, int y, int width, int height, String language, String skill, Tutorial tutorial)
     {
         this.setBounds(x, y, width, height);
         this.setBackground(new Color(0x3396ff));
@@ -65,7 +67,7 @@ public class TutorialScreen extends JPanel {
         prevPanel = new JPanel();
         prevPanel.setPreferredSize(new Dimension(width/5, height/7));
         prev = new JButton("prev");
-        prev.addActionListener(new PrevListener());
+        prev.addActionListener(new PrevListener(tutorial, this));
         prevPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         prevPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         prevPanel.setBackground(new Color(0x0063cc));
@@ -84,7 +86,7 @@ public class TutorialScreen extends JPanel {
         nextPanel = new JPanel();
         nextPanel.setPreferredSize(new Dimension(width/5, height/7));
         next = new JButton("next");
-        next.addActionListener(new NextListener());
+        next.addActionListener(new NextListener(tutorial, this));
         nextPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         nextPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         nextPanel.setBackground(new Color(0x0063cc));
@@ -103,25 +105,22 @@ public class TutorialScreen extends JPanel {
         for (int i = 0; i < code.size(); i++)
         {
             JTextArea text = new JTextArea();
-            if (code.get(i).contains("@"))
+            if (code.get(i).contains("£"))
             {
-                code.get(i).replace("@", "");
+                code.get(i).replace("£", "");
                 colour = Color.ORANGE;
                 text.setBackground(colour);
+                text.setText(code.get(i));
             }
             else
             {
                 colour = new Color(0xebebe0);
                 text.setBackground(colour);
+                text.setText(code.get(i));
             }
             text.setBounds(0,0,this.getWidth()/4, this.getHeight()/4);
             layeredPane.add(text);
         }
-    }
-
-    public JLayeredPane getLayeredPane()
-    {
-       return layeredPane;
     }
 
     public void drawGraphic(Graphics2D g2)
@@ -134,13 +133,14 @@ public class TutorialScreen extends JPanel {
         guideText.setText(text);
     }
 
-    public void changeCode()
+    public void changeCode(String text)
     {
-
+        createLayeredPanes(new ArrayList(Arrays.asList(text.split("@"))));
+        graphicsPanel.add(layeredPane);
     }
 
-    public void changeConsoleText()
+    public void changeConsoleText(String text)
     {
-
+        consoleText.setText(text);
     }
 }
