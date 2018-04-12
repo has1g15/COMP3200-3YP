@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuizResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/QuizResult.java">
+      <file leaf-file-name="PlatformGuidePage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="57" column="39" lean-forward="false" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+            <state relative-caret-position="273">
+              <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -70,14 +70,14 @@
       <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="45" />
+            <state relative-caret-position="324">
+              <caret line="78" column="11" lean-forward="true" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NextListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NextListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/NextListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -179,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/View/MainPanel.java" />
         <option value="$PROJECT_DIR$/src/Controller/ExerciseParser.java" />
         <option value="$PROJECT_DIR$/src/View/ExerciseResult.java" />
-        <option value="$PROJECT_DIR$/src/View/PlatformGuidePage.java" />
         <option value="$PROJECT_DIR$/src/View/PracticalExercisePage.java" />
         <option value="$PROJECT_DIR$/src/Controller/StatsListener.java" />
         <option value="$PROJECT_DIR$/src/View/StatsPage.java" />
@@ -190,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/View/TutorialScreen.java" />
         <option value="$PROJECT_DIR$/src/Controller/NextListener.java" />
         <option value="$PROJECT_DIR$/src/Model/Tutorial.java" />
+        <option value="$PROJECT_DIR$/src/View/PlatformGuidePage.java" />
       </list>
     </option>
   </component>
@@ -421,12 +421,12 @@
       <workItem from="1520965619872" duration="9322000" />
       <workItem from="1521048290468" duration="83115000" />
       <workItem from="1522167854281" duration="53311000" />
-      <workItem from="1523399383571" duration="20469000" />
+      <workItem from="1523399383571" duration="23796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249812000" />
+    <option name="totallyTimeSpent" value="253139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -789,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -870,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/QuizScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1911">
@@ -927,6 +911,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="78" column="11" lean-forward="true" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
           <folding />
         </state>
       </provider>

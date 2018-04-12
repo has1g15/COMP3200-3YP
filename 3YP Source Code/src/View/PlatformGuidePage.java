@@ -105,7 +105,10 @@ public class PlatformGuidePage extends JPanel {
         exerciseBorder.setTitleColor(Color.WHITE);
         exerciseBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         exercise.setBorder(exerciseBorder);
-        exerciseText = new JTextArea("Write description");
+        exerciseText = new JTextArea("As well as a multiple choice quiz, there is also an interactive exercise at the end" +
+                " of each skill. You will be provided with a problem that you will need to write a solution to in the box provided" +
+                " based on the content in the tutorial. Your solution will be marked once you click submit and you will be awarded " +
+                "a score out of 10.");
         exerciseText.setColumns(90);
         exerciseText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         exerciseText.setBackground(new Color(0x3396ff));
@@ -123,7 +126,10 @@ public class PlatformGuidePage extends JPanel {
         statsBorder.setTitleColor(Color.WHITE);
         statsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         stats.setBorder(statsBorder);
-        statsText = new JTextArea("Write description");
+        statsText = new JTextArea("You can view a breakdown of your statistics by clicking the view stats option from the menu. " +
+                "On this page you will be able to see your current level in each language, your current progress percentage and " +
+                "the number of points you have accumulated in each language. Also, you can see the individual points you have received" +
+                " from each quiz and exercise.");
         statsText.setColumns(90);
         statsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         statsText.setBackground(new Color(0x3396ff));
@@ -141,7 +147,9 @@ public class PlatformGuidePage extends JPanel {
         rewardsBorder.setTitleColor(Color.WHITE);
         rewardsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         rewards.setBorder(rewardsBorder);
-        rewardsText = new JTextArea("Write description");
+        rewardsText = new JTextArea("When you have completed assessment tasks at the end of a skill, you will receive points" +
+                " based on your performance. The maximum for each task is 10 points, when you receive enough points you will be " +
+                "able to level up in a language. There are five possible levels available and forty points between each level.");
         rewardsText.setColumns(90);
         rewardsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         rewardsText.setBackground(new Color(0x3396ff));
