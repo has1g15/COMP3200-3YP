@@ -41,15 +41,6 @@ public class Tutorial {
         }
     }
 
-    /*public void setOutputs()
-    {
-        output = new ArrayList<>();
-        for (Map.Entry<String, String> entry: tutorialData.entrySet())
-        {
-            output.add(entry.getKey().split("\\$")[1]);
-        }
-    }*/
-
     public void setGuides()
     {
         guides = new ArrayList<>();
@@ -97,5 +88,15 @@ public class Tutorial {
     public void saveProgress()
     {
 
+    }
+
+    public String getLanguage()
+    {
+        return language;
+    }
+
+    public String getSkill()
+    {
+        return skill;
     }
 }

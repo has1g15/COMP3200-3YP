@@ -114,9 +114,9 @@ public class TutorialScreen extends JPanel {
 
     public void createLayeredPanes(ArrayList<String> code)
     {
-        int offset = 60;
-        int xScale = 2;
-        int yScale = 2;
+        int xOffset = 60;
+        int yOffset = 40;
+        int xScale = 3;
 
         layeredPane = new JLayeredPane();
         layeredPane.setPreferredSize(new Dimension(graphicsPanel.getWidth()*3/4, graphicsPanel.getHeight()*3/4));
@@ -124,7 +124,7 @@ public class TutorialScreen extends JPanel {
         for (int i = 0; i < code.size(); i++)
         {
             String[] lines = code.get(i).split("\r\n|\r|\n");
-            System.out.println(lines.length);
+            int yScale = lines.length;
             JTextArea text = new JTextArea();
             text.setEditable(false);
             text.setFont(new Font("Courier New", Font.BOLD, 16));
@@ -137,14 +137,14 @@ public class TutorialScreen extends JPanel {
             }
             else
             {
-                colour = Color.WHITE;
+                colour = new Color(0xebebe0);
                 text.setBackground(colour);
                 text.setText(code.get(i));
             }
-            text.setBounds(offset*i/2,offset*i*2/3,this.getWidth()/xScale, this.getHeight()/yScale);
+            text.setBounds(xOffset * i/2,yOffset,graphicsPanel.getWidth()*2/5, graphicsPanel.getHeight()/21*yScale);
             layeredPane.add(text, new Integer(i));
+            yOffset = yOffset + (graphicsPanel.getHeight()/20)*2;
             xScale+=0.75;
-            yScale+=2;
         }
         graphicsPanel.add(layeredPane, gbc);
     }

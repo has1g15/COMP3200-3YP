@@ -13,7 +13,7 @@ public class Menu extends JPanel {
 
     private JProgressBar javaProg, jsProg, pythonProg;
     private JLabel java, js, python;
-    private JButton stats, toolTips, menu, exit;
+    private JButton stats, helpGuide, menu, exit;
     private GridBagConstraints gbc;
     private Progress progress;
 
@@ -58,8 +58,8 @@ public class Menu extends JPanel {
 
         stats = new JButton("View Stats");
         stats.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
-        toolTips = new JButton("Help Guide");
-        toolTips.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
+        helpGuide = new JButton("Help Guide");
+        helpGuide.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         menu = new JButton("Main Menu");
         menu.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         exit = new JButton("Exit");
@@ -78,12 +78,12 @@ public class Menu extends JPanel {
         gbc.insets = new Insets(60, 0, 30, 0);
         this.add(stats, gbc); gbc.gridy++;
         gbc.insets = new Insets(0, 0, 30, 0);
-        this.add(toolTips, gbc); gbc.gridy++;
+        this.add(helpGuide, gbc); gbc.gridy++;
         this.add(menu, gbc); gbc.gridy++;
         this.add(exit, gbc);
 
         stats.addActionListener(new StatsListener());
-        toolTips.addActionListener(new GuideListener());
+        helpGuide.addActionListener(new GuideListener());
         menu.addActionListener(new MenuListener());
         exit.addActionListener(new ExitListener());
     }

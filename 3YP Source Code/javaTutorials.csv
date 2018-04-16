@@ -8,11 +8,6 @@ array[3] = 5;
 
 
 
-
-
-
-
-
 @£for (int i = 0; i < 10; i++)
 {
 
@@ -29,10 +24,13 @@ array[3] = 5;
 
 
  }
-@System.out.print(""Yes"");",$This is the console,blah blah 1
+@System.out.print(""Yes"");",$-,"For loops are used for performing an operation a fixed number of times. The for loop condition includes a starting condition, a finishing condition as well as the value the loop index should be incremented or decremented by each time the loop is executed. In the example, the loop will start from 0 and stop when the i variable is equal to 9. i++ means that each time the loop is executed, i will increase by a value of 1. "
 4,"int num = 5;
 int array = new int[10];
 array[3] = 5;
+
+
+
 
 @for (int i = 0; i < 10; i++)
 {
@@ -50,10 +48,13 @@ array[3] = 5;
 
           
  }
-@System.out.print(""Yes"");",$This is the console,blah blah 2
+@System.out.print(""Yes"");",$-,"In the example, each time it is checked whether the value at index i in the array is equal to the num variable which has a value of 5."
 4,"int num = 5;
 int array = new int[10];
 array[3] = 5;
+
+
+
 
 @for (int i = 0; i < 10; i++)
 {
@@ -71,4 +72,48 @@ array[3] = 5;
 
           
  }
-@£System.out.print(""Yes"");",$This is the console,blah blah 3
+@£System.out.print(""Yes"");",$-,"On the 4th execution of the loop, when i is equal to 3, yes will be printed to the console, this is because array[i] and num have the same value."
+4,"int i = 10;
+
+@£while (i > 0)
+{
+
+
+
+
+}
+@System.out.print(i);
+i--;",$-,"The next type of loop we'll look at is a while loop. A while loop is different to a for loop because we do not need to know how many times the loop needs to execute before it is run. A while loop will keep looping until its entry condition is met. In the example, the condition i > 0 is checked each time at the start to determine whether or not the loop should be terminated or executed."
+4,"int i = 10;
+
+@while (i > 0)
+{
+
+
+
+
+}
+@£System.out.print(i);
+i--;",$10 9 8 7 6 5 4 3 2 1,The i variable is decremented by 1 each time i is printed. This is done until i reaches the value of 0 where the loop will not execute again.
+4,"int i = 10;
+
+@£do
+{
+
+
+
+
+} while (i > 0)
+@System.out.print(i);
+i--;",$-,"The final type of loop in this tutorial is a do while loop, this is similar to a while loop but the condition is checked at the end of a loop rather than at the start like in a while loop."
+4,"int i = 10;
+
+@do
+{
+
+
+
+
+} while (i > 0)
+@£System.out.print(i);
+i--;",$10 9 8 7 6 5 4 3 2 1  ,"After i has been printed and decremented, that is when it will be checked to see if it is value is over zero "

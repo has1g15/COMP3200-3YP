@@ -1,6 +1,6 @@
 package View;
 
-import Controller.GoListener;
+import Controller.TutorialListener;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,7 +67,7 @@ public class MainPanel extends JPanel {
                     public void actionPerformed(ActionEvent e) {
                         skill = (String)skillOptions.getSelectedItem();
                         if (language!="Select a Language from this Menu" && skill!= "Select a Skill from this Menu") {
-                            go.addActionListener(new GoListener(language, skill));
+                            go.addActionListener(new TutorialListener(language, skill));
                         }
                         else
                         {

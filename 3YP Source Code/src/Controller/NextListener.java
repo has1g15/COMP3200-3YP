@@ -1,6 +1,9 @@
 package Controller;
 
 import Model.Tutorial;
+import View.MainFrame;
+import View.QuizResult;
+import View.TutorialEnd;
 import View.TutorialScreen;
 
 import java.awt.event.ActionEvent;
@@ -30,8 +33,8 @@ public class NextListener implements ActionListener {
         }
         else
         {
-            System.out.println("uh oh");
-            //Go to end of tutorial screen
+            MainFrame.mainFrame.updatePanel(new TutorialEnd(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
+                    MainFrame.HEIGHT, tutorial.getLanguage(), tutorial.getSkill()));
         }
     }
 }
