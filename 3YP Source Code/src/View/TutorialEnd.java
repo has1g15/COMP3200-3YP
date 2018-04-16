@@ -22,7 +22,7 @@ public class TutorialEnd extends JPanel{
         title.setPreferredSize(new Dimension(width, height*1/6));
         title.setBackground(new Color(0x0063cc));
         title.setLayout(new GridBagLayout());
-        name = new JLabel("End of " + language + skill + " tutorial");
+        name = new JLabel("End of " + language + " " + skill + " tutorial");
         name.setFont(new Font("Balsamiq Sans", Font.BOLD, 22));
         name.setForeground(Color.WHITE);
         title.add(name);

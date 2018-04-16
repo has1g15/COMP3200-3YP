@@ -36,7 +36,6 @@ public class Tutorial {
         {
             String temp[] = entry.getKey().split("\\$");
             code.add(temp[0]);
-            System.out.println(temp[0]);
             output.add(temp[1]);
         }
     }

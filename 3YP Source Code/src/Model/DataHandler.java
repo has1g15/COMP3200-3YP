@@ -196,7 +196,6 @@ public class DataHandler {
 
             stat.dispose();
             System.out.println("Loaded " + count + " MCQs from " + javaMcqData.size() + " quizzes");
-            System.out.print(javaMcqData.toString());
         }
         catch (SQLiteException e)
         {

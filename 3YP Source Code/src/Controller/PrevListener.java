@@ -20,10 +20,17 @@ public class PrevListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        tutorial.decrementIndex();
-        if (tutorial.getCurrentIndex() < 0)
+        if (tutorial.getCurrentIndex() == 0)
         {
 
+        }
+        else
+        {
+            tutorial.decrementIndex();
+            System.out.println("It's okay (previous)");
+            tutorialScreen.changeCode(tutorial.getCurrentCode());
+            tutorialScreen.changeConsoleText(tutorial.getCurrentOutput());
+            tutorialScreen.changeGuideText(tutorial.getCurrentGuide());
         }
     }
 }
