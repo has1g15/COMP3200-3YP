@@ -71,7 +71,7 @@ public class Tutorial {
 
     public void decrementIndex()
     {
-        currentIndex--;
+        currentIndex = currentIndex -1;
     }
 
     public boolean isMaxIndex()

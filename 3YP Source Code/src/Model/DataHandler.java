@@ -17,16 +17,16 @@ public class DataHandler {
     private final String javaMcqTable = "javaMcq";
     private final String javaScriptMcqTable = "javaScriptMcq";
     private final String pythonMcqTable = "pythonMcq";
-    private final String javaPracticalQuestions = "javaPractical";
-    private final String javaScriptPracticalQuestions = "javaScriptPractical";
-    private final String pythonPracticalQuestions = "pythonPractical";
+    private final String javaPracticalQuestions = "javaExercises";
+    private final String javaScriptPracticalQuestions = "javaScriptExercises";
+    private final String pythonPracticalQuestions = "pythonExercises";
 
     public SQLiteConnection c;
 
     private HashMap<String, HashMap<String, String>> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
-                                                      javaMcqData, javaScriptMcqData, pythonMcqData;
-    private HashMap<Integer, String> javaExerciseData, javaScriptExerciseData, pythonExerciseData;
+                                                      javaMcqData, javaScriptMcqData, pythonMcqData,
+                                                      javaExerciseData, javaScriptExerciseData, pythonExerciseData;
     private HashMap<String, Integer> skillMap;
 
     public static DataHandler dataHandler = new DataHandler();
@@ -47,7 +47,7 @@ public class DataHandler {
         loadAppData();
         loadTutorialData();
         loadMcqData();
-        //loadPracticalQuestions();
+        loadPracticalQuestions();
         loadSkillMap();
         finish();
     }
@@ -67,7 +67,7 @@ public class DataHandler {
                 String data = stat.columnString(2);
 
                 HashMap<String, String> datas = appData.get(language);
-                //Check if tutorial already exists otherwise create map for mcq
+
                 if (datas == null)
                 {
                     datas = new LinkedHashMap<>();
@@ -77,7 +77,7 @@ public class DataHandler {
                 count++;
             }
             stat.dispose();
-            System.out.println("Loaded " + count + " bits of data " + appData.size() + " app data");
+            System.out.println("Loaded " + count + " values");
         }
         catch (SQLiteException e)
         {
@@ -88,19 +88,19 @@ public class DataHandler {
     public void loadTutorialData()
     {
         System.out.println("Loading data from " + javaTutorialTable);
-        //System.out.println("Loading data from " + javaScriptTutorialTable);
-        //System.out.println("Loading data from " + pythonTutorialTable);
+        System.out.println("Loading data from " + javaScriptTutorialTable);
+        System.out.println("Loading data from " + pythonTutorialTable);
 
         int count = 0;
         try
         {
             SQLiteStatement javaStat = c.prepare("SELECT * FROM " + javaTutorialTable);
-            //SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
-            //SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
+            SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
+            SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
 
             javaTutorialData = new LinkedHashMap<>();
-            //javaScriptTutorialData = new HashMap<>();
-            //pythonTutorialData = new HashMap<>();
+            javaScriptTutorialData = new HashMap<>();
+            pythonTutorialData = new HashMap<>();
 
             while (javaStat.step())
             {
@@ -109,7 +109,7 @@ public class DataHandler {
                 String guide = javaStat.columnString(3);
 
                 HashMap<String, String> tutorialContent = javaTutorialData.get(tutorialID);
-                //Check if tutorial already exists otherwise create map for mcq
+
                 if (tutorialContent == null)
                 {
                     tutorialContent = new LinkedHashMap<>();
@@ -120,9 +120,10 @@ public class DataHandler {
             }
 
             javaStat.dispose();
-            System.out.println("Loaded " + count + " tutorials from " + javaTutorialData.size() + " Java tutorials");
+            System.out.println("Loaded " + count + " tutorials pages from " + javaTutorialData.size() + " Java tutorials");
+            count = 0;
 
-            /*while (javaScriptStat.step())
+            while (javaScriptStat.step())
             {
                 Integer tutorialID = javaScriptStat.columnInt(0);
                 String example = javaScriptStat.columnString(1) + javaScriptStat.columnString(2);
@@ -140,6 +141,7 @@ public class DataHandler {
             }
             javaScriptStat.dispose();
             System.out.println("Loaded " + count + " tutorials from " + javaScriptTutorialData.size() + " JavaScript tutorials");
+            count = 0;
 
             while (pythonStat.step())
             {
@@ -158,7 +160,7 @@ public class DataHandler {
                 count++;
             }
             pythonStat.dispose();
-            System.out.println("Loaded " + count + " tutorials from " + javaScriptTutorialData.size() + " Python tutorials");*/
+            System.out.println("Loaded " + count + " tutorials from " + javaScriptTutorialData.size() + " Python tutorials");
         }
         catch (SQLiteException e)
         {
@@ -169,22 +171,27 @@ public class DataHandler {
     public void loadMcqData()
     {
         System.out.println("Loading data from " + javaMcqTable);
-        //System.out.println("Loading data from " + javaScriptMcqTable);
-        //System.out.println("Loading data from " + pythonMcqTable);
+        System.out.println("Loading data from " + javaScriptMcqTable);
+        System.out.println("Loading data from " + pythonMcqTable);
         int count = 0;
         try
         {
-            SQLiteStatement stat = c.prepare("SELECT * FROM " + javaMcqTable);
+            SQLiteStatement javaStat = c.prepare("SELECT * FROM " + javaMcqTable);
+            SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptMcqTable);
+            SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonMcqTable);
+
             javaMcqData = new LinkedHashMap<>();
-            while (stat.step())
+            javaScriptMcqData = new LinkedHashMap<>();
+            pythonMcqData = new LinkedHashMap<>();
+
+            while (javaStat.step())
             {
-                Integer mcqID = stat.columnInt(0);
-                String questions = stat.columnString(1);
-                String answers = stat.columnString(2) + stat.columnString(3) + stat.columnString(4) +
-                        stat.columnString(5) + stat.columnString(6);
+                Integer mcqID = javaStat.columnInt(0);
+                String questions = javaStat.columnString(1);
+                String answers = javaStat.columnString(2) + javaStat.columnString(3) + javaStat.columnString(4) +
+                        javaStat.columnString(5) + javaStat.columnString(6);
 
                 HashMap<String, String> mcqQuestions = javaMcqData.get(mcqID);
-                //Check if mcq already exists otherwise create map for mcq
                 if (mcqQuestions == null)
                 {
                     mcqQuestions = new LinkedHashMap<>();
@@ -193,9 +200,48 @@ public class DataHandler {
                 mcqQuestions.put(questions, answers);
                 count++;
             }
-
-            stat.dispose();
+            javaStat.dispose();
             System.out.println("Loaded " + count + " MCQs from " + javaMcqData.size() + " quizzes");
+            count = 0;
+
+            while (javaScriptStat.step())
+            {
+                Integer mcqID = javaScriptStat.columnInt(0);
+                String questions = javaScriptStat.columnString(1);
+                String answers = javaScriptStat.columnString(2) + javaScriptStat.columnString(3) + javaScriptStat.columnString(4) +
+                        javaScriptStat.columnString(5) + javaScriptStat.columnString(6);
+
+                HashMap<String, String> mcqQuestions = javaScriptMcqData.get(mcqID);
+                if (mcqQuestions == null)
+                {
+                    mcqQuestions = new LinkedHashMap<>();
+                    javaScriptMcqData.put(mcqID, mcqQuestions);
+                }
+                mcqQuestions.put(questions, answers);
+                count++;
+            }
+            javaScriptStat.dispose();
+            System.out.println("Loaded " + count + " MCQs from " + javaScriptMcqData.size() + " quizzes");
+            count = 0;
+
+            while (pythonStat.step())
+            {
+                Integer mcqID = pythonStat.columnInt(0);
+                String questions = pythonStat.columnString(1);
+                String answers = pythonStat.columnString(2) + pythonStat.columnString(3) + pythonStat.columnString(4) +
+                        pythonStat.columnString(5) + pythonStat.columnString(6);
+
+                HashMap<String, String> mcqQuestions = pythonMcqData.get(mcqID);
+                if (mcqQuestions == null)
+                {
+                    mcqQuestions = new LinkedHashMap<>();
+                    pythonMcqData.put(mcqID, mcqQuestions);
+                }
+                mcqQuestions.put(questions, answers);
+                count++;
+            }
+            pythonStat.dispose();
+            System.out.println("Loaded " + count + " MCQs from " + pythonMcqData.size() + " quizzes");
         }
         catch (SQLiteException e)
         {
@@ -206,8 +252,8 @@ public class DataHandler {
     public void loadPracticalQuestions()
     {
         System.out.println("Loading data from " + javaPracticalQuestions);
-        //System.out.println("Loading data from " + javaScriptPracticalQuestions);
-        //System.out.println("Loading data from " + pythonPracticalQuestions);
+        System.out.println("Loading data from " + javaScriptPracticalQuestions);
+        System.out.println("Loading data from " + pythonPracticalQuestions);
 
         int count = 0;
         try
@@ -216,41 +262,69 @@ public class DataHandler {
             SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptPracticalQuestions);
             SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonPracticalQuestions);
 
-            //change hashmaps to multimaps/add extra field for ordered answers
             javaExerciseData = new LinkedHashMap<>();
-            //javaScriptExerciseData = new LinkedHashMap<>();
-            //pythonExerciseData = new LinkedHashMap<>();
+            javaScriptExerciseData = new LinkedHashMap<>();
+            pythonExerciseData = new LinkedHashMap<>();
 
             while (javaStat.step())
             {
                 Integer exerciseID = javaStat.columnInt(0);
-                String codeLine = javaStat.columnString(1);
-                javaExerciseData.put(exerciseID, codeLine);
+                String problem = javaStat.columnString(1);
+                String answer = javaStat.columnString(2);
+
+                HashMap<String, String> exercises = javaExerciseData.get(exerciseID);
+
+                if (exercises == null)
+                {
+                    exercises = new LinkedHashMap<>();
+                    javaExerciseData.put(exerciseID, exercises);
+                }
+                exercises.put(problem, answer);
                 count++;
             }
 
             javaStat.dispose();
-            System.out.println("Loaded " + count + " exercises from " + javaExerciseData.size() + " Java exercises");
+            System.out.println("Loaded " + javaExerciseData.size() + " Java exercises");
+            count = 0;
 
-            /*while (javaScriptStat.step())
+            while (javaScriptStat.step())
             {
-                Integer exerciseID = javaStat.columnInt(0);
-                String codeLine = javaStat.columnString(1);
-                javaScriptExerciseData.put(exerciseID, codeLine);
+                Integer exerciseID = javaScriptStat.columnInt(0);
+                String problem = javaScriptStat.columnString(1);
+                String answer = javaScriptStat.columnString(2);
+
+                HashMap<String, String> exercises = javaScriptExerciseData.get(exerciseID);
+
+                if (exercises == null)
+                {
+                    exercises = new LinkedHashMap<>();
+                    javaScriptExerciseData.put(exerciseID, exercises);
+                }
+                exercises.put(problem, answer);
                 count++;
             }
             javaScriptStat.dispose();
             System.out.println("Loaded " + count + " exercises from " + javaScriptExerciseData.size() + " JavaScript exercises");
+            count = 0;
 
             while (pythonStat.step())
             {
-                Integer exerciseID = javaStat.columnInt(0);
-                String codeLine = javaStat.columnString(1);
-                pythonExerciseData.put(exerciseID, codeLine);
+                Integer exerciseID = pythonStat.columnInt(0);
+                String problem = pythonStat.columnString(1);
+                String answer = pythonStat.columnString(2);
+
+                HashMap<String, String> exercises = pythonExerciseData.get(exerciseID);
+
+                if (exercises == null)
+                {
+                    exercises = new LinkedHashMap<>();
+                    pythonExerciseData.put(exerciseID, exercises);
+                }
+                exercises.put(problem, answer);
                 count++;
             }
             pythonStat.dispose();
-            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");*/
+            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");
         }
         catch (SQLiteException e)
         {
@@ -319,9 +393,9 @@ public class DataHandler {
         return map.get(quizID);
     }
 
-    public List<String> getExerciseData(int exerciseID, String language)
+    public HashMap<String, String> getExerciseData(int exerciseID, String language)
     {
-        HashMap<Integer, String> map = null;
+        HashMap<Integer, HashMap<String, String>> map = null;
         switch (language)
         {
             case "Java":
@@ -334,15 +408,7 @@ public class DataHandler {
                 map = pythonExerciseData;
                 break;
         }
-        List<String> codeLines = new ArrayList<>();
-        for (Map.Entry<Integer, String> entry : map.entrySet())
-        {
-            if (exerciseID == entry.getKey())
-            {
-                codeLines.add(entry.getValue());
-            }
-        }
-        return codeLines;
+        return map.get(exerciseID);
     }
 
     public int getTutorialID(String skill)
