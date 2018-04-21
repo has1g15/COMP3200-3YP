@@ -29,11 +29,4 @@ public class TutorialListener implements ActionListener {
         tutorialScreen.changeGuideText(tutorial.getCurrentGuide());
         MainFrame.mainFrame.updatePanel(tutorialScreen);
     }
-
-    public String getSkillGuide()
-    {
-        String skill = "";
-        //TODO: extract info from table using DataHandler() - .get() from hashmap
-        return skill;
-    }
 }

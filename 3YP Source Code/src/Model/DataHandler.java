@@ -27,7 +27,7 @@ public class DataHandler {
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
                                                       javaMcqData, javaScriptMcqData, pythonMcqData,
                                                       javaExerciseData, javaScriptExerciseData, pythonExerciseData;
-    private HashMap<String, Integer> skillMap;
+    public HashMap<String, Integer> skillMap;
 
     public static DataHandler dataHandler = new DataHandler();
 
@@ -347,7 +347,7 @@ public class DataHandler {
         skillMap.put("File Handling", 10);
     }
 
-    public void updateAppData(String field, String data)
+    public void updateAppData(String language, String field, String data)
     {
 
     }

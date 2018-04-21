@@ -5,8 +5,6 @@ import java.awt.*;
 
 public class MainFrame extends JFrame {
 
-    //TODO: line breaks in formatting table
-
     Menu menu;
     private JPanel panel;
     public static final int WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
@@ -36,5 +34,10 @@ public class MainFrame extends JFrame {
         mainFrame.add(newPanel);
         this.setVisible(true);
         panel = newPanel;
+    }
+
+    public void updateProgressBars()
+    {
+        menu.updateProgressBars();
     }
 }

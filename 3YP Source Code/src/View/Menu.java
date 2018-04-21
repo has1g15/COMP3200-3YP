@@ -19,7 +19,6 @@ public class Menu extends JPanel {
 
     public Menu(int x, int y, int width, int height)
     {
-        //TODO: update progress bars from data upon loading menu
         this.setBounds(x, y, width, height);
         this.setBackground(new Color(0X003166));
         this.setLayout(new GridBagLayout());
@@ -86,5 +85,12 @@ public class Menu extends JPanel {
         helpGuide.addActionListener(new GuideListener());
         menu.addActionListener(new MenuListener());
         exit.addActionListener(new ExitListener());
+    }
+
+    public void updateProgressBars()
+    {
+        javaProg.setValue(progress.getJavaPercentage());
+        jsProg.setValue(progress.getJavaScriptPercentage());
+        pythonProg.setValue(progress.getPythonPercentage());
     }
 }

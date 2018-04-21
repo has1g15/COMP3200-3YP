@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.DataHandler;
+import Model.Progress;
 import Model.Quiz;
 import View.MainFrame;
 import View.QuizResult;
@@ -56,13 +58,14 @@ public class QuizCalculator implements ActionListener {
         LocalDate date = LocalDate.now();
         quiz.setDateCompleted(formatter.format(date));
         calcScore();
+        updateProgress(score);
         MainFrame.mainFrame.updatePanel(new QuizResult(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
                 MainFrame.HEIGHT, score, quizListener));
     }
 
-    public void updateAppData()
+    public void updateProgress(int score)
     {
-        //TODO: update app data using method in DataHandler
-        //only update if quiz has scored higher
+        Progress.progress.saveProgress(quizListener.getLanguage(), "Quiz " +
+                DataHandler.dataHandler.skillMap.get(quizListener.getSkill()), Integer.toString(score));
     }
 }
