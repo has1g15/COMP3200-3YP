@@ -35,11 +35,11 @@
       <file leaf-file-name="Progress.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Progress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="187">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="e#1304#1305#0" expanded="true" />
-                <element signature="e#1340#1341#0" expanded="true" />
+                <element signature="e#1453#1454#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,8 +113,8 @@
       <file leaf-file-name="QuizCalculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/QuizCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="68" column="104" lean-forward="true" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
+            <state relative-caret-position="918">
+              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -162,14 +162,14 @@
         <option value="$PROJECT_DIR$/src/Model/Tutorial.java" />
         <option value="$PROJECT_DIR$/src/View/TutorialScreen.java" />
         <option value="$PROJECT_DIR$/src/Model/DataHandler.java" />
-        <option value="$PROJECT_DIR$/src/Controller/QuizCalculator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Controller/ExitListener.java" />
         <option value="$PROJECT_DIR$/src/Controller/MenuListener.java" />
         <option value="$PROJECT_DIR$/src/View/Menu.java" />
-        <option value="$PROJECT_DIR$/src/Model/Progress.java" />
         <option value="$PROJECT_DIR$/src/Controller/TutorialListener.java" />
         <option value="$PROJECT_DIR$/src/View/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/Model/Progress.java" />
+        <option value="$PROJECT_DIR$/src/Controller/QuizCalculator.java" />
       </list>
     </option>
   </component>
@@ -940,12 +940,12 @@
       <workItem from="1521048290468" duration="83115000" />
       <workItem from="1522167854281" duration="53311000" />
       <workItem from="1523399383571" duration="37374000" />
-      <workItem from="1523724717803" duration="24632000" />
+      <workItem from="1523724717803" duration="24901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291349000" />
+    <option name="totallyTimeSpent" value="291618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1159,6 +1159,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,14 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/QuizCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="68" column="104" lean-forward="true" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5287">
@@ -1513,13 +1506,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/QuizCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Progress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state relative-caret-position="187">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>

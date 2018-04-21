@@ -65,7 +65,7 @@ public class QuizCalculator implements ActionListener {
 
     public void updateProgress(int score)
     {
-        Progress.progress.saveProgress(quizListener.getLanguage(), "Quiz " +
+        new Progress(quizListener.getLanguage(), "Quiz " +
                 DataHandler.dataHandler.skillMap.get(quizListener.getSkill()), Integer.toString(score));
     }
 }

@@ -9,12 +9,17 @@ public class Progress {
 
     private int pointsToAdd;
 
-    public Progress()
-    {
+    String language, field, value;
 
+    public Progress(String language, String field, String value)
+    {
+        this.language = language;
+        this.field = field;
+        this.value = value;
+        saveProgress();
     }
 
-    public void saveProgress(String language, String field, String value)
+    public void saveProgress()
     {
         if (calculatePoints(language, field, value) == true)
         {
