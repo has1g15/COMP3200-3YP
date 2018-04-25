@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.DataHandler;
 import View.MainFrame;
 
 import java.awt.event.ActionEvent;
@@ -16,5 +17,6 @@ public class ExitListener implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         MainFrame.mainFrame.dispose();
+        DataHandler.dataHandler.finish();
     }
 }

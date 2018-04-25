@@ -128,7 +128,6 @@ public class TutorialScreen extends JPanel {
             text.setFont(new Font("Courier New", Font.BOLD, 16));
             if (code.get(i).contains("£"))
             {
-                System.out.println("yes");
                 String remove = code.get(i).replace("£", "");
                 colour = Color.ORANGE;
                 text.setBackground(colour);
@@ -136,7 +135,6 @@ public class TutorialScreen extends JPanel {
             }
             else
             {
-                System.out.println("no");
                 colour = new Color(0xebebe0);
                 text.setBackground(colour);
                 text.setText(code.get(i));

@@ -21,7 +21,7 @@ public class DataHandler {
     private final String javaScriptPracticalQuestions = "javaScriptExercises";
     private final String pythonPracticalQuestions = "pythonExercises";
 
-    public SQLiteConnection c;
+    private SQLiteConnection c;
 
     private HashMap<String, HashMap<String, String>> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
@@ -33,12 +33,10 @@ public class DataHandler {
 
     public void init()
     {
-        System.out.println(thirdYPdb);
         c = new SQLiteConnection(new File(thirdYPdb));
         try
         {
             c.open(false);
-            System.out.println("Opened database successfully");
         }
         catch (SQLiteException e)
         {
@@ -58,8 +56,8 @@ public class DataHandler {
         int count = 0;
         try
         {
+            appData = new LinkedHashMap<>();
             SQLiteStatement stat = c.prepare("SELECT * FROM " + appDataTable);
-            appData = new HashMap<>();
             while (stat.step())
             {
                 String language = stat.columnString(0);
@@ -91,16 +89,16 @@ public class DataHandler {
         System.out.println("Loading data from " + javaScriptTutorialTable);
         System.out.println("Loading data from " + pythonTutorialTable);
 
+        javaTutorialData = new LinkedHashMap<>();
+        javaScriptTutorialData = new LinkedHashMap<>();
+        pythonTutorialData = new LinkedHashMap<>();
+
         int count = 0;
         try
         {
             SQLiteStatement javaStat = c.prepare("SELECT * FROM " + javaTutorialTable);
             SQLiteStatement javaScriptStat = c.prepare("SELECT * FROM " + javaScriptTutorialTable);
             SQLiteStatement pythonStat = c.prepare("SELECT * FROM " + pythonTutorialTable);
-
-            javaTutorialData = new LinkedHashMap<>();
-            javaScriptTutorialData = new HashMap<>();
-            pythonTutorialData = new HashMap<>();
 
             while (javaStat.step())
             {
@@ -349,7 +347,17 @@ public class DataHandler {
 
     public void updateAppData(String language, String field, String data)
     {
-
+        try
+        {
+            c = new SQLiteConnection(new File(thirdYPdb));
+            c.open(false);
+            c.exec("UPDATE appData SET data = '" + data + "' WHERE dataField = '" + field + "' AND language = '" + language + "';");
+            System.out.print(language + field + data);
+        }
+        catch (SQLiteException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public HashMap<String, String> getAppData(String language)

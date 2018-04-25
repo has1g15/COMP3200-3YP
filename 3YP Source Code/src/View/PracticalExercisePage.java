@@ -1,6 +1,7 @@
 package View;
 
 import Controller.ExerciseListener;
+import Controller.ExerciseParser;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -69,6 +70,12 @@ public class PracticalExercisePage extends JPanel{
         submit.setSize(30, 10);
         panel.add(submit, gbc);
 
+        submit.addActionListener(new ExerciseParser(exerciseListener, this, exerciseListener.getExercise()));
         this.add(panel);
+    }
+
+    public String getUserAnswer()
+    {
+        return answer.getText();
     }
 }
