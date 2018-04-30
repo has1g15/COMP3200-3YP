@@ -24,7 +24,7 @@ public class Quiz {
 
     public void populateQuizData()
     {
-        quizID = DataHandler.dataHandler.getQuizID(skill);
+        quizID = DataHandler.dataHandler.getID(skill);
         quizData = DataHandler.dataHandler.getMCQData(quizID, language);
     }
 

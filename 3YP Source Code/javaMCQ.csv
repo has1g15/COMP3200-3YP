@@ -9,22 +9,92 @@
 1,Declare a variable which can ONLY be accessed from where it is declared,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";","$private String hello = ""hello"";"
 1,Declare a variable which can be accessed from ANYWHERE within an application,"protected String hello = ""hello"";","$final String hello = ""hello"";","$private String hello = ""hello"";","$public String hello = ""hello"";","$public String hello = ""hello"";"
 2,Write a SINGLE line comment ,/This is a comment,$/*This is a comment,$//This is a comment,$/This is a comment/,$//This is a comment
-2,Write a MULTILINE comment ,"""//This is
-a comment//""","""$/*This is
-a comment""","""$*/This is
-a comment/*""","""$/*This is 
-a comment*/""","""$/*This is 
-a comment*/"""
+2,Write a MULTILINE comment ,//This is a comment//,$/*This is a comment,$*/This is a comment/*,$/*This is a comment*/,$/*This is a comment*/
 2,What would you use to print text to a NEW line in the console?,"System.out.print(""Hello!"");","$System.out.printline(""Hello!"");","$System.out.println(""Hello!"");","$System.out.Printline(""Hello!"");","$System.out.println(""Hello!"");"
-2,What is the structure of the MAIN method in Java?,"""public static main (String args) {
-}""","""$public static void main (String[] args) {
-}""","""$public static void programMain (String[] args) {
-}""","""$public static void main (String args) {
-}""","""$public static void main (String[] args) {
-}"""
+2,What is the structure of the MAIN method in Java?,public static main (String args) {},$public static void main (String[] args) {},$public static void programMain (String[] args) {},$public static void main (String args) {},$public static void main (String[] args) {}
 2,"When using the format method, which of the following conversions is true?",d formats an integer value as a decimal value,$d formats a decimal value as an integer,$n formats an integer value as a decimal value,$n formats a decimal value as an integer,$d formats an integer value as a decimal value
 2,What is the most MEANINGFUL name for a variable denoting the name of a student?,studentName,$studname,$sn,$nameofastudent,$studentName
 2,Write the variable 'average group size' in CAMELCASE ,averageGroupSize,$aVeRaGeGrOuPsIzE,$AveragegroupsizE,$Average_Group_Size,$averageGroupSize
 2,How do you import the library needed to read user input to the console? ,import javaScanner;,$import java.scanner;,$import java.util.Scanner;,$import java.util.inputReader;,$import java.util.Scanner;
 2,How do you read in STRING input?,String input = scanner.nextstring();,$String input = scanner.nextLine();,$String input = scanner.readLine();,$Scanner input = scanner.nextString();,$String input = scanner.nextLine();
 2,How do you read in INTEGER input? ,int input = scanner.nextInteger();,$int input = scanner.readInt();,$int input = scanner.readInteger();,$int input = scanner.nextInt();,$int input = scanner.nextInt();
+3,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+3,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+4,What loop(s) do not perform a fixed number of times?,For loops,$Do while and while loops,$For and while loops,$For and do while loops,$Do while and while loops
+4,What loop(s) have a starting condition?,"For, while and do while",$Do while and while loops,$For and while loops,$For and do while loops,$For and while loops
+4,What loop(s) have an end condition?,For loops,$Do while and while loops,$For and while loops,$Do while loops,$Do while loops
+4,What loop(s) will continuously execute until their condition is met?,"For, while and do while",$Do while and while loops,$For and while loops,$Do while loops,$For and while loops
+4,How can you increase a counter variable i by 1 each time a loop executes?,i--;,$i+1;,$i1+;,$i++;,$i++;
+4,Which of the following is an incorrect syntax of a for loop condition?,for (int i = 0; i < 10; i++),$for (int i = 10; i > 0; i--),$for (int i = 0; i = 10; i++),$for (int i = 20; i > 19; i--),$for (int i = 0; i = 10; i++)
+4,How many times will a for loop with the following condition execute? (int I = 1; I <10; i++),9,$10,$11,$0,$9
+4,What is the structure of a do while loop?,do ( statements } while (condition),$do while (condition) { statements },$do (condition) while { statements },$while (condition) do { statements },$do { statements } while (condition)
+4,What loop(s) are best to use in a situation when an operation needs to be performed 10 times?,For loops,$Do while and while loops,$For and while loops,$For and do while loops,$For loops
+4,what loop(s) are best to use in a situation when an operation needs to be performed until a boolean variable is true?,For loops,$Do while and while loops,$For and while loops,$For and do while loops,$Do while and while loops
+5,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+5,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+6,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+7,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+8,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+9,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question1,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question2,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question3,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question4,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question5,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question6,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question7,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question8,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question9,answer1,$answer2,$answer3,$answer4,$correctAnswer
+10,question10,answer1,$answer2,$answer3,$answer4,$correctAnswer

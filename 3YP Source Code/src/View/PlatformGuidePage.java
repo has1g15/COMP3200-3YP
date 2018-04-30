@@ -2,6 +2,7 @@ package View;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
@@ -13,6 +14,7 @@ public class PlatformGuidePage extends JPanel {
     private JTextArea menuText, tutorialText, quizText, exerciseText, statsText, rewardsText;
     private JLabel name;
     private JScrollPane guideScroll;
+    private MatteBorder titlePanelBorder;
 
     public PlatformGuidePage(int x, int y, int width, int height)
     {
@@ -26,18 +28,20 @@ public class PlatformGuidePage extends JPanel {
         name = new JLabel("Platform Guide");
         name.setFont(new Font("Balsamiq Sans", Font.BOLD, 22));
         name.setForeground(Color.WHITE);
+        titlePanelBorder = new MatteBorder(10, 0, 10, 0, new Color(0x003166));
+        title.setBorder(titlePanelBorder);
         title.add(name);
         this.add(title);
 
-        border = new LineBorder(Color.WHITE);
+        border = new LineBorder(new Color(0x003166), 3);
 
         guide = new JPanel();
         guide.setLayout(new GridLayout(6,1));
         menuNav = new JPanel();
         menuNav.setPreferredSize(new Dimension(width - 20, height/7));
-        menuNav.setBackground(new Color(0x3396ff));
+        menuNav.setBackground(new Color(0xebebe0));
         menuNavBorder = new TitledBorder(border, "Menu Navigation Tips");
-        menuNavBorder.setTitleColor(Color.WHITE);
+        menuNavBorder.setTitleColor(new Color(0x003166));
         menuNavBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         menuNav.setBorder(menuNavBorder);
         menuText = new JTextArea("The application menu consists of a progress overview and some navigation options. You" +
@@ -46,19 +50,19 @@ public class PlatformGuidePage extends JPanel {
                 " exit the application. The menu is available on every page of the application.");
         menuText.setColumns(90);
         menuText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        menuText.setBackground(new Color(0x3396ff));
+        menuText.setBackground(new Color(0xebebe0));
         menuText.setLineWrap(true);
         menuText.setWrapStyleWord(true);
-        menuText.setForeground(Color.WHITE);
+        menuText.setForeground(new Color(0x003166));
         menuText.setEditable(false);
         menuNav.add(menuText);
         guide.add(menuNav);
 
         tutorial = new JPanel();
         tutorial.setPreferredSize(new Dimension(width - 20, height/7));
-        tutorial.setBackground(new Color(0x3396ff));
+        tutorial.setBackground(new Color(0xebebe0));
         tutorialBorder = new TitledBorder(border, "Tutorial Tips");
-        tutorialBorder.setTitleColor(Color.WHITE);
+        tutorialBorder.setTitleColor(new Color(0x003166));
         tutorialBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         tutorial.setBorder(tutorialBorder);
         tutorialText = new JTextArea("After selecting your choice of language and skill, their respective tutorial will" +
@@ -68,19 +72,19 @@ public class PlatformGuidePage extends JPanel {
                 " of the content.");
         tutorialText.setColumns(90);
         tutorialText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        tutorialText.setBackground(new Color(0x3396ff));
+        tutorialText.setBackground(new Color(0xebebe0));
         tutorialText.setLineWrap(true);
         tutorialText.setWrapStyleWord(true);
-        tutorialText.setForeground(Color.WHITE);
+        tutorialText.setForeground(new Color(0x003166));
         tutorialText.setEditable(false);
         tutorial.add(tutorialText);
         guide.add(tutorial);
 
         quiz = new JPanel();
         quiz.setPreferredSize(new Dimension(width - 20, height/7));
-        quiz.setBackground(new Color(0x3396ff));
+        quiz.setBackground(new Color(0xebebe0));
         quizBorder = new TitledBorder(border, "Quiz Tips");
-        quizBorder.setTitleColor(Color.WHITE);
+        quizBorder.setTitleColor(new Color(0x003166));
         quizBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         quiz.setBorder(quizBorder);
         quizText = new JTextArea("At the end of each tutorial, there is a ten question multiple choice quiz to assess your" +
@@ -90,19 +94,19 @@ public class PlatformGuidePage extends JPanel {
                 " point to achieve higher scores, these will be updated accordingly.");
         quizText.setColumns(90);
         quizText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        quizText.setBackground(new Color(0x3396ff));
+        quizText.setBackground(new Color(0xebebe0));
         quizText.setLineWrap(true);
         quizText.setWrapStyleWord(true);
-        quizText.setForeground(Color.WHITE);
+        quizText.setForeground(new Color(0x003166));
         quizText.setEditable(false);
         quiz.add(quizText);
         guide.add(quiz);
 
         exercise = new JPanel();
         exercise.setPreferredSize(new Dimension(width - 20, height/7));
-        exercise.setBackground(new Color(0x3396ff));
+        exercise.setBackground(new Color(0xebebe0));
         exerciseBorder = new TitledBorder(border, "Practical Exercise Tips");
-        exerciseBorder.setTitleColor(Color.WHITE);
+        exerciseBorder.setTitleColor(new Color(0x003166));
         exerciseBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         exercise.setBorder(exerciseBorder);
         exerciseText = new JTextArea("As well as a multiple choice quiz, there is also an interactive exercise at the end" +
@@ -111,19 +115,19 @@ public class PlatformGuidePage extends JPanel {
                 "a score out of 10.");
         exerciseText.setColumns(90);
         exerciseText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        exerciseText.setBackground(new Color(0x3396ff));
+        exerciseText.setBackground(new Color(0xebebe0));
         exerciseText.setLineWrap(true);
         exerciseText.setWrapStyleWord(true);
-        exerciseText.setForeground(Color.WHITE);
+        exerciseText.setForeground(new Color(0x003166));
         exerciseText.setEditable(false);
         exercise.add(exerciseText);
         guide.add(exercise);
 
         stats = new JPanel();
         stats.setPreferredSize(new Dimension(width - 20, height/7));
-        stats.setBackground(new Color(0x3396ff));
+        stats.setBackground(new Color(0xebebe0));
         statsBorder = new TitledBorder(border, "Viewing your Stats");
-        statsBorder.setTitleColor(Color.WHITE);
+        statsBorder.setTitleColor(new Color(0x003166));
         statsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         stats.setBorder(statsBorder);
         statsText = new JTextArea("You can view a breakdown of your statistics by clicking the view stats option from the menu. " +
@@ -132,19 +136,19 @@ public class PlatformGuidePage extends JPanel {
                 " from each quiz and exercise.");
         statsText.setColumns(90);
         statsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        statsText.setBackground(new Color(0x3396ff));
+        statsText.setBackground(new Color(0xebebe0));
         statsText.setLineWrap(true);
         statsText.setWrapStyleWord(true);
-        statsText.setForeground(Color.WHITE);
+        statsText.setForeground(new Color(0x003166));
         statsText.setEditable(false);
         stats.add(statsText);
         guide.add(stats);
 
         rewards = new JPanel();
         rewards.setPreferredSize(new Dimension(width - 20, height/7));
-        rewards.setBackground(new Color(0x3396ff));
+        rewards.setBackground(new Color(0xebebe0));
         rewardsBorder = new TitledBorder(border, "Rewards");
-        rewardsBorder.setTitleColor(Color.WHITE);
+        rewardsBorder.setTitleColor(new Color(0x003166));
         rewardsBorder.setTitleFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         rewards.setBorder(rewardsBorder);
         rewardsText = new JTextArea("When you have completed assessment tasks at the end of a skill, you will receive points" +
@@ -152,10 +156,10 @@ public class PlatformGuidePage extends JPanel {
                 "able to level up in a language. There are five possible levels available and forty points between each level.");
         rewardsText.setColumns(90);
         rewardsText.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-        rewardsText.setBackground(new Color(0x3396ff));
+        rewardsText.setBackground(new Color(0xebebe0));
         rewardsText.setLineWrap(true);
         rewardsText.setWrapStyleWord(true);
-        rewardsText.setForeground(Color.WHITE);
+        rewardsText.setForeground(new Color(0x003166));
         rewardsText.setEditable(false);
         rewards.add(rewardsText);
         guide.add(rewards);

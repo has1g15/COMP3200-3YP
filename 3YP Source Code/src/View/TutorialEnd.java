@@ -4,6 +4,7 @@ import Controller.ExerciseListener;
 import Controller.QuizListener;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 
 public class TutorialEnd extends JPanel{
@@ -12,6 +13,7 @@ public class TutorialEnd extends JPanel{
     private JLabel name, instruction;
     private JButton quiz, exercise;
     private GridBagConstraints gbc;
+    private MatteBorder titlePanelBorder;
 
     public TutorialEnd(int x, int y, int width, int height, String language, String skill)
     {
@@ -25,12 +27,14 @@ public class TutorialEnd extends JPanel{
         name = new JLabel("End of " + language + " " + skill + " tutorial");
         name.setFont(new Font("Balsamiq Sans", Font.BOLD, 22));
         name.setForeground(Color.WHITE);
+        titlePanelBorder = new MatteBorder(10, 0, 10, 0, new Color(0x003166));
+        title.setBorder(titlePanelBorder);
         title.add(name);
         this.add(title);
 
         panel = new JPanel();
         panel.setPreferredSize(new Dimension(width, height*5/6));
-        panel.setBackground(new Color(0x3396ff));
+        panel.setBackground(new Color(0xebebe0));
         panel.setLayout(new GridBagLayout());
         gbc = new GridBagConstraints();
         gbc.gridx = 0;

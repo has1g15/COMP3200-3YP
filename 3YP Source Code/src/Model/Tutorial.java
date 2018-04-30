@@ -24,7 +24,7 @@ public class Tutorial {
 
     public void populateTutorialData()
     {
-        tutorialID = DataHandler.dataHandler.getTutorialID(skill);
+        tutorialID = DataHandler.dataHandler.getID(skill);
         tutorialData = DataHandler.dataHandler.getTutorialData(tutorialID, language);
     }
 

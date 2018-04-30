@@ -3,9 +3,13 @@ package View;
 import Controller.TutorialListener;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.Arrays;
 
 public class MainPanel extends JPanel {
 
@@ -16,6 +20,7 @@ public class MainPanel extends JPanel {
     private String language, skill;
     private JComboBox<String> languageOptions, skillOptions;
     private JButton go;
+    private MatteBorder border;
 
     public MainPanel(int x, int y, int width, int height)
     {
@@ -29,24 +34,27 @@ public class MainPanel extends JPanel {
         name = new JLabel("Graphical Programming E-Learning Platform");
         name.setFont(new Font("Balsamiq Sans", Font.BOLD, 22));
         name.setForeground(Color.WHITE);
+        Color colour = new Color(0x003166);
+        border = new MatteBorder(10, 0, 10, 0, colour);
         title.add(name);
+        title.setBorder(border);
         this.add(title);
 
         goPanel = new JPanel();
         goPanel.setPreferredSize(new Dimension(width, height*2/3));
         gbc = new GridBagConstraints();
         goPanel.setLayout(new GridBagLayout());
-        goPanel.setBackground(new Color(0x3396ff));
+        goPanel.setBackground(new Color(0xebebe0));
 
         selectLanguage = new JLabel("Please Select a Language...");
         selectLanguage.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
-        selectLanguage.setForeground(Color.WHITE);
-        languages = new String[] {"Select a Language from this Menu", "Java", "Javascript", "Python"};
+        selectLanguage.setForeground(new Color(0X003166));
+        languages = new String[] {"Select a Language from this Menu", "Java", "JavaScript", "Python"};
         languageOptions = new JComboBox<>(languages);
         language = "";
         selectSkill = new JLabel("Please Select a Skill...");
         selectSkill.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
-        selectSkill.setForeground(Color.WHITE);
+        selectSkill.setForeground(new Color(0X003166));
         skills = new String[] {"Select a Skill from this Menu", "Printing, Variable Declaration and Data Types",
                 "Formatting and I/O", "Conditional Statements", "Loops", "Operators", "String Handling",
                 "Functions, Procedures and Libraries", "Scope", "Data Structures", "File Handling"};

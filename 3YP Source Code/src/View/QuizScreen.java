@@ -4,6 +4,7 @@ import Controller.QuizCalculator;
 import Controller.QuizListener;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -24,6 +25,7 @@ public class QuizScreen extends JPanel {
     private String[] chosenAnswers;
     private List<String> correctAnswers;
     private int i;
+    private MatteBorder titlePanelBorder;
 
     public QuizScreen(int x, int y, int width, int height, QuizListener quizListener)
     {
@@ -40,6 +42,8 @@ public class QuizScreen extends JPanel {
         name = new JLabel(quizListener.getLanguage() + ": " + quizListener.getSkill() + " Quiz");
         name.setFont(new Font("Balsamiq Sans", Font.BOLD, 22));
         name.setForeground(Color.WHITE);
+        titlePanelBorder = new MatteBorder(10, 0, 10, 0, new Color(0x003166));
+        title.setBorder(titlePanelBorder);
         title.add(name);
         this.add(title);
 
@@ -57,11 +61,11 @@ public class QuizScreen extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 10, 0);
-        gbc.gridwidth=4;
+        gbc.gridwidth=5;
         quizPanel.setLayout(new GridBagLayout());
-        quizPanel.setBackground(new Color(0x3396ff));
+        quizPanel.setBackground(new Color(0xebebe0));
         quizPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
-        instruction = new JLabel("Please answer the following ten questions, selecting one of the 4 answers for each");
+        instruction = new JLabel("Please answer ALL of the following ten questions, selecting one of the 4 answers for each");
         instruction.setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
         instruction.setForeground(new Color(0x003166));
         quizPanel.add(instruction, gbc);
@@ -72,13 +76,13 @@ public class QuizScreen extends JPanel {
             correctAnswers.add(quizListener.getAnswers().get(i)[4]);
             questionLabels[i] = new JLabel(i+1 + ") " + quizListener.getQuestions().get(i));
             questionLabels[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
-            questionLabels[i].setForeground(Color.WHITE);
+            questionLabels[i].setForeground(new Color(0x003166));
             gbc.gridwidth=4;
             quizPanel.add(questionLabels[i], gbc);
             gbc.gridy++;
             checkBoxGroup[i] = new CheckboxGroup();
             cb1[i] = new Checkbox(quizListener.getAnswers().get(i)[0], checkBoxGroup[i],false);
-            cb1[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb1[i].setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
             cb1[i].setForeground(new Color(0x003166));
             cb1[i].addItemListener(new ItemListener() {
                 @Override
@@ -91,7 +95,7 @@ public class QuizScreen extends JPanel {
                 }
             });
             cb2[i] = new Checkbox(quizListener.getAnswers().get(i)[1], checkBoxGroup[i],false);
-            cb2[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb2[i].setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
             cb2[i].setForeground(new Color(0x003166));
             cb2[i].addItemListener(new ItemListener() {
                 @Override
@@ -104,7 +108,7 @@ public class QuizScreen extends JPanel {
                 }
             });
             cb3[i] = new Checkbox(quizListener.getAnswers().get(i)[2], checkBoxGroup[i],false);
-            cb3[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb3[i].setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
             cb3[i].setForeground(new Color(0x003166));
             cb3[i].addItemListener(new ItemListener() {
                 @Override
@@ -117,7 +121,7 @@ public class QuizScreen extends JPanel {
                 }
             });
             cb4[i] = new Checkbox(quizListener.getAnswers().get(i)[3], checkBoxGroup[i],false);
-            cb4[i].setFont(new Font("Balsamiq Sans", Font.BOLD, 14));
+            cb4[i].setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
             cb4[i].setForeground(new Color(0x003166));
             cb4[i].addItemListener(new ItemListener() {
                 @Override
@@ -134,7 +138,8 @@ public class QuizScreen extends JPanel {
             quizPanel.add(cb1[i], gbc);
             gbc.gridx++;
             quizPanel.add(cb2[i], gbc);
-            gbc.gridx++;
+            gbc.gridx = 0;
+            gbc.gridy++;
             quizPanel.add(cb3[i], gbc);
             gbc.gridx++;
             quizPanel.add(cb4[i], gbc);

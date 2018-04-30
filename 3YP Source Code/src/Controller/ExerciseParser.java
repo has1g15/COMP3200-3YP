@@ -25,22 +25,33 @@ public class ExerciseParser implements ActionListener{
         this.practicalExercise = practicalExercise;
     }
 
-    public int parseSolution()
+    public void parseSolution()
     {
-        int score = 0;
-        return score;
+        score = 0;
+        String[] modelAnswerSplit = practicalExercise.getAnswer().split("\\r?\\n");
+        String[] userAnswerSplit = userAnswer.split("\\r?\\n");
+        for (int i = 0; i < userAnswerSplit.length; i++)
+        {
+            if (userAnswerSplit[i].equals(modelAnswerSplit[i]))
+            {
+                score +=2;
+            }
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        userAnswer = practicalExercisePage.getUserAnswer();
+        parseSolution();
+        updateProgress(score);
         MainFrame.mainFrame.updatePanel(new ExerciseResult(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
-                MainFrame.HEIGHT, score, exerciseListener));
+                MainFrame.HEIGHT, score, exerciseListener, userAnswer));
     }
 
     public void updateProgress(int score)
     {
-        /*new Progress(exerciseListener.getLanguage(), "Exercise " +
-                DataHandler.dataHandler.skillMap.get(exerciseListener.getSkill()), Integer.toString(score));*/
+        new Progress(exerciseListener.getLanguage(), "Exercise" +
+                DataHandler.dataHandler.skillMap.get(exerciseListener.getSkill()), Integer.toString(score));
     }
 }

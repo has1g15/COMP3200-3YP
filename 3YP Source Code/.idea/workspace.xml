@@ -12,64 +12,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/DataHandler.java">
+      <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="354" column="54" lean-forward="false" selection-start-line="354" selection-start-column="54" selection-end-line="354" selection-end-column="54" />
+            <state relative-caret-position="272">
+              <caret line="37" column="55" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TutorialScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/TutorialScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
-                <element signature="e#14035#14036#0" expanded="true" />
-                <element signature="e#14079#14080#0" expanded="true" />
-                <element signature="e#15666#15667#0" expanded="true" />
-                <element signature="e#15708#15709#0" expanded="true" />
-                <element signature="e#15754#15755#0" expanded="true" />
-                <element signature="e#15796#15797#0" expanded="true" />
-                <element signature="e#15982#15983#0" expanded="true" />
-                <element signature="e#16009#16010#0" expanded="true" />
+                <element signature="e#6583#6584#0" expanded="true" />
+                <element signature="e#6622#6623#0" expanded="true" />
+                <element signature="e#7540#7541#0" expanded="true" />
+                <element signature="e#7581#7582#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExerciseParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ExerciseParser.java">
+      <file leaf-file-name="ExerciseResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/ExerciseResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="43" column="110" lean-forward="false" selection-start-line="43" selection-start-column="110" selection-end-line="43" selection-end-column="110" />
+            <state relative-caret-position="357">
+              <caret line="33" column="42" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/MainFrame.java">
+      <file leaf-file-name="PlatformGuidePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+            <state relative-caret-position="340">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExitListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ExitListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Progress.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Progress.java">
+      <file leaf-file-name="QuizResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/QuizResult.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#1763#1764#0" expanded="true" />
-              </folding>
+              <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/QuizScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,18 +80,28 @@
       <file leaf-file-name="StatsPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/StatsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+            <state relative-caret-position="425">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="35" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatsListener.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/StatsListener.java">
+      <file leaf-file-name="PracticalExercisePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/PracticalExercisePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="146">
+              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TutorialEnd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/TutorialEnd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -97,28 +110,8 @@
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-793">
-              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuizCalculator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/QuizCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -147,33 +140,33 @@
         <option value="$PROJECT_DIR$/src/View/CompleteSkill.java" />
         <option value="$PROJECT_DIR$/src/Controller/ToolTipsListener.java" />
         <option value="$PROJECT_DIR$/src/View/ToolTipsPage.java" />
-        <option value="$PROJECT_DIR$/src/Model/Quiz.java" />
-        <option value="$PROJECT_DIR$/src/Model/PracticalExercise.java" />
-        <option value="$PROJECT_DIR$/src/Controller/ExerciseListener.java" />
-        <option value="$PROJECT_DIR$/src/View/QuizScreen.java" />
-        <option value="$PROJECT_DIR$/src/View/MainPanel.java" />
-        <option value="$PROJECT_DIR$/src/View/ExerciseResult.java" />
-        <option value="$PROJECT_DIR$/src/Controller/StatsListener.java" />
-        <option value="$PROJECT_DIR$/src/View/StatsPage.java" />
-        <option value="$PROJECT_DIR$/src/View/QuizResult.java" />
         <option value="$PROJECT_DIR$/src/Controller/GoListener.java" />
-        <option value="$PROJECT_DIR$/src/View/PlatformGuidePage.java" />
-        <option value="$PROJECT_DIR$/src/Controller/NextListener.java" />
-        <option value="$PROJECT_DIR$/src/View/TutorialEnd.java" />
-        <option value="$PROJECT_DIR$/src/Controller/PrevListener.java" />
-        <option value="$PROJECT_DIR$/src/Model/Tutorial.java" />
         <option value="$PROJECT_DIR$/src/Controller/MenuListener.java" />
         <option value="$PROJECT_DIR$/src/Controller/TutorialListener.java" />
         <option value="$PROJECT_DIR$/src/View/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/View/Menu.java" />
-        <option value="$PROJECT_DIR$/src/View/TutorialScreen.java" />
-        <option value="$PROJECT_DIR$/src/View/PracticalExercisePage.java" />
-        <option value="$PROJECT_DIR$/src/Controller/ExerciseParser.java" />
         <option value="$PROJECT_DIR$/src/Controller/ExitListener.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Controller/QuizCalculator.java" />
+        <option value="$PROJECT_DIR$/src/Model/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/Controller/ExerciseListener.java" />
+        <option value="$PROJECT_DIR$/src/Model/PracticalExercise.java" />
+        <option value="$PROJECT_DIR$/src/Model/Tutorial.java" />
+        <option value="$PROJECT_DIR$/src/Controller/ExerciseParser.java" />
         <option value="$PROJECT_DIR$/src/Model/Progress.java" />
+        <option value="$PROJECT_DIR$/src/Controller/PrevListener.java" />
+        <option value="$PROJECT_DIR$/src/Controller/NextListener.java" />
+        <option value="$PROJECT_DIR$/src/Controller/QuizCalculator.java" />
+        <option value="$PROJECT_DIR$/src/Controller/StatsListener.java" />
         <option value="$PROJECT_DIR$/src/Model/DataHandler.java" />
+        <option value="$PROJECT_DIR$/src/View/MainPanel.java" />
+        <option value="$PROJECT_DIR$/src/View/TutorialScreen.java" />
+        <option value="$PROJECT_DIR$/src/View/ExerciseResult.java" />
+        <option value="$PROJECT_DIR$/src/View/Menu.java" />
+        <option value="$PROJECT_DIR$/src/View/PlatformGuidePage.java" />
+        <option value="$PROJECT_DIR$/src/View/PracticalExercisePage.java" />
+        <option value="$PROJECT_DIR$/src/View/QuizResult.java" />
+        <option value="$PROJECT_DIR$/src/View/QuizScreen.java" />
+        <option value="$PROJECT_DIR$/src/View/StatsPage.java" />
+        <option value="$PROJECT_DIR$/src/View/TutorialEnd.java" />
       </list>
     </option>
   </component>
@@ -804,11 +797,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sqlite4java-392" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -945,12 +938,12 @@
       <workItem from="1522167854281" duration="53311000" />
       <workItem from="1523399383571" duration="37374000" />
       <workItem from="1523724717803" duration="39147000" />
-      <workItem from="1524565088687" duration="17484000" />
+      <workItem from="1524565088687" duration="82693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323348000" />
+    <option name="totallyTimeSpent" value="388557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,12 +968,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28705147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0873635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5304212" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13884555" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1134,30 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/GuideListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="78" column="11" lean-forward="true" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/Controller.QuizListener">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1195,6 +1164,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../sqlite4java-392/sqlite4java-src.zip!/com/almworks/sqlite4java/SQLiteConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/PracticalExercise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://JAVA/">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1226,7 +1235,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.8641975308641975" x="244.0" y="274.0" />
+          <settings layout="Hierarchic Group" zoom="0.9576719576719577" x="244.0" y="273.5" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -1240,74 +1249,548 @@
           <ID>JAVA</ID>
           <OriginalElement>Controller</OriginalElement>
           <nodes>
-            <node x="" y="">Controller.NextListener</node>
-            <node x="" y="">Controller.ExitListener</node>
-            <node x="" y="">Controller.TutorialListener</node>
-            <node x="" y="">Model.Tutorial</node>
-            <node x="" y="">Controller.ExerciseListener</node>
-            <node x="" y="">Model.Progress</node>
-            <node x="" y="">Controller.PrevListener</node>
-            <node x="" y="">Controller.MenuListener</node>
-            <node x="" y="">Model.DataHandler</node>
-            <node x="" y="">Controller.GuideListener</node>
-            <node x="" y="">Controller.StatsListener</node>
-            <node x="" y="">Model.Quiz</node>
-            <node x="" y="">Controller.ExerciseParser</node>
-            <node x="" y="">Controller.QuizCalculator</node>
-            <node x="" y="">Controller.QuizListener</node>
-            <node x="" y="">Model.PracticalExercise</node>
+            <node x="899.0007058287803" y="1190.0">Controller.ExitListener</node>
+            <node x="531.0416666666666" y="1000.0">Controller.NextListener</node>
+            <node x="107.75407803148642" y="890.0">Model.Tutorial</node>
+            <node x="1060.1257058287802" y="160.0">Model.Progress</node>
+            <node x="76.90685580926424" y="0.0">Controller.MenuListener</node>
+            <node x="646.779502911138" y="0.0">Model.DataHandler</node>
+            <node x="1111.2252089838673" y="1190.0">Controller.StatsListener</node>
+            <node x="452.875" y="280.0">Controller.ExerciseParser</node>
+            <node x="672.0721344002088" y="1400.0">View.MainFrame</node>
+            <node x="420.3020833333333" y="890.0">View.TutorialEnd</node>
+            <node x="741.5007058287803" y="1110.0">View.PlatformGuidePage</node>
+            <node x="341.56116112087057" y="160.0">Model.PracticalExercise</node>
+            <node x="387.6733248763993" y="370.0">View.PracticalExercisePage</node>
+            <node x="997.0580357142858" y="1280.0">View.Menu</node>
+            <node x="198.56116112087057" y="160.0">View.ExerciseResult</node>
+            <node x="559.4649915430659" y="700.0">View.QuizScreen</node>
+            <node x="120.69207487639926" y="1190.0">Controller.TutorialListener</node>
+            <node x="300.7983248763993" y="460.0">Controller.ExerciseListener</node>
+            <node x="83.92166642271741" y="1000.0">Controller.PrevListener</node>
+            <node x="334.5483248763993" y="540.0">View.QuizResult</node>
+            <node x="757.0007058287803" y="1190.0">Controller.GuideListener</node>
+            <node x="638.1649915430659" y="540.0">Model.Quiz</node>
+            <node x="10.5" y="1280.0">View.MainPanel</node>
+            <node x="215.59207487639924" y="1110.0">View.TutorialScreen</node>
+            <node x="533.375" y="620.0">Controller.QuizCalculator</node>
+            <node x="553.533244698153" y="800.0">Controller.QuizListener</node>
+            <node x="938.7864201144945" y="1480.0">Main</node>
+            <node x="1084.6002089838673" y="1110.0">View.StatsPage</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="725.0" y="326.0" />
+          <edges>
+            <edge source="Controller.MenuListener" target="View.MainFrame">
+              <point x="-45.75" y="15.0" />
+              <point x="92.15685580926424" y="130.0" />
+              <point x="0.0" y="130.0" />
+              <point x="0.0" y="1380.0" />
+              <point x="676.0007058287803" y="1380.0" />
+              <point x="-51.071428571428555" y="-15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="Controller.QuizListener">
+              <point x="-32.0" y="15.0" />
+              <point x="565.375" y="680.0" />
+              <point x="537.720744698153" y="680.0" />
+              <point x="537.720744698153" y="760.0" />
+              <point x="589.470744698153" y="760.0" />
+              <point x="-21.5625" y="-15.0" />
+            </edge>
+            <edge source="Model.Tutorial" target="Model.DataHandler">
+              <point x="0.0" y="-15.0" />
+              <point x="153.25407803148642" y="100.0" />
+              <point x="653.2239473555825" y="100.0" />
+              <point x="-51.55555555555554" y="15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="Model.PracticalExercise">
+              <point x="0.0" y="-15.0" />
+              <point x="514.375" y="210.0" />
+              <point x="463.96116112087054" y="210.0" />
+              <point x="54.39999999999998" y="15.0" />
+            </edge>
+            <edge source="Controller.NextListener" target="Model.Tutorial">
+              <point x="0.0" y="-15.0" />
+              <point x="588.5416666666666" y="950.0" />
+              <point x="193.06657803148642" y="950.0" />
+              <point x="39.8125" y="15.0" />
+            </edge>
+            <edge source="View.QuizScreen" target="Controller.QuizListener">
+              <point x="27.25" y="15.0" />
+              <point x="641.2149915430659" y="750.0" />
+              <point x="618.220744698153" y="750.0" />
+              <point x="7.1875" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="Model.Progress">
+              <point x="49.200000000000045" y="-15.0" />
+              <point x="563.575" y="230.0" />
+              <point x="1068.042372495447" y="230.0" />
+              <point x="-39.583333333333314" y="15.0" />
+            </edge>
+            <edge source="View.TutorialScreen" target="Controller.ExerciseListener">
+              <point x="6.2999999999999545" y="-15.0" />
+              <point x="284.8920748763992" y="1050.0" />
+              <point x="293.9233248763993" y="1050.0" />
+              <point x="293.9233248763993" y="515.0" />
+              <point x="317.2983248763993" y="515.0" />
+              <point x="-49.5" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="View.QuizResult">
+              <point x="-51.200000000000045" y="-15.0" />
+              <point x="546.175" y="600.0" />
+              <point x="414.0483248763993" y="600.0" />
+              <point x="26.5" y="15.0" />
+            </edge>
+            <edge source="Controller.TutorialListener" target="View.TutorialScreen">
+              <point x="16.5" y="-15.0" />
+              <point x="203.19207487639926" y="1160.0" />
+              <point x="247.09207487639924" y="1160.0" />
+              <point x="-31.5" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="Model.Progress">
+              <point x="0.0" y="-15.0" />
+              <point x="597.375" y="240.0" />
+              <point x="1083.8757058287802" y="240.0" />
+              <point x="-23.75" y="15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="View.PracticalExercisePage">
+              <point x="-10.25" y="15.0" />
+              <point x="504.125" y="350.0" />
+              <point x="468.6733248763993" y="350.0" />
+              <point x="0.0" y="-15.0" />
+            </edge>
+            <edge source="Model.Progress" target="Model.DataHandler">
+              <point x="0.0" y="-15.0" />
+              <point x="1107.6257058287802" y="70.0" />
+              <point x="730.5572806889157" y="70.0" />
+              <point x="25.777777777777715" y="15.0" />
+            </edge>
+            <edge source="View.MainFrame" target="View.Menu">
+              <point x="27.5" y="-15.0" />
+              <point x="754.5721344002088" y="1350.0" />
+              <point x="1017.3080357142858" y="1350.0" />
+              <point x="-20.25" y="15.0" />
+            </edge>
+            <edge source="Controller.NextListener" target="View.TutorialEnd">
+              <point x="38.33333333333337" y="-15.0" />
+              <point x="626.875" y="940.0" />
+              <point x="475.8020833333333" y="940.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="View.TutorialEnd" target="Controller.QuizListener">
+              <point x="27.75" y="-15.0" />
+              <point x="503.5520833333333" y="870.0" />
+              <point x="611.033244698153" y="870.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Controller.MenuListener" target="View.MainPanel">
+              <point x="-15.25" y="15.0" />
+              <point x="122.65685580926424" y="140.0" />
+              <point x="37.0" y="140.0" />
+              <point x="-26.5" y="-15.0" />
+            </edge>
+            <edge source="Main" target="Model.DataHandler">
+              <point x="19.25" y="-15.0" />
+              <point x="996.5364201144945" y="1455.0" />
+              <point x="1250.439494698153" y="1455.0" />
+              <point x="1250.439494698153" y="50.0" />
+              <point x="756.3350584666936" y="50.0" />
+              <point x="51.55555555555554" y="15.0" />
+            </edge>
+            <edge source="Model.Progress" target="View.MainFrame">
+              <point x="39.58333333333337" y="15.0" />
+              <point x="1147.2090391621136" y="250.0" />
+              <point x="1237.7252089838673" y="250.0" />
+              <point x="1237.7252089838673" y="1380.0" />
+              <point x="778.1435629716374" y="1380.0" />
+              <point x="51.071428571428555" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExerciseListener" target="View.MainFrame">
+              <point x="49.5" y="15.0" />
+              <point x="416.2983248763993" y="515.0" />
+              <point x="723.1435629716374" y="515.0" />
+              <point x="-3.928571428571445" y="-15.0" />
+            </edge>
+            <edge source="View.QuizScreen" target="Controller.QuizCalculator">
+              <point x="-36.33333333333337" y="-15.0" />
+              <point x="577.6316582097326" y="680.0" />
+              <point x="586.7083333333334" y="680.0" />
+              <point x="-10.666666666666629" y="15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="Model.DataHandler">
+              <point x="24.600000000000023" y="-15.0" />
+              <point x="538.975" y="260.0" />
+              <point x="545.7878362444714" y="260.0" />
+              <point x="545.7878362444714" y="120.0" />
+              <point x="679.0017251333602" y="120.0" />
+              <point x="-25.77777777777783" y="15.0" />
+            </edge>
+            <edge source="Controller.ExitListener" target="Model.DataHandler">
+              <point x="0.0" y="-15.0" />
+              <point x="953.5007058287803" y="140.0" />
+              <point x="717.6683918000269" y="140.0" />
+              <point x="12.888888888888914" y="15.0" />
+            </edge>
+            <edge source="View.TutorialScreen" target="Controller.NextListener">
+              <point x="31.5" y="-15.0" />
+              <point x="310.09207487639924" y="1070.0" />
+              <point x="545.4166666666666" y="1070.0" />
+              <point x="-43.125" y="15.0" />
+            </edge>
+            <edge source="View.TutorialScreen" target="Model.Tutorial">
+              <point x="-6.2999999999999545" y="-15.0" />
+              <point x="272.2920748763993" y="1050.0" />
+              <point x="259.12332487639924" y="1050.0" />
+              <point x="259.12332487639924" y="970.0" />
+              <point x="170.31657803148642" y="970.0" />
+              <point x="17.0625" y="15.0" />
+            </edge>
+            <edge source="View.TutorialEnd" target="Controller.ExerciseListener">
+              <point x="-27.75" y="-15.0" />
+              <point x="448.0520833333333" y="850.0" />
+              <point x="324.0483248763993" y="850.0" />
+              <point x="324.0483248763993" y="515.0" />
+              <point x="350.2983248763993" y="515.0" />
+              <point x="-16.5" y="15.0" />
+            </edge>
+            <edge source="View.Menu" target="Model.Progress">
+              <point x="20.25" y="-15.0" />
+              <point x="1057.8080357142858" y="1250.0" />
+              <point x="1074.1002089838673" y="1250.0" />
+              <point x="1074.1002089838673" y="260.0" />
+              <point x="1115.542372495447" y="260.0" />
+              <point x="7.916666666666686" y="15.0" />
+            </edge>
+            <edge source="Controller.TutorialListener" target="View.MainFrame">
+              <point x="33.0" y="15.0" />
+              <point x="219.69207487639926" y="1360.0" />
+              <point x="691.7149915430659" y="1360.0" />
+              <point x="-35.35714285714289" y="-15.0" />
+            </edge>
+            <edge source="View.Menu" target="Controller.StatsListener">
+              <point x="33.75" y="-15.0" />
+              <point x="1071.3080357142858" y="1260.0" />
+              <point x="1140.2252089838673" y="1260.0" />
+              <point x="-29.0" y="15.0" />
+            </edge>
+            <edge source="Main" target="View.MainFrame">
+              <point x="-19.25" y="-15.0" />
+              <point x="958.0364201144945" y="1455.0" />
+              <point x="727.0721344002088" y="1455.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizListener" target="View.QuizScreen">
+              <point x="-7.1875" y="-15.0" />
+              <point x="603.845744698153" y="750.0" />
+              <point x="586.7149915430659" y="750.0" />
+              <point x="-27.25" y="15.0" />
+            </edge>
+            <edge source="View.PracticalExercisePage" target="Controller.ExerciseListener">
+              <point x="40.5" y="15.0" />
+              <point x="509.1733248763993" y="430.0" />
+              <point x="408.0483248763993" y="430.0" />
+              <point x="41.25" y="-15.0" />
+            </edge>
+            <edge source="View.TutorialScreen" target="Controller.QuizListener">
+              <point x="18.90000000000009" y="-15.0" />
+              <point x="297.49207487639933" y="1060.0" />
+              <point x="389.63541666666663" y="1060.0" />
+              <point x="389.63541666666663" y="860.0" />
+              <point x="572.6999113648196" y="860.0" />
+              <point x="-38.33333333333337" y="15.0" />
+            </edge>
+            <edge source="Controller.ExerciseListener" target="View.PracticalExercisePage">
+              <point x="24.75" y="-15.0" />
+              <point x="391.5483248763993" y="420.0" />
+              <point x="428.1733248763993" y="420.0" />
+              <point x="-40.5" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="View.MainFrame">
+              <point x="53.33333333333326" y="15.0" />
+              <point x="650.7083333333333" y="670.0" />
+              <point x="711.9649915430659" y="670.0" />
+              <point x="711.9649915430659" y="1330.0" />
+              <point x="715.2864201144945" y="1330.0" />
+              <point x="-11.785714285714334" y="-15.0" />
+            </edge>
+            <edge source="Controller.StatsListener" target="Model.DataHandler">
+              <point x="43.5" y="-15.0" />
+              <point x="1212.7252089838673" y="1170.0" />
+              <point x="1209.042372495447" y="1170.0" />
+              <point x="1209.042372495447" y="60.0" />
+              <point x="743.4461695778047" y="60.0" />
+              <point x="38.66666666666663" y="15.0" />
+            </edge>
+            <edge source="View.QuizResult" target="Controller.ExerciseListener">
+              <point x="0.0" y="-15.0" />
+              <point x="387.5483248763993" y="515.0" />
+              <point x="383.2983248763993" y="515.0" />
+              <point x="16.5" y="15.0" />
+            </edge>
+            <edge source="View.MainFrame" target="View.MainPanel">
+              <point x="-43.214285714285666" y="-15.0" />
+              <point x="683.8578486859232" y="1370.0" />
+              <point x="63.5" y="1370.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="View.ExerciseResult" target="Controller.ExerciseListener">
+              <point x="-30.75" y="15.0" />
+              <point x="229.31116112087057" y="440.0" />
+              <point x="309.0483248763993" y="440.0" />
+              <point x="-57.75" y="-15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="Model.Quiz">
+              <point x="51.200000000000045" y="-15.0" />
+              <point x="648.575" y="600.0" />
+              <point x="660.3649915430659" y="600.0" />
+              <point x="-14.799999999999955" y="15.0" />
+            </edge>
+            <edge source="View.MainPanel" target="Controller.TutorialListener">
+              <point x="26.5" y="-15.0" />
+              <point x="90.0" y="1260.0" />
+              <point x="153.69207487639926" y="1260.0" />
+              <point x="-33.0" y="15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="Controller.ExerciseListener">
+              <point x="30.75" y="15.0" />
+              <point x="545.125" y="350.0" />
+              <point x="560.1733248763993" y="350.0" />
+              <point x="560.1733248763993" y="440.0" />
+              <point x="424.5483248763993" y="440.0" />
+              <point x="57.75" y="-15.0" />
+            </edge>
+            <edge source="Controller.GuideListener" target="View.MainFrame">
+              <point x="-30.5" y="15.0" />
+              <point x="787.5007058287803" y="1330.0" />
+              <point x="738.8578486859232" y="1330.0" />
+              <point x="11.785714285714334" y="-15.0" />
+            </edge>
+            <edge source="Controller.PrevListener" target="View.TutorialScreen">
+              <point x="0.0" y="15.0" />
+              <point x="140.9216664227174" y="1070.0" />
+              <point x="247.09207487639924" y="1070.0" />
+              <point x="-31.5" y="-15.0" />
+            </edge>
+            <edge source="Controller.StatsListener" target="View.StatsPage">
+              <point x="-43.5" y="-15.0" />
+              <point x="1125.7252089838673" y="1170.0" />
+              <point x="1109.8502089838673" y="1170.0" />
+              <point x="-25.25" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="View.QuizScreen">
+              <point x="32.0" y="15.0" />
+              <point x="629.375" y="680.0" />
+              <point x="650.2983248763993" y="680.0" />
+              <point x="36.33333333333337" y="-15.0" />
+            </edge>
+            <edge source="Controller.GuideListener" target="View.PlatformGuidePage">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Controller.TutorialListener" target="Model.Tutorial">
+              <point x="-16.5" y="-15.0" />
+              <point x="170.19207487639926" y="1160.0" />
+              <point x="59.52166642271743" y="1160.0" />
+              <point x="59.52166642271743" y="960.0" />
+              <point x="124.81657803148642" y="960.0" />
+              <point x="-28.4375" y="15.0" />
+            </edge>
+            <edge source="Controller.NextListener" target="View.MainFrame">
+              <point x="43.125" y="15.0" />
+              <point x="631.6666666666666" y="1090.0" />
+              <point x="657.0899915430659" y="1090.0" />
+              <point x="657.0899915430659" y="1350.0" />
+              <point x="699.5721344002088" y="1350.0" />
+              <point x="-27.5" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExerciseListener" target="Model.PracticalExercise">
+              <point x="-8.25" y="-15.0" />
+              <point x="358.5483248763993" y="440.0" />
+              <point x="361.2983248763993" y="440.0" />
+              <point x="361.2983248763993" y="260.0" />
+              <point x="409.56116112087057" y="260.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Controller.StatsListener" target="View.MainFrame">
+              <point x="29.0" y="15.0" />
+              <point x="1198.2252089838673" y="1370.0" />
+              <point x="770.2864201144945" y="1370.0" />
+              <point x="43.214285714285666" y="-15.0" />
+            </edge>
+            <edge source="Controller.QuizListener" target="Model.Quiz">
+              <point x="35.9375" y="-15.0" />
+              <point x="646.970744698153" y="770.0" />
+              <point x="689.9649915430659" y="770.0" />
+              <point x="14.799999999999955" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizCalculator" target="Model.DataHandler">
+              <point x="-25.600000000000023" y="-15.0" />
+              <point x="571.775" y="600.0" />
+              <point x="586.375" y="600.0" />
+              <point x="586.375" y="130.0" />
+              <point x="691.8906140222491" y="130.0" />
+              <point x="-12.888888888888914" y="15.0" />
+            </edge>
+            <edge source="Controller.PrevListener" target="Model.Tutorial">
+              <point x="-28.5" y="-15.0" />
+              <point x="112.42166642271741" y="980.0" />
+              <point x="147.56657803148642" y="980.0" />
+              <point x="-5.6875" y="15.0" />
+            </edge>
+            <edge source="Controller.StatsListener" target="Model.Progress">
+              <point x="14.5" y="-15.0" />
+              <point x="1183.7252089838673" y="1170.0" />
+              <point x="1196.1002089838673" y="1170.0" />
+              <point x="1196.1002089838673" y="260.0" />
+              <point x="1131.3757058287802" y="260.0" />
+              <point x="23.75" y="15.0" />
+            </edge>
+            <edge source="View.Menu" target="Controller.GuideListener">
+              <point x="-33.75" y="-15.0" />
+              <point x="1003.8080357142858" y="1260.0" />
+              <point x="848.5007058287803" y="1260.0" />
+              <point x="30.5" y="15.0" />
+            </edge>
+            <edge source="View.Menu" target="Controller.MenuListener">
+              <point x="-6.75" y="-15.0" />
+              <point x="1030.8080357142858" y="1240.0" />
+              <point x="1018.5007058287803" y="1240.0" />
+              <point x="1018.5007058287803" y="80.0" />
+              <point x="183.65685580926424" y="80.0" />
+              <point x="45.75" y="15.0" />
+            </edge>
+            <edge source="View.PracticalExercisePage" target="Controller.ExerciseParser">
+              <point x="-54.0" y="-15.0" />
+              <point x="414.6733248763993" y="340.0" />
+              <point x="483.625" y="340.0" />
+              <point x="-30.75" y="15.0" />
+            </edge>
+            <edge source="Model.Quiz" target="Model.DataHandler">
+              <point x="0.0" y="-15.0" />
+              <point x="675.1649915430659" y="140.0" />
+              <point x="704.779502911138" y="140.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="View.QuizResult" target="Controller.QuizListener">
+              <point x="-26.5" y="15.0" />
+              <point x="361.0483248763993" y="780.0" />
+              <point x="560.720744698153" y="780.0" />
+              <point x="-50.3125" y="-15.0" />
+            </edge>
+            <edge source="View.Menu" target="Controller.ExitListener">
+              <point x="-20.25" y="-15.0" />
+              <point x="1017.3080357142858" y="1250.0" />
+              <point x="980.7507058287803" y="1250.0" />
+              <point x="27.25" y="15.0" />
+            </edge>
+            <edge source="Controller.QuizListener" target="View.MainFrame">
+              <point x="38.33333333333337" y="15.0" />
+              <point x="649.3665780314864" y="870.0" />
+              <point x="681.9649915430659" y="870.0" />
+              <point x="681.9649915430659" y="1340.0" />
+              <point x="707.4292772573517" y="1340.0" />
+              <point x="-19.64285714285711" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="View.ExerciseResult">
+              <point x="-49.19999999999993" y="-15.0" />
+              <point x="465.17500000000007" y="230.0" />
+              <point x="290.81116112087057" y="230.0" />
+              <point x="30.75" y="15.0" />
+            </edge>
+            <edge source="View.StatsPage" target="Controller.StatsListener">
+              <point x="25.25" y="15.0" />
+              <point x="1160.3502089838673" y="1170.0" />
+              <point x="1154.7252089838673" y="1170.0" />
+              <point x="-14.5" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExerciseParser" target="View.MainFrame">
+              <point x="51.25" y="15.0" />
+              <point x="565.625" y="350.0" />
+              <point x="731.0007058287803" y="350.0" />
+              <point x="3.928571428571445" y="-15.0" />
+            </edge>
+            <edge source="Controller.ExitListener" target="View.MainFrame">
+              <point x="-27.25" y="15.0" />
+              <point x="926.2507058287803" y="1340.0" />
+              <point x="746.7149915430659" y="1340.0" />
+              <point x="19.64285714285711" y="-15.0" />
+            </edge>
+            <edge source="View.TutorialScreen" target="Controller.PrevListener">
+              <point x="-44.09999999999991" y="-15.0" />
+              <point x="234.49207487639933" y="1080.0" />
+              <point x="102.92166642271741" y="1080.0" />
+              <point x="-38.0" y="15.0" />
+            </edge>
+            <edge source="View.ExerciseResult" target="Controller.MenuListener">
+              <point x="0.0" y="-15.0" />
+              <point x="260.06116112087057" y="90.0" />
+              <point x="153.15685580926424" y="90.0" />
+              <point x="15.25" y="15.0" />
+            </edge>
+            <edge source="Model.PracticalExercise" target="Model.DataHandler">
+              <point x="0.0" y="-15.0" />
+              <point x="409.56116112087057" y="110.0" />
+              <point x="666.1128362444714" y="110.0" />
+              <point x="-38.66666666666663" y="15.0" />
+            </edge>
+            <edge source="Controller.NextListener" target="View.TutorialScreen">
+              <point x="14.375" y="15.0" />
+              <point x="602.9166666666666" y="1090.0" />
+              <point x="335.2920748763993" y="1090.0" />
+              <point x="56.700000000000045" y="-15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="1126.0" />
           <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-          </Categories>
+          <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/QuizListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Progress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="92" column="22" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="103" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ExerciseResult.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Tutorial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="77">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TutorialEnd.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ExerciseListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="21" column="65" lean-forward="true" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PrevListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="89">
+          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/NextListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ExerciseParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        <state relative-caret-position="106">
+          <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ExitListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/GuideListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1320,180 +1803,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/TutorialListener.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/NextListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/PracticalExercise.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/PrevListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/TutorialScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="140" column="13" lean-forward="true" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/QuizResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/QuizScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="151" column="5" lean-forward="false" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PracticalExercisePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-          <folding>
-            <element signature="e#2705#2706#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Tutorial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../sqlite4java-392/sqlite4java-src.zip!/com/almworks/sqlite4java/SQLiteConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ExerciseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ExerciseParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="43" column="110" lean-forward="false" selection-start-line="43" selection-start-column="110" selection-end-line="43" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ExitListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="357">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/QuizCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="704">
+          <caret line="59" column="9" lean-forward="false" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DataHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/QuizListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="354" column="54" lean-forward="false" selection-start-line="354" selection-start-column="54" selection-end-line="354" selection-end-column="54" />
-          <folding>
-            <element signature="e#14035#14036#0" expanded="true" />
-            <element signature="e#14079#14080#0" expanded="true" />
-            <element signature="e#15666#15667#0" expanded="true" />
-            <element signature="e#15708#15709#0" expanded="true" />
-            <element signature="e#15754#15755#0" expanded="true" />
-            <element signature="e#15796#15797#0" expanded="true" />
-            <element signature="e#15982#15983#0" expanded="true" />
-            <element signature="e#16009#16010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-793">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Progress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/StatsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state relative-caret-position="191">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/StatsListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/TutorialListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DataHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="350" column="9" lean-forward="true" selection-start-line="350" selection-start-column="9" selection-end-line="350" selection-end-column="9" />
+          <folding>
+            <element signature="e#15544#15545#0" expanded="true" />
+            <element signature="e#15586#15587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="55" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ExerciseResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="42" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PlatformGuidePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PracticalExercisePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/QuizResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/QuizScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="113" column="25" lean-forward="true" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/StatsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/TutorialEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/TutorialScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#6583#6584#0" expanded="true" />
+            <element signature="e#6622#6623#0" expanded="true" />
+            <element signature="e#7540#7541#0" expanded="true" />
+            <element signature="e#7581#7582#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

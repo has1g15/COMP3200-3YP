@@ -22,12 +22,13 @@ public class PrevListener implements ActionListener {
     {
         if (tutorial.getCurrentIndex() == 0)
         {
-
+            tutorialScreen.graphicsPanel.remove(tutorialScreen.layeredPane);
+            tutorialScreen.graphicsPanel.revalidate();
+            tutorialScreen.graphicsPanel.repaint();
         }
         else
         {
             tutorial.decrementIndex();
-            System.out.println("It's okay (previous)");
             tutorialScreen.changeCode(tutorial.getCurrentCode());
             tutorialScreen.changeConsoleText(tutorial.getCurrentOutput());
             tutorialScreen.changeGuideText(tutorial.getCurrentGuide());

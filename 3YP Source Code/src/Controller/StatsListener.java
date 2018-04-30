@@ -13,8 +13,6 @@ import java.util.Map;
 
 public class StatsListener implements ActionListener {
 
-    private Progress progress;
-
     public StatsListener()
     {
 
@@ -28,7 +26,6 @@ public class StatsListener implements ActionListener {
 
     public HashMap<String, String> getStatsData(String language)
     {
-        System.out.print(DataHandler.dataHandler.getAppData(language));
         return DataHandler.dataHandler.getAppData(language);
     }
 }

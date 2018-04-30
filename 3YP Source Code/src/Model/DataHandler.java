@@ -23,7 +23,7 @@ public class DataHandler {
 
     private SQLiteConnection c;
 
-    private HashMap<String, HashMap<String, String>> appData;
+    public HashMap<String, HashMap<String, String>> appData;
     private HashMap<Integer, HashMap<String, String>> javaTutorialData, javaScriptTutorialData, pythonTutorialData,
                                                       javaMcqData, javaScriptMcqData, pythonMcqData,
                                                       javaExerciseData, javaScriptExerciseData, pythonExerciseData;
@@ -302,7 +302,7 @@ public class DataHandler {
                 count++;
             }
             javaScriptStat.dispose();
-            System.out.println("Loaded " + count + " exercises from " + javaScriptExerciseData.size() + " JavaScript exercises");
+            System.out.println("Loaded " + javaScriptExerciseData.size() + " JavaScript exercises");
             count = 0;
 
             while (pythonStat.step())
@@ -322,7 +322,7 @@ public class DataHandler {
                 count++;
             }
             pythonStat.dispose();
-            System.out.println("Loaded " + count + " exercises from " + pythonExerciseData.size() + " Python exercises");
+            System.out.println("Loaded " + pythonExerciseData.size() + " Python exercises");
         }
         catch (SQLiteException e)
         {
@@ -352,7 +352,6 @@ public class DataHandler {
             c = new SQLiteConnection(new File(thirdYPdb));
             c.open(false);
             c.exec("UPDATE appData SET data = '" + data + "' WHERE dataField = '" + field + "' AND language = '" + language + "';");
-            System.out.print(language + field + data);
         }
         catch (SQLiteException e)
         {
@@ -419,12 +418,7 @@ public class DataHandler {
         return map.get(exerciseID);
     }
 
-    public int getTutorialID(String skill)
-    {
-        return skillMap.get(skill);
-    }
-
-    public int getQuizID(String skill)
+    public int getID(String skill)
     {
         return skillMap.get(skill);
     }

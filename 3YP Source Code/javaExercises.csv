@@ -1,7 +1,22 @@
-﻿1,problem,answer
+﻿1,"Declare and initialise the following:
+1) String variable hello with value hello
+2) Character variable c with value c
+3) Integer variable num with value 5
+4) Float variable f with value 8.3
+5) Boolean variable correct with value false","String hello = ""hello"";
+char c = 'c';
+int num = 5;
+float f = 8.3;
+boolean correct = false;"
 2,problem,answer
 3,problem,answer
-4,problem,answer
+4,"Assuming an integer variable i has been declared and intialised with a value, 
+write a while loop where it is checked at the start if i is less than 10 and if the 
+condition is met, i is printed and then incremented.","while (i < 10)
+{
+System.out.print(i);
+i++;
+}"
 5,problem,answer
 6,problem,answer
 7,problem,answer

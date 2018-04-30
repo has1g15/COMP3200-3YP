@@ -7,26 +7,30 @@ import Controller.QuizListener;
 import Model.Tutorial;
 
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TutorialScreen extends JPanel {
 
-    private JPanel graphicsPanel, guidePanel, prevPanel, labelPanel, nextPanel, console, codePanel;
+    private JPanel guidePanel, prevPanel, labelPanel, nextPanel, console, codePanel;
+    public JPanel graphicsPanel;
     private JScrollPane guidePane;
     private JTextArea guideText, consoleText, initial;
     private JLabel taskLabel;
     private JButton prev, next, quiz, exercise;
-    private JLayeredPane layeredPane;
+    public JLayeredPane layeredPane;
     private GridBagConstraints gbc;
     private Tutorial tutorial;
+    private MatteBorder border;
 
     public TutorialScreen(int x, int y, int width, int height, String language, String skill, Tutorial tutorial)
     {
         this.tutorial = tutorial;
         this.setBounds(x, y, width, height);
-        this.setBackground(new Color(0x3396ff));
+        this.setBackground(new Color(0x003166));
         FlowLayout flowLayout = new FlowLayout();
         flowLayout.setHgap(0);
         flowLayout.setVgap(0);
@@ -58,14 +62,14 @@ public class TutorialScreen extends JPanel {
 
         guidePanel = new JPanel();
         guidePanel.setPreferredSize(new Dimension(this.getWidth()/3, this.getHeight()*6/7));
-        guidePanel.setBackground(new Color(0x3396ff));
+        guidePanel.setBackground(new Color(0x0063cc));
         guidePanel.setLayout(new FlowLayout());
         guideText = new JTextArea("", 30, 24);
         guideText.setFont(new Font("Balsamiq Sand", Font.BOLD, 14));
         guideText.setLineWrap(true);
         guideText.setWrapStyleWord(true);
         guidePane = new JScrollPane(guideText);
-        quiz = new JButton("Quiz Out");
+        quiz = new JButton("Take Quiz");
         exercise = new JButton("Take Exercise");
         quiz.setFont(new Font("Balsamiq Sans", Font.PLAIN, 14));
         quiz.addActionListener(new QuizListener(language, skill));
@@ -76,19 +80,22 @@ public class TutorialScreen extends JPanel {
         guidePanel.add(quiz);
         guidePanel.add(exercise);
 
+        border = new MatteBorder(5, 0, 0, 0, new Color(0x003166));
         prevPanel = new JPanel();
         prevPanel.setPreferredSize(new Dimension(width/5, height/7));
-        prev = new JButton("prev");
+        prevPanel.setBorder(new CompoundBorder(border, BorderFactory.createEmptyBorder(15, 0, 15, 0)));
+        prev = new JButton("< prev");
+        prev.setPreferredSize(new Dimension(150, 40));
+        prev.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         prev.addActionListener(new PrevListener(tutorial, this));
         prevPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        prevPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         prevPanel.setBackground(new Color(0x0063cc));
         prevPanel.add(prev);
 
         labelPanel = new JPanel();
         labelPanel.setPreferredSize(new Dimension(width*3/5, height/7));
+        labelPanel.setBorder(new CompoundBorder(border, BorderFactory.createEmptyBorder(15, 0, 15, 0)));
         labelPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        labelPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         labelPanel.setBackground(new Color(0x0063cc));
         taskLabel = new JLabel(language + ": " + skill);
         taskLabel.setForeground(Color.WHITE);
@@ -97,10 +104,12 @@ public class TutorialScreen extends JPanel {
 
         nextPanel = new JPanel();
         nextPanel.setPreferredSize(new Dimension(width/5, height/7));
-        next = new JButton("next");
+        nextPanel.setBorder(new CompoundBorder(border, BorderFactory.createEmptyBorder(15, 0, 15, 0)));
+        next = new JButton("next >");
+        next.setPreferredSize(new Dimension(150, 40));
+        next.setFont(new Font("Balsamiq Sans", Font.BOLD, 18));
         next.addActionListener(new NextListener(tutorial, this));
         nextPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        nextPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         nextPanel.setBackground(new Color(0x0063cc));
         nextPanel.add(next);
 
@@ -141,14 +150,9 @@ public class TutorialScreen extends JPanel {
             }
             text.setBounds(xOffset * i/2,yOffset,graphicsPanel.getWidth()*2/5, graphicsPanel.getHeight()/21*yScale);
             layeredPane.add(text, new Integer(i));
-            yOffset = yOffset + (graphicsPanel.getHeight()/20)*2;
-        }
-        if (tutorial.getCurrentIndex() == 1)
-        {
-            graphicsPanel.remove(initial);
+            yOffset = yOffset + (graphicsPanel.getHeight()/10);
         }
         graphicsPanel.add(layeredPane, gbc);
-        System.out.println("adding");
     }
 
     public void changeGuideText(String text)
@@ -159,8 +163,17 @@ public class TutorialScreen extends JPanel {
     public void changeCode(String text)
     {
         System.out.println(tutorial.getCurrentIndex());
-        if (tutorial.getCurrentIndex() > 1) {
+        if (tutorial.getCurrentIndex() == 1)
+        {
+            graphicsPanel.remove(initial);
+            graphicsPanel.revalidate();
+            graphicsPanel.repaint();
+        }
+        if (tutorial.getCurrentIndex() > 1)
+        {
             graphicsPanel.remove(layeredPane);
+            graphicsPanel.revalidate();
+            graphicsPanel.repaint();
         }
         if (tutorial.getCurrentIndex() == 0)
         {

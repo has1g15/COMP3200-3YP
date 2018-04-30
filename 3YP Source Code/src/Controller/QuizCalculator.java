@@ -8,10 +8,12 @@ import View.QuizResult;
 import View.QuizScreen;
 import View.TutorialScreen;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class QuizCalculator implements ActionListener {
@@ -30,37 +32,43 @@ public class QuizCalculator implements ActionListener {
         this.quiz = quiz;
     }
 
-    public int calcScore()
+    public void calcScore()
     {
         int index = 0;
         score = 0;
         for (String chosenAnswer: selectedAnswers)
         {
-            System.out.println(chosenAnswer);
-            System.out.println(correctAnswers.get(index));
-            System.out.print(index);
             if (chosenAnswer.equals(correctAnswers.get(index)))
             {
                 score++;
             }
             index++;
         }
-        System.out.println(score);
-        return score;
     }
 
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        List<String> chosenAnswers = new ArrayList<>();
         selectedAnswers = quizScreen.getSelectedAnswers();
+        for (int i = 0; i < 10; i++)
+        {
+            if (selectedAnswers[i] != null)
+            {
+                chosenAnswers.add(selectedAnswers[i]);
+            }
+        }
         correctAnswers = quizScreen.getCorrectAnswers();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
-        LocalDate date = LocalDate.now();
-        quiz.setDateCompleted(formatter.format(date));
+        if (chosenAnswers.size() != 10)
+        {
+            JOptionPane.showMessageDialog(null, "Please select an answer for every question");
+        }
+        else {
         calcScore();
         updateProgress(score);
         MainFrame.mainFrame.updatePanel(new QuizResult(MainFrame.PANEL_X_POS, 0, MainFrame.PANEL_WIDTH,
                 MainFrame.HEIGHT, score, quizListener));
+        }
     }
 
     public void updateProgress(int score)

@@ -1,5 +1,15 @@
-﻿1,Welcome to Java Tutorial 1,$This is the console,"In this tutorial, we are going to learn how to print out data to the console and declare and initialise variables as well as a selection of the data types available in Java."
-1,"£System.out.print(""Hello!"");",$Hello!,"To print to the console, we use the following: System.out.print();. We enclose the data we want to print within the brackets. For now, we will use a String type - essentially text surrounded by double quotation marks"
+﻿1,"Welcome to Java Printing, Variable Declaration and Data Types Tutorial ",$This is the console,"In this tutorial, we are going to learn how to print out data to the console and declare and initialise variables as well as a selection of the data types available in Java."
+1,"£System.out.print(""Hello"");",$Hello,"To print to the console, we use the following: System.out.print();. We enclose the data we want to print within the brackets. For now, we will use a String type - essentially text surrounded by double quotation marks. From this stage, it is important to note that every statement should finish with a semi colon (;)."
+1,"£System.out.println(""Hello"");",$Hello,"If we want to print each piece of data on a new line, the println command is used"
+1,£String hello;,$-,"Variables are used to store pieces of data. In Java, variables need to be declared which means defining their data type, here a String variable is declared, a String is a sequence of characters, a person's name for example."
+1,"£String hello = ""hello"";",$-,"Variables should be initialised which means setting their value. In the example, the hello variable is assigned the String ""hello"". It is important that the data being assigned is of the same type as the declared variable. The double quotation marks in the example show that this is a String."
+1,£System.out.print(hello);,$hello,"When printing, the variable can be used in the print statement instead of the explicit data like in the first printing example"
+1,£int number = 5;,$-,"We can also declare and initialise integers, to do this we use the 'int' type, and then simply assign a whole number to the declared variable."
+1,£char c = 'a';,$-,"A variable that only takes a single character is a char. When assigning a value, we enclose the value in single quotation marks"
+1,£float number = 7.0;,$-,A float variable can be used for numbers with decimal points. We declare and initialise this much like an int variable but the value has to contain a decimal point even if it is a whole number.
+1,£boolean correct = true;,$- ,"The final data type we'll cover is the boolean variable, this is a variable that can either be assigned a value of true or false. Note these do not need to be surrounded by any quotation marks"
+2,Welcome to Java Tutorial 2,$This is the console,text
+3,Welcome to Java Tutorial 3,$This is the console,text
 4,Welcome to the Java Loops Tutorial,$This is the console,"In this tutorial, we are going to learn about some of the types of loop we can use in Java. Loops are a concept used for performing operations sequentially until a specified condition is met. We'll start by looking at for loops."
 4,"int num = 5;
 int array = new int[10];
@@ -117,3 +127,9 @@ i--;",$-,"The final type of loop in this tutorial is a do while loop, this is si
 } while (i > 0)
 @£System.out.print(i);
 i--;",$10 9 8 7 6 5 4 3 2 1  ,"After i has been printed and decremented, that is when it will be checked to see if it is value is over zero "
+5,Welcome to Java Tutorial 5,$This is the console,text
+6,Welcome to Java Tutorial 6,$This is the console,text
+7,Welcome to Java Tutorial 7,$This is the console,text
+8,Welcome to Java Tutorial 8,$This is the console,text
+9,Welcome to Java Tutorial 9,$This is the console,text
+10,Welcome to Java Tutorial 10,$This is the console,text

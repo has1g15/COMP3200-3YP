@@ -3,13 +3,13 @@ package Model;
 import View.MainFrame;
 import com.almworks.sqlite4java.SQLiteException;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 
 public class Progress {
 
     private int pointsToAdd, points;
-    //private DataHandler dataHandler;
 
     public Progress()
     {
@@ -18,7 +18,6 @@ public class Progress {
 
     public Progress(String language, String field, String value)
     {
-        //dataHandler = new DataHandler();
         saveProgress(language, field, value);
     }
 
@@ -28,9 +27,18 @@ public class Progress {
         {
             points = Integer.parseInt(DataHandler.dataHandler.getAppData(language).get("Points")) + pointsToAdd;
             DataHandler.dataHandler.updateAppData(language, field, value);
-            DataHandler.dataHandler.updateAppData(language, "Points", String.valueOf(points));
-            DataHandler.dataHandler.updateAppData(language, "Percentage", calculatePercentage());
-            DataHandler.dataHandler.updateAppData(language, "Level", calculateLevel());
+            HashMap<String, String> tempMap = DataHandler.dataHandler.getAppData(language);
+            tempMap.put(field, value);
+            String pts = String.valueOf(points);
+            DataHandler.dataHandler.updateAppData(language, "Points", pts);
+            tempMap.put("Points", pts);
+            String percentage = calculatePercentage();
+            DataHandler.dataHandler.updateAppData(language, "Progress", percentage);
+            tempMap.put("Progress", percentage);
+            String level = calculateLevel();
+            DataHandler.dataHandler.updateAppData(language, "Level", level);
+            tempMap.put("Level", level);
+            DataHandler.dataHandler.appData.put(language, tempMap);
             MainFrame.mainFrame.updateProgressBars();
         }
     }
@@ -61,7 +69,7 @@ public class Progress {
 
     public String calculatePercentage()
     {
-        int percentage = points/200;
+        int percentage = Math.round((float)points/(float)2);
         return String.valueOf(percentage);
     }
 
