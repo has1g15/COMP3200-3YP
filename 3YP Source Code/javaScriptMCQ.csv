@@ -48,16 +48,16 @@
 5,question8,answer1,$answer2,$answer3,$answer4,$rightanswer
 5,question9,answer1,$answer2,$answer3,$answer4,$rightanswer
 5,question10,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question1,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question2,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question3,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question4,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question5,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question6,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question7,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question8,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question9,answer1,$answer2,$answer3,$answer4,$rightanswer
-6,question10,answer1,$answer2,$answer3,$answer4,$rightanswer
+6,What is the operation that can be used to concatenate a string?,*,$%,$+,$*,$+
+6,What is the method that can be used to concatenate a string? ,concat(),$concatenate(),$add(),$join(),$concat()
+6,What method converts a string to all lower case?,upperCase(),$toLowerCase(),$toLower(),$lower(),$toLowerCase()
+6,What method converts a string to all upper case?,lowerCase(),$toUpperCase(),$toUpper(),$upper(),$toUpperCase()
+6,How would you return the length of the variable hello?,lengthOf(hello),$hello.length(),$hello.getLength(),$hello.length,$hello.length
+6,What is the purpose of the indexOf() method?,Returns position of first occurrence of a specified string within a string,$Returns the length of the specified string in the string,$Returns position of last occurrence of specified string within a string,$Returns the first and last occurrence of the specified string within a string,$Returns position of first occurrence of a specified string within a string
+6,"If var hello = ""hello"", what does hello.slice(1,3) return?",llo,$elo,$ello,$hello,$elo
+6,"If var hello = ""hello"", what does hello.slice(0,4) return?",llo,$elo,$ello,$hello,$hello
+6,"If var hello = ""hello"", what does hello.substr(1,3) return?",hel,$elo,$hell,$ello,$elo
+6,"If var hello = ""hello"", what does hello.substr(0,4) return?",hel,$elo,$hell,$ello,$hell
 7,question1,answer1,$answer2,$answer3,$answer4,$rightanswer
 7,question2,answer1,$answer2,$answer3,$answer4,$rightanswer
 7,question3,answer1,$answer2,$answer3,$answer4,$rightanswer

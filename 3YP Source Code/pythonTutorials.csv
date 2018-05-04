@@ -1,4 +1,11 @@
-﻿1,Welcome to Python Tutorial 1,$This is the console,text
+﻿1,"Welcome to Python Printing, Variable Declaration and Data Types Tutorial ",$This is the console,"In this tutorial, we are going to learn how to print out data to the console, initialise variables and a selection of the data types available in Java."
+1,"£hello = ""hello""",$-,"Python is a dynamically typed language meaning we don't declare variables, we simply assign values as variable types are interpreted at runtime. We are going to look five of the main types available in Python. "
+1,£num = 5,$-,This is how numbers are assigned 
+1,"£hello = ""hello""",$-,This is how strings are assigned
+1,"£list = [0, 1, 2, 3, 4, 5]",$-,Variables in a list type are declared using square brackets
+1,"£tuple = (0, 1, 2, 3, 4, 5)",$-,The tuple type is like a list but it has a fixed size meaning variables cannot be added once it is initialised. Tuples use round brackets. 
+1,"£dictionary = {1: hello, 2: goodbye}",$-,"The last type we'll learn about is the dictionary type, this maps keys to values using a colon (:). Curly braces are used to define a dictionary"
+1,"£print ""hello""",$hello,"To output in Python, we can use the print statement, this is simply put before what we want to print"
 2,Welcome to Python Tutorial 2,$This is the console,text
 3,Welcome to Python Tutorial 3,$This is the console,text
 4,Welcome to Python Tutorial 4,$This is the console,text

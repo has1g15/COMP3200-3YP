@@ -131,7 +131,7 @@ public class DataHandler {
 
                 if (tutorialContent == null)
                 {
-                    tutorialContent = new HashMap<>();
+                    tutorialContent = new LinkedHashMap<>();
                     javaScriptTutorialData.put(tutorialID, tutorialContent);
                 }
                 tutorialContent.put(example, guide);
@@ -151,7 +151,7 @@ public class DataHandler {
 
                 if(tutorialContent == null)
                 {
-                    tutorialContent = new HashMap<>();
+                    tutorialContent = new LinkedHashMap<>();
                     pythonTutorialData.put(tutorialID, tutorialContent);
                 }
                 tutorialContent.put(example, guide);

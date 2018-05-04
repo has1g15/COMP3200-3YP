@@ -3,7 +3,13 @@
 3,Welcome to JavaScript Tutorial 3,$This is the console,text 
 4,Welcome to JavaScript Tutorial 4,$This is the console,text 
 5,Welcome to JavaScript Tutorial 5,$This is the console,text 
-6,Welcome to JavaScript Tutorial 6,$This is the console,text 
+6,Welcome to JavaScript String Handling Tutorial,$This is the console,"There are several ways that strings can be manipulated in JavaScript, we will cover a handful of these methods"
+6,"£var hello = hel.concat("" "", ""lo"");",$-,"Firstly, we can join two strings together, this is called concatentation. We can either use a + in between the strings we want to join or include them as parameters in the concat() method, as shown in the example. "
+6,£console.log(hello.toUpperCase());,$HELLO,Strings can be converted to all upper or lower case using the toLowerCase() or toUpperCase methods
+6,£console.log(hello.length);,$5,"To get the length of a string, .length can be added after the string, returning a number"
+6,"£console.log(hello.indexOf(""lo""));",$4,"indexOf() can be used to find the position of the first occurrence of a specified string within a string. In the example, 3 is returned as ""lo"" starts at the 4th position in the string. (Remebering indexes start from 0)"
+6,"£console.log(hello.slice(2, 4));",$llo,The slice() method cuts a string and stores the extracted part in a new string. The start and end position of the sliced string are specified as paramters. 
+6,"£console.log(hello.slice(2, 3));",$llo,The final method we'll look at is .substr(). This is similar to slice() but the second paramter specified is the length of the substring rather than the end position. 
 7,Welcome to JavaScript Tutorial 7,$This is the console,text 
 8,Welcome to JavaScript Tutorial 8,$This is the console,text 
 9,Welcome to JavaScript Tutorial 9,$This is the console,text 

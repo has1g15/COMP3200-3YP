@@ -55,6 +55,7 @@ public class TutorialScreen extends JPanel {
         consoleText.setBackground(Color.BLACK);
         consoleText.setForeground(Color.WHITE);
         consoleText.setFont(new Font("Courier New", Font.BOLD, 14));
+        consoleText.setEditable(false);
         console.add(consoleText);
 
         codePanel.add(graphicsPanel);
@@ -68,6 +69,7 @@ public class TutorialScreen extends JPanel {
         guideText.setFont(new Font("Balsamiq Sand", Font.BOLD, 14));
         guideText.setLineWrap(true);
         guideText.setWrapStyleWord(true);
+        guideText.setEditable(false);
         guidePane = new JScrollPane(guideText);
         quiz = new JButton("Take Quiz");
         exercise = new JButton("Take Exercise");
@@ -148,7 +150,7 @@ public class TutorialScreen extends JPanel {
                 text.setBackground(colour);
                 text.setText(code.get(i));
             }
-            text.setBounds(xOffset * i/2,yOffset,graphicsPanel.getWidth()*2/5, graphicsPanel.getHeight()/21*yScale);
+            text.setBounds(xOffset * i/2,yOffset,code.get(i).length()*10, graphicsPanel.getHeight()/21*yScale);
             layeredPane.add(text, new Integer(i));
             yOffset = yOffset + (graphicsPanel.getHeight()/10);
         }
@@ -178,6 +180,7 @@ public class TutorialScreen extends JPanel {
         if (tutorial.getCurrentIndex() == 0)
         {
             initial = new JTextArea(text);
+            initial.setEditable(false);
             initial.setBackground(new Color(0xebebe0));
             initial.setFont(new Font("Courier New", Font.BOLD, 16));
             graphicsPanel.add(initial, gbc);
